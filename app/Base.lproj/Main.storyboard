@@ -20,20 +20,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LUNARFEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwZ-ah-iQb">
-                                <rect key="frame" x="119" y="347" width="177" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LUNARFEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwZ-ah-iQb">
+                                <rect key="frame" x="118" y="347" width="178" height="63"/>
                                 <fontDescription key="fontDescription" name="PostNoBillsColombo-Light" family="Post No Bills Colombo" pointSize="42"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.46666666666666667" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="titleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jNn-fN-1Dw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="titleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jNn-fN-1Dw">
                                 <rect key="frame" x="65" y="222" width="284" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-tu-EhV">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-tu-EhV">
                                 <rect key="frame" x="161" y="567" width="92" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.90196078431372551" green="0.71764705882352942" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,9 +39,8 @@
                                     <action selector="signup:" destination="KqN-rA-ERi" eventType="touchUpInside" id="lY0-d1-eJK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWL-Fc-tZY">
-                                <rect key="frame" x="172" y="647" width="71" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWL-Fc-tZY">
+                                <rect key="frame" x="171" y="647" width="72" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="0.90196078430000004" green="0.71764705880000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,11 +51,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18431372549019609" green="0.17254901960784313" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jNn-fN-1Dw" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="65" id="9V4-Hu-PVM"/>
+                            <constraint firstItem="kwZ-ah-iQb" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="118" id="9zl-gd-BVF"/>
+                            <constraint firstItem="dWL-Fc-tZY" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="171" id="BEa-j1-qCo"/>
+                            <constraint firstItem="dWL-Fc-tZY" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="171" id="Fxs-Ds-FMm"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="jNn-fN-1Dw" secondAttribute="trailing" constant="65" id="M3N-fz-uCe"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="dWL-Fc-tZY" secondAttribute="trailing" constant="171" id="O0G-JJ-bkN"/>
+                            <constraint firstItem="jNn-fN-1Dw" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="65" id="PNP-tb-bFq"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="dWL-Fc-tZY" secondAttribute="trailing" constant="171" id="Vv6-8h-aGZ"/>
+                            <constraint firstItem="NUa-tu-EhV" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="161" id="WAu-8n-m2L"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="NUa-tu-EhV" secondAttribute="trailing" constant="161" id="bAg-VA-KL9"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="kwZ-ah-iQb" secondAttribute="trailing" constant="118" id="egq-W4-S8S"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="jNn-fN-1Dw" secondAttribute="trailing" constant="65" id="emr-Ce-QpQ"/>
+                            <constraint firstItem="kwZ-ah-iQb" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="118" id="jEu-mY-Ye7"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="NUa-tu-EhV" secondAttribute="trailing" constant="161" id="lug-Bq-HoB"/>
+                            <constraint firstItem="KvP-2I-bYN" firstAttribute="trailing" secondItem="kwZ-ah-iQb" secondAttribute="trailing" constant="118" id="p9N-o7-cbC"/>
+                            <constraint firstItem="NUa-tu-EhV" firstAttribute="leading" secondItem="KvP-2I-bYN" secondAttribute="leading" constant="161" id="rEK-RO-iyl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KvP-2I-bYN"/>
                     </view>
-                    <connections>
-                        <outlet property="signup" destination="NUa-tu-EhV" id="jy2-9o-5X6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyo-j2-4YE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
