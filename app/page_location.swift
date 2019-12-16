@@ -22,14 +22,19 @@ class page_location: UIViewController {
     
     @IBAction func menuTapped(_ sender: Any) {
         if (menuOut == false) {
-            leading.constant = 150
-            trailing.constant = -150
+            leading.constant = 0
+            trailing.constant = 0
             menuOut = true
         } else {
-            leading.constant = 0
+            leading.constant = -170
             trailing.constant = 0
             menuOut = false
         }
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        })
+        
     }
     
     func setUpElements(){
