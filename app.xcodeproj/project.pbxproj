@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6453B13223A6D86100D4AA28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453B13123A6D86100D4AA28 /* Login.swift */; };
 		6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */; };
+		64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467323A71B1F00F3B2C7 /* signup.swift */; };
 		AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51441823A6B76A00C37465 /* AppDelegate.swift */; };
 		AA51441B23A6B76A00C37465 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51441A23A6B76A00C37465 /* SceneDelegate.swift */; };
 		AA51442023A6B76A00C37465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA51441E23A6B76A00C37465 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
 		64E1467223A6F5B100F3B2C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		64E1467323A71B1F00F3B2C7 /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
 		7854034B4AD6E2B5F428C313 /* Pods_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A0CA8F628964B784DC35C /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
 		AA51441523A6B76A00C37465 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				AA51441823A6B76A00C37465 /* AppDelegate.swift */,
 				AA51441A23A6B76A00C37465 /* SceneDelegate.swift */,
 				AA51441E23A6B76A00C37465 /* Main.storyboard */,
+				64E1467323A71B1F00F3B2C7 /* signup.swift */,
 				6453B13123A6D86100D4AA28 /* Login.swift */,
 				AA51442123A6B76D00C37465 /* Assets.xcassets */,
 				AA51442323A6B76D00C37465 /* LaunchScreen.storyboard */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */,
+				64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */,
 				AA51441B23A6B76A00C37465 /* SceneDelegate.swift in Sources */,
 				6453B13223A6D86100D4AA28 /* Login.swift in Sources */,
 			);

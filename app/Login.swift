@@ -8,11 +8,6 @@
 import UIKit
 
 class Login: UIViewController {
-    
-    @IBAction func signup(_ sender: UIButton) {
-        // connect with firebase
-    }
-    
     @IBAction func login(_ sender: UIButton) {
         // connect with firebase
     }
