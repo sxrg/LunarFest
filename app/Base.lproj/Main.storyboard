@@ -195,7 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="wc0-xy-E5o"/>
                     </view>
                     <navigationItem key="navigationItem" id="e4U-Sc-ARm">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburger" id="tKQ-jl-eHS">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="text.justify" catalog="system" id="tKQ-jl-eHS">
                             <connections>
                                 <action selector="menuTapped:" destination="VPT-fv-BEb" id="EqN-Og-Vi0"/>
                             </connections>
@@ -203,6 +203,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="leading" destination="UC5-cE-e5u" id="7iH-NE-Am9"/>
+                        <outlet property="navbar" destination="e4U-Sc-ARm" id="WHo-nb-Zng"/>
                         <outlet property="trailing" destination="Djn-zV-KMM" id="tl3-jb-o7Y"/>
                     </connections>
                 </viewController>
@@ -273,11 +274,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4Y-Cb-1ij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="139"/>
+            <point key="canvasLocation" x="2890" y="130"/>
         </scene>
     </scenes>
     <resources>
-        <image name="hamburger" width="500" height="500"/>
+        <image name="text.justify" catalog="system" width="64" height="50"/>
         <image name="titleLogo" width="2555" height="866"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

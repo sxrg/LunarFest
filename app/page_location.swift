@@ -11,9 +11,9 @@ class page_location: UIViewController {
     
     @IBOutlet weak var leading: NSLayoutConstraint!
     @IBOutlet weak var trailing: NSLayoutConstraint!
+    @IBOutlet weak var navbar: UINavigationItem!
     
     var menuOut = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,5 +35,11 @@ class page_location: UIViewController {
     func setUpElements(){
         // Style the elements
         //Utilities.styleTextField(emailField)
+        
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
+        navigationController?.navigationBar.isTranslucent = false
+     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+    
     }
 }
