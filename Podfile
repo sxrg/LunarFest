@@ -16,5 +16,6 @@ pod 'Firebase/InAppMessagingDisplay'
 pod 'Firebase/Analytics'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'GoogleSignIn'
 
 end
