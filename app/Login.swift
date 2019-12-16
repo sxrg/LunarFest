@@ -8,20 +8,23 @@
 import UIKit
 
 class Login: UIViewController {
-    
-    @IBAction func signup(_ sender: UIButton) {
-        // connect with firebase
-    }
-    
     @IBAction func login(_ sender: UIButton) {
         // connect with firebase
     }
+    @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        setUpElements()
         
+    }
+    
+    func setUpElements(){
+        
+        // Style the elements
+        Utilities.styleHollowButton(btnLogin)
     }
 
 

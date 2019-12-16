@@ -3,7 +3,7 @@
 
 target 'app' do
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for app
   
@@ -16,5 +16,6 @@ pod 'Firebase/InAppMessagingDisplay'
 pod 'Firebase/Analytics'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'GoogleSignIn'
 
 end
