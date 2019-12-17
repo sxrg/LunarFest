@@ -19,6 +19,7 @@ class signup: UIViewController {
     @IBOutlet weak var btnSubmit: UIButton!
     
     var email: String!
+    let userDefault = UserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,39 @@ class signup: UIViewController {
             //move to next view contorller
         }else{
         }
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
+        
         setUpElements()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if userDefault.bool(forKey: "usersignedin") {
+            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+        }
     }
     
     @IBAction func btnSignup(_ sender: Any) {
 
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+          print(error.localizedDescription)
+          return
+        } else {
+          guard let authentication = user.authentication else { return }
+          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+          Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
+              if error == nil {
+                  print(result?.user.email)
+                  print(result?.user.displayName)
+              } else {
+                  print(error?.localizedDescription)
+              }
+          }
+          }
     }
     
 
