@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>778926133465-f9o5s7kj20gat2tf4cadr001c9bg0v6n.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.778926133465-f9o5s7kj20gat2tf4cadr001c9bg0v6n</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>778926133465-sdgtoan976mksm2eiok78bengjh6dn9c.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBtvBDnBWH8aypijEToiiXgoenypCRVkPM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>778926133465</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ca.acsea.app</string>
+	<key>PROJECT_ID</key>
+	<string>acsea-apps</string>
+	<key>STORAGE_BUCKET</key>
+	<string>acsea-apps.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:778926133465:ios:d9a207a1f5f3cbd7</string>
+	<key>DATABASE_URL</key>
+	<string>https://acsea-apps.firebaseio.com</string>
+</dict>
+</plist>
