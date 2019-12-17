@@ -168,6 +168,9 @@
                                 <state key="normal" title="Events">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="eventTapped:" destination="VPT-fv-BEb" eventType="touchUpInside" id="VzB-AW-Fya"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-g1-Pxb">
                                 <rect key="frame" x="20" y="270" width="142" height="36"/>
@@ -275,23 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irD-Be-EU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4533" y="-19"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Odu-Y2-UnN">
-            <objects>
-                <viewController id="3Vk-05-gO3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ncf-2n-mEI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="v50-ib-5Fg"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mf2-XK-5Bs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NTF-5t-4Yx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3672" y="874"/>
+            <point key="canvasLocation" x="4601" y="-594"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S9Q-fb-DGc">
@@ -307,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adV-8c-vSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4491" y="874"/>
+            <point key="canvasLocation" x="3030" y="913"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QW1-Yy-5c6">
@@ -323,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxf-6O-lQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5322" y="874"/>
+            <point key="canvasLocation" x="3816" y="913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mAY-nj-0pH">

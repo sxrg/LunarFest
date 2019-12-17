@@ -22,9 +22,19 @@ class page_location: UIViewController {
         setUpElements()
     }
     
+    @IBAction func eventTapped(_ sender: Any) {
+        leading.constant = 0
+        trailing.constant = 0
+        menuOut = false
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
     @IBAction func menuTapped(_ sender: Any) {
         if (menuOut == false) {
-            leading.constant = 150
+            leading.constant = 180
             trailing.constant = -150
             menuOut = true
         } else {
