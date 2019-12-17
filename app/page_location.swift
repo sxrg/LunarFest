@@ -11,9 +11,11 @@ class page_location: UIViewController {
     
     @IBOutlet weak var leading: NSLayoutConstraint!
     @IBOutlet weak var trailing: NSLayoutConstraint!
+    
     @IBOutlet weak var navbar: UINavigationItem!
     
     var menuOut = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,11 +24,11 @@ class page_location: UIViewController {
     
     @IBAction func menuTapped(_ sender: Any) {
         if (menuOut == false) {
-            leading.constant = 0
-            trailing.constant = 0
+            leading.constant = 150
+            trailing.constant = -150
             menuOut = true
         } else {
-            leading.constant = -170
+            leading.constant = 0
             trailing.constant = 0
             menuOut = false
         }
