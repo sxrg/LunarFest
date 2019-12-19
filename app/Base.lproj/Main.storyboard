@@ -145,66 +145,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-sb-N9U">
-                                <rect key="frame" x="20" y="160" width="41" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Map">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jcb-xZ-PVh" kind="show" id="qdu-Fl-cCv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-qx-7OQ">
-                                <rect key="frame" x="20" y="106" width="64" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Events">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="eventTapped:" destination="VPT-fv-BEb" eventType="touchUpInside" id="VzB-AW-Fya"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-g1-Pxb">
-                                <rect key="frame" x="20" y="270" width="142" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="LunarFest Quiz">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-MF-YGX">
-                                <rect key="frame" x="20" y="326" width="93" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="My Points">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-HI-l0H">
-                                <rect key="frame" x="20" y="214" width="80" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="FunStop">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dfh-Yk-ccD" kind="show" id="vtD-YJ-KF2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9p-EQ-zdD">
-                                <rect key="frame" x="20" y="380" width="58" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-zQ-mJ2">
                                 <rect key="frame" x="0.0" y="56" width="414" height="786"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-sb-N9U">
+                                        <rect key="frame" x="245" y="204" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jcb-xZ-PVh" kind="show" id="qdu-Fl-cCv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-qx-7OQ">
+                                        <rect key="frame" x="245" y="83" width="64" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Events">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="eventTapped:" destination="VPT-fv-BEb" eventType="touchUpInside" id="VzB-AW-Fya"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-g1-Pxb">
+                                        <rect key="frame" x="245" y="263" width="142" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="LunarFest Quiz">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-MF-YGX">
+                                        <rect key="frame" x="245" y="320" width="93" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="My Points">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-HI-l0H">
+                                        <rect key="frame" x="245" y="144" width="80" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="FunStop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dfh-Yk-ccD" kind="show" id="vtD-YJ-KF2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9p-EQ-zdD">
+                                        <rect key="frame" x="245" y="384" width="58" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="About">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Aih-HI-l0H" firstAttribute="leading" secondItem="HoU-zQ-mJ2" secondAttribute="leading" constant="245" id="0Ci-87-z1f"/>
+                                    <constraint firstAttribute="bottom" secondItem="rVy-qx-7OQ" secondAttribute="bottom" constant="667" id="2is-z1-zEg"/>
+                                    <constraint firstItem="Wbe-MF-YGX" firstAttribute="leading" secondItem="HoU-zQ-mJ2" secondAttribute="leading" constant="245" id="3fE-C8-nlO"/>
+                                    <constraint firstItem="jqd-sb-N9U" firstAttribute="leading" secondItem="HoU-zQ-mJ2" secondAttribute="leading" constant="245" id="4fb-fN-DcU"/>
+                                    <constraint firstAttribute="bottom" secondItem="x9p-EQ-zdD" secondAttribute="bottom" constant="366" id="9fn-1B-eoN"/>
+                                    <constraint firstAttribute="trailing" secondItem="jqd-sb-N9U" secondAttribute="trailing" constant="128" id="FbK-3b-JHy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aih-HI-l0H" secondAttribute="bottom" constant="606" id="JhA-bM-6Ik"/>
+                                    <constraint firstAttribute="bottom" secondItem="92w-g1-Pxb" secondAttribute="bottom" constant="487" id="N9P-yY-rgu"/>
+                                    <constraint firstAttribute="trailing" secondItem="92w-g1-Pxb" secondAttribute="trailing" constant="27" id="Oxj-18-AJX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aih-HI-l0H" secondAttribute="trailing" constant="89" id="QnB-Cb-inU"/>
+                                    <constraint firstAttribute="trailing" secondItem="rVy-qx-7OQ" secondAttribute="trailing" constant="105" id="UdU-47-KO8"/>
+                                    <constraint firstItem="92w-g1-Pxb" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="263" id="WxM-Qd-wy7"/>
+                                    <constraint firstItem="x9p-EQ-zdD" firstAttribute="leading" secondItem="HoU-zQ-mJ2" secondAttribute="leading" constant="245" id="XiG-3l-fOO"/>
+                                    <constraint firstAttribute="trailing" secondItem="x9p-EQ-zdD" secondAttribute="trailing" constant="111" id="aYe-jr-ji5"/>
+                                    <constraint firstItem="jqd-sb-N9U" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="204" id="awN-Xe-lAA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wbe-MF-YGX" secondAttribute="trailing" constant="76" id="bXw-Nd-NrL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wbe-MF-YGX" secondAttribute="bottom" constant="430" id="g2Y-S3-UHc"/>
+                                    <constraint firstItem="rVy-qx-7OQ" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="83" id="gcM-Wg-Lli"/>
+                                    <constraint firstItem="Aih-HI-l0H" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="144" id="kZG-RW-rns"/>
+                                    <constraint firstAttribute="bottom" secondItem="jqd-sb-N9U" secondAttribute="bottom" constant="546" id="mwf-hM-Evc"/>
+                                    <constraint firstItem="x9p-EQ-zdD" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="384" id="pT7-oK-xzo"/>
+                                    <constraint firstItem="Wbe-MF-YGX" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="320" id="stO-yf-ecf"/>
+                                    <constraint firstItem="92w-g1-Pxb" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="263" id="ulC-sI-TMa"/>
+                                    <constraint firstItem="92w-g1-Pxb" firstAttribute="leading" secondItem="HoU-zQ-mJ2" secondAttribute="leading" constant="245" id="v8M-Dh-QPF"/>
+                                    <constraint firstItem="rVy-qx-7OQ" firstAttribute="leading" secondItem="HoU-zQ-mJ2" secondAttribute="leading" constant="245" id="zaR-gg-CCI"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="tag">
                                         <integer key="value" value="1"/>
@@ -212,9 +235,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HoU-zQ-mJ2" firstAttribute="top" secondItem="wc0-xy-E5o" secondAttribute="top" id="BYF-ba-0Iy"/>
+                            <constraint firstItem="HoU-zQ-mJ2" firstAttribute="width" secondItem="rDc-so-6qg" secondAttribute="width" id="M66-GP-u6S"/>
                             <constraint firstItem="wc0-xy-E5o" firstAttribute="trailing" secondItem="HoU-zQ-mJ2" secondAttribute="trailing" id="Wjf-UI-G4N" userLabel="Trailing"/>
                             <constraint firstItem="HoU-zQ-mJ2" firstAttribute="leading" secondItem="wc0-xy-E5o" secondAttribute="leading" id="f4F-Kf-App" userLabel="Leading"/>
                             <constraint firstItem="HoU-zQ-mJ2" firstAttribute="bottom" secondItem="wc0-xy-E5o" secondAttribute="bottom" constant="34" id="ut7-Tf-rhq"/>
@@ -238,6 +262,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7d-ks-sKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3815.9420289855075" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Qc-Yz-79V">
+            <objects>
+                <viewController id="Emx-Mm-ubI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWK-2l-FN2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="diE-dL-vX8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKW-1T-9o2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4729" y="130"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S9Q-fb-DGc">
