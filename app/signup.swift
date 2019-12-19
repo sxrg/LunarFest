@@ -12,7 +12,8 @@ import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
 
-class signup: UIViewController {
+class signup: UIViewController, GIDSignInDelegate {
+    
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -24,6 +25,7 @@ class signup: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if Auth.auth().currentUser != nil{
+            //self.moveToLocationMenu()
             //move to next view contorller
         }else{
         }
@@ -31,8 +33,20 @@ class signup: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
         
+        
         setUpElements()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action:
+        #selector(self.dismissKeyboard(_:)))
+                self.view.addGestureRecognizer(tapGesture)
+        /*get the two inputfield to give up as first
+        object that'll receive an event*/
     }
+    
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer){
+            emailField.resignFirstResponder()
+            passwordField.resignFirstResponder()
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         if userDefault.bool(forKey: "usersignedin") {
@@ -41,7 +55,7 @@ class signup: UIViewController {
     }
     
     @IBAction func btnSignup(_ sender: Any) {
-
+        createUser()
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -66,21 +80,24 @@ class signup: UIViewController {
     //FIRAuthErrorCodeEmailAlreadyInUse
     func createUser(){
         Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){
-            (authResult, error) in
-            if error != nil{
-                let errorCode = AuthErrorCode(rawValue: error!._code)
+        (authResult, error) in
+        if error != nil{
+            let errorCode = AuthErrorCode(rawValue: error!._code)
                 
-                if errorCode == .emailAlreadyInUse {
-                        //if email is already use then try signing in
-                        self.signIn()
-                    }else{
-                        //some kind of error that's not email has been used occured
-                        let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
-                                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                    self.present(alert,animated: true, completion: nil)
-                    }
+            if errorCode == .emailAlreadyInUse {
+                
+                //if email is already use then try signing in
+                self.signIn()
+                
             }else{
-                self.signIn()//directly signs in the user in after account is created
+                
+                //some kind of error that's not email has been used occured
+                let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert,animated: true, completion: nil)
+            }
+        }else{
+            self.signIn()//directly signs in the user in after account is created
             }
         }
     }
@@ -88,37 +105,32 @@ class signup: UIViewController {
     func signIn(){//might not need to pass the two parameter in?
 
          Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!){
-                    (user, error) in
-                    if error != nil{
-                //cant sign in
-                        let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        self.present(alert,animated: true, completion: nil)
+            (user, error) in
+            if error != nil{
+                    
+            //cant sign in
+            let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert,animated: true, completion: nil)
                         
-                    }else{
+            }else{
+                    
                 //signed in update user's email in database
-                        let user = Auth.auth().currentUser
-                        let uid = user!.uid
-                        let myDatabse = Database.database().reference()
-                        myDatabse.child("users").child(uid).child("email").setValue(user?.email)
-                        self.moveToLocationMenu()
-                        }
-                  }
+                let user = Auth.auth().currentUser
+                let uid = user!.uid
+                let myDatabse = Database.database().reference()
+            myDatabse.child("users").child(uid).child("email").setValue(user?.email)
+                    self.moveToLocationMenu()
             }
+        }
+    }
 
     func moveToLocationMenu(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let locationMenu = storyBoard.instantiateViewController(withIdentifier: "LocationMenu")
+            let locationMenu = storyBoard.instantiateViewController(withIdentifier: "page_location")
+            locationMenu.modalPresentationStyle = .fullScreen
             self.present(locationMenu, animated: true, completion: nil)
     }
-        
-
-        
-//    @IBAction func startLogin(_ sender: Any) {
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let Login = storyBoard.instantiateViewController(withIdentifier: "Login") as! Login;
-//        self.present(Login, animated: true, completion: nil)
-//    }
     
     func setUpElements(){
         
