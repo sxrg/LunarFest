@@ -15,6 +15,7 @@ import GoogleSignIn
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
+    
     let gcmMessageIDKey = "gcm.message_id"
     var window: UIWindow?
     let userDefault = UserDefaults()
@@ -38,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 Messaging.messaging().delegate = self
                 application.registerForRemoteNotifications()
         
-               FirebaseApp.configure()
+               FirebaseApp.configure() 
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self

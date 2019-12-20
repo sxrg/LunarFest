@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KqN-rA-ERi">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -384,6 +384,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAs-Q6-phh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="okN-WZ-nhj">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </objects>
             <point key="canvasLocation" x="4246.875" y="357.04225352112678"/>
         </scene>
@@ -2591,8 +2596,233 @@
             </objects>
             <point key="canvasLocation" x="7654" y="415"/>
         </scene>
+        <!--Points View Controller-->
+        <scene sceneID="ly9-SO-teN">
+            <objects>
+                <viewController id="jhu-Zg-Xlu" customClass="PointsViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hew-Z3-CKd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Rk-uue">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qa-4z-ABH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A2-gI-MZc">
+                                                <rect key="frame" x="30" y="40" width="120" height="28"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Total Points:">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" metaFont="system" size="23"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-0p-L9T">
+                                                <rect key="frame" x="30" y="78" width="354" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="46"/>
+                                                <color key="textColor" red="0.87248665089999999" green="0.72519260640000005" blue="0.49014914040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bM-XQ-EYe">
+                                                <rect key="frame" x="30" y="153" width="164.66666666666666" height="27.666666666666657"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="How to Redeem:">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" metaFont="system" size="23"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsl-W6-lO9">
+                                                <rect key="frame" x="30" y="480.66666666666663" width="354" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Vei-aZ-ILi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <state key="normal" title="Redeem">
+                                                    <color key="titleColor" red="0.87248665089999999" green="0.72519260640000005" blue="0.49014914040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openQRCodeScannerWithSender:" destination="jhu-Zg-Xlu" eventType="touchUpInside" id="hTM-Zy-kmf"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3w-Hf-KAM">
+                                                <rect key="frame" x="20" y="200.66666666666669" width="374" height="245"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="245" id="g5w-zI-IUQ"/>
+                                                </constraints>
+                                                <string key="text">1. Visit all location shown on the map
+
+2. At each location ask a volunteer for Fun Stop QR code
+ 3. Scan the QR code 
+ 4. Once all QR codes are scan visit Fun Stop Booth for a chance to win a prize 
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <string key="userLabel">1. Visit all location shown on the map  2. At each location ask a volunteer for Fun Stop QR code  3. Scan the QR code   4. Once all QR codes are scan visit Fun Stop Booth for a chance to win a prize</string>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.18527990580000001" green="0.16953071950000001" blue="0.28628683090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fb9-0p-L9T" secondAttribute="trailing" constant="30" id="1SW-VL-qdE"/>
+                                            <constraint firstAttribute="trailing" secondItem="xsl-W6-lO9" secondAttribute="trailing" constant="30" id="9gC-I7-ZqX"/>
+                                            <constraint firstItem="xsl-W6-lO9" firstAttribute="top" secondItem="u3w-Hf-KAM" secondAttribute="bottom" constant="35" id="O0E-AL-68p"/>
+                                            <constraint firstItem="xsl-W6-lO9" firstAttribute="leading" secondItem="4qa-4z-ABH" secondAttribute="leading" constant="30" id="SaA-f5-Bhb"/>
+                                            <constraint firstItem="9bM-XQ-EYe" firstAttribute="leading" secondItem="4qa-4z-ABH" secondAttribute="leading" constant="30" id="St0-bJ-AiW"/>
+                                            <constraint firstItem="8A2-gI-MZc" firstAttribute="leading" secondItem="4qa-4z-ABH" secondAttribute="leading" constant="30" id="cDb-Yd-vto"/>
+                                            <constraint firstItem="fb9-0p-L9T" firstAttribute="leading" secondItem="4qa-4z-ABH" secondAttribute="leading" constant="30" id="cX9-CR-3Bf"/>
+                                            <constraint firstItem="fb9-0p-L9T" firstAttribute="top" secondItem="8A2-gI-MZc" secondAttribute="bottom" constant="10" id="dUA-cC-GY8"/>
+                                            <constraint firstItem="8A2-gI-MZc" firstAttribute="top" secondItem="4qa-4z-ABH" secondAttribute="top" constant="40" id="e42-Cc-J2Q"/>
+                                            <constraint firstItem="u3w-Hf-KAM" firstAttribute="leading" secondItem="4qa-4z-ABH" secondAttribute="leading" constant="20" id="eWF-Qi-JFR"/>
+                                            <constraint firstItem="u3w-Hf-KAM" firstAttribute="top" secondItem="9bM-XQ-EYe" secondAttribute="bottom" constant="20" id="g8w-tv-B2Z"/>
+                                            <constraint firstItem="9bM-XQ-EYe" firstAttribute="top" secondItem="fb9-0p-L9T" secondAttribute="bottom" constant="20" id="lCr-IK-ndQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="u3w-Hf-KAM" secondAttribute="trailing" constant="20" id="xds-Uz-wwv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4qa-4z-ABH" firstAttribute="bottom" secondItem="gbX-t6-8ii" secondAttribute="bottom" id="34P-Wz-8C6"/>
+                                    <constraint firstAttribute="trailing" secondItem="4qa-4z-ABH" secondAttribute="trailing" id="AMM-ZP-zUu"/>
+                                    <constraint firstItem="4qa-4z-ABH" firstAttribute="leading" secondItem="xZZ-Rk-uue" secondAttribute="leading" id="Zpo-hB-KJq"/>
+                                    <constraint firstItem="4qa-4z-ABH" firstAttribute="top" secondItem="ToV-3j-Jgq" secondAttribute="top" id="amW-Zr-Rra"/>
+                                    <constraint firstAttribute="bottom" secondItem="4qa-4z-ABH" secondAttribute="bottom" id="heJ-nR-b6z"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ToV-3j-Jgq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="gbX-t6-8ii"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xZZ-Rk-uue" firstAttribute="top" secondItem="dlh-8z-aYl" secondAttribute="top" id="G9p-5X-mdf"/>
+                            <constraint firstItem="xZZ-Rk-uue" firstAttribute="trailing" secondItem="dlh-8z-aYl" secondAttribute="trailing" id="NW8-Rm-fHc"/>
+                            <constraint firstItem="xZZ-Rk-uue" firstAttribute="bottom" secondItem="dlh-8z-aYl" secondAttribute="bottom" id="bea-E5-R6z"/>
+                            <constraint firstItem="4qa-4z-ABH" firstAttribute="width" secondItem="hew-Z3-CKd" secondAttribute="width" id="tla-uM-EiJ"/>
+                            <constraint firstItem="xZZ-Rk-uue" firstAttribute="leading" secondItem="dlh-8z-aYl" secondAttribute="leading" id="yRA-er-trK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dlh-8z-aYl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="10M-tX-q46"/>
+                    <connections>
+                        <outlet property="btnRedeem" destination="xsl-W6-lO9" id="0G0-5k-UUA"/>
+                        <outlet property="pointsInfo" destination="u3w-Hf-KAM" id="2Al-iD-een"/>
+                        <outlet property="pointsText" destination="fb9-0p-L9T" id="5Dr-9d-eZ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJL-pN-xSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6527.5362318840589" y="1211.413043478261"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QqC-PM-z1L">
+            <objects>
+                <viewController id="Rz4-dM-Ncp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="whz-1g-D4k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zR-jt-3aB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-05-zvS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1240"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9O-MK-gsm">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACSEA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M24-kT-bfM">
+                                                        <rect key="frame" x="40" y="26" width="334" height="54"/>
+                                                        <fontDescription key="fontDescription" name="PostNoBillsColombo-Light" family="Post No Bills Colombo" pointSize="36"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.18924370409999999" green="0.1651780605" blue="0.29413086179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="M24-kT-bfM" firstAttribute="top" secondItem="G9O-MK-gsm" secondAttribute="top" constant="26" id="0BM-Jy-jeN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="M24-kT-bfM" secondAttribute="bottom" id="NxT-S3-xch"/>
+                                                    <constraint firstItem="M24-kT-bfM" firstAttribute="leading" secondItem="G9O-MK-gsm" secondAttribute="leading" constant="40" id="ZIU-fh-stz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="M24-kT-bfM" secondAttribute="trailing" constant="40" id="bbN-80-eu3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="M24-kT-bfM" secondAttribute="bottom" id="f97-Qu-qLV"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-Cj-HsE">
+                                                <rect key="frame" x="30" y="109.99999999999997" width="354" height="365.33333333333326"/>
+                                                <string key="text">Founded in March 2004, Asian-Canadian Special Events Association (ACSEA) continues to create sustainable projects in the areas of arts and culture, working with partners across British Columbia, Canada, and internationally following a threefold mandate:
+
+1. Community Engagement 
+2. Fostering New Artistic and Cultural Expressions
+3. Platform to Learn and Share
+
+ACSEA’s signature events are spread throughout the year: the end of winter LunarFest, end of summer TAIWANfest and IPACI, and finally a brand new event in partnership with Canadian Heritage and Canada 150, We Are Canadians, Too!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACSEA-about" translatesAutoresizingMaskIntoConstraints="NO" id="Dot-8R-lgD">
+                                                <rect key="frame" x="30" y="494" width="354" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="RKM-A9-zYZ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="G9O-MK-gsm" secondAttribute="trailing" id="2EB-ea-hnU"/>
+                                            <constraint firstItem="G9O-MK-gsm" firstAttribute="top" secondItem="FRd-05-zvS" secondAttribute="top" id="4Q5-md-O36"/>
+                                            <constraint firstItem="cLz-Cj-HsE" firstAttribute="leading" secondItem="FRd-05-zvS" secondAttribute="leading" constant="30" id="B7B-Km-PWb"/>
+                                            <constraint firstAttribute="trailing" secondItem="cLz-Cj-HsE" secondAttribute="trailing" constant="30" id="LYb-km-78Y"/>
+                                            <constraint firstItem="cLz-Cj-HsE" firstAttribute="top" secondItem="G9O-MK-gsm" secondAttribute="bottom" constant="30" id="Ylf-Rp-9Kw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dot-8R-lgD" secondAttribute="trailing" constant="30" id="diO-L9-PRg"/>
+                                            <constraint firstItem="Dot-8R-lgD" firstAttribute="top" secondItem="cLz-Cj-HsE" secondAttribute="bottom" constant="18.5" id="eH2-LJ-gqv"/>
+                                            <constraint firstItem="Dot-8R-lgD" firstAttribute="leading" secondItem="FRd-05-zvS" secondAttribute="leading" constant="30" id="ks8-D5-Zz3"/>
+                                            <constraint firstAttribute="bottom" secondItem="G9O-MK-gsm" secondAttribute="bottom" constant="1160" id="lih-az-7OW"/>
+                                            <constraint firstItem="G9O-MK-gsm" firstAttribute="leading" secondItem="FRd-05-zvS" secondAttribute="leading" id="loN-8j-H5x"/>
+                                            <constraint firstAttribute="height" constant="1240" id="sUS-2f-bD6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FRd-05-zvS" secondAttribute="trailing" id="6OK-jg-pUq"/>
+                                    <constraint firstItem="FRd-05-zvS" firstAttribute="top" secondItem="9zR-jt-3aB" secondAttribute="top" id="JnG-rX-CJ3"/>
+                                    <constraint firstItem="FRd-05-zvS" firstAttribute="trailing" secondItem="YgV-Hl-JWE" secondAttribute="trailing" id="NC9-wv-x0p"/>
+                                    <constraint firstItem="FRd-05-zvS" firstAttribute="leading" secondItem="YgV-Hl-JWE" secondAttribute="leading" id="bLh-TM-qyc"/>
+                                    <constraint firstItem="FRd-05-zvS" firstAttribute="top" secondItem="YgV-Hl-JWE" secondAttribute="top" id="ohG-Jk-THP"/>
+                                    <constraint firstItem="FRd-05-zvS" firstAttribute="leading" secondItem="9zR-jt-3aB" secondAttribute="leading" id="qQr-qJ-vqc"/>
+                                    <constraint firstAttribute="bottom" secondItem="FRd-05-zvS" secondAttribute="bottom" constant="-573" id="wtw-Dw-T3Z"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vCb-dM-29l"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YgV-Hl-JWE"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9zR-jt-3aB" firstAttribute="bottom" secondItem="6wH-D2-EiI" secondAttribute="bottom" id="VZR-S1-0Qb"/>
+                            <constraint firstItem="9zR-jt-3aB" firstAttribute="leading" secondItem="6wH-D2-EiI" secondAttribute="leading" id="XsK-me-xWq"/>
+                            <constraint firstItem="FRd-05-zvS" firstAttribute="width" secondItem="whz-1g-D4k" secondAttribute="width" id="Yhq-Lk-n0Q"/>
+                            <constraint firstItem="9zR-jt-3aB" firstAttribute="trailing" secondItem="6wH-D2-EiI" secondAttribute="trailing" id="b2c-Mm-Zfd"/>
+                            <constraint firstItem="9zR-jt-3aB" firstAttribute="top" secondItem="6wH-D2-EiI" secondAttribute="top" id="ma1-qp-fD7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6wH-D2-EiI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gjg-nW-H5a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0FH-4p-rmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7664" y="1207"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ACSEA-about" width="1600" height="592"/>
         <image name="dummyImage" width="600" height="400"/>
         <image name="event_available_24px_outlined" width="24" height="24"/>
         <image name="icons8-camera-60" width="60" height="60"/>
