@@ -56,4 +56,15 @@ class Utilities {
         myView.layer.shadowRadius = 10
         myView.layer.masksToBounds = false
     }
+    
+    static func styleEventButtons(_ button: UIButton) {
+        button.layer.cornerRadius = 30
+        button.clipsToBounds = true
+        
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style:
+                    UIBlurEffect.Style.light))
+        blur.frame = button.bounds
+        blur.isUserInteractionEnabled = false //This allows touches to forward to the button.
+        button.insertSubview(blur, at: 0)
+    }
 }

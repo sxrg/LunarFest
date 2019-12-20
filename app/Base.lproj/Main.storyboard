@@ -367,6 +367,11 @@
                             <constraint firstItem="nei-e6-XgQ" firstAttribute="trailing" secondItem="DW3-69-Iww" secondAttribute="trailing" id="zil-g4-09u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DW3-69-Iww"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="HoU-zQ-mJ2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="e4U-Sc-ARm">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="icons8-menu-30" id="tKQ-jl-eHS">
@@ -377,6 +382,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btn_1" destination="ekV-LD-jmo" id="IQg-CC-Wwd"/>
+                        <outlet property="btn_2" destination="a3H-in-om2" id="NaM-gD-gLe"/>
+                        <outlet property="btn_3" destination="DmD-Mr-CJ4" id="vfV-vB-FQl"/>
+                        <outlet property="btn_4" destination="eYt-mk-JEd" id="v7m-uT-HSi"/>
                         <outlet property="leading" destination="Iqx-LU-VXk" id="lN0-zd-QAX"/>
                         <outlet property="myView" destination="HoU-zQ-mJ2" id="qEN-vK-UVX"/>
                         <outlet property="navbar" destination="e4U-Sc-ARm" id="WHo-nb-Zng"/>
