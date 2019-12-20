@@ -12,13 +12,15 @@ class PointsViewController: UIViewController{
     var qrValue = ""
     let userDefault = UserDefaults.standard
     @IBOutlet var btnRedeem: UIButton!
-        @IBOutlet var pointsText: UILabel!
-
+    @IBOutlet var pointsText: UILabel!
+    @IBOutlet var pointsInfo: UILabel!
+    
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.pointsInfo.layer.cornerRadius = 15
         setUpElements()
         userID = Auth.auth().currentUser!.uid
-        if(qrValue != "0"){
+        if(qrValue != ""){
             checkQRCodeValue()
         }
         getUserPoints()
