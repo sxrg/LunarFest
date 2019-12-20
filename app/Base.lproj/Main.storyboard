@@ -320,6 +320,9 @@
                                         <state key="normal" title="LunarFest Quiz">
                                             <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="FCW-2V-JOb" kind="show" id="kXg-1I-i9K"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-MF-YGX">
                                         <rect key="frame" x="226" y="286" width="92" height="40"/>
@@ -367,11 +370,6 @@
                             <constraint firstItem="nei-e6-XgQ" firstAttribute="trailing" secondItem="DW3-69-Iww" secondAttribute="trailing" id="zil-g4-09u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DW3-69-Iww"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="HoU-zQ-mJ2"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="e4U-Sc-ARm">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="icons8-menu-30" id="tKQ-jl-eHS">
@@ -386,6 +384,8 @@
                         <outlet property="btn_2" destination="a3H-in-om2" id="NaM-gD-gLe"/>
                         <outlet property="btn_3" destination="DmD-Mr-CJ4" id="vfV-vB-FQl"/>
                         <outlet property="btn_4" destination="eYt-mk-JEd" id="v7m-uT-HSi"/>
+                        <outlet property="btn_5" destination="Mpf-Tr-aIg" id="neZ-UB-BNa"/>
+                        <outlet property="btn_6" destination="Khz-lA-Oaw" id="q5t-3W-aBk"/>
                         <outlet property="leading" destination="Iqx-LU-VXk" id="lN0-zd-QAX"/>
                         <outlet property="myView" destination="HoU-zQ-mJ2" id="qEN-vK-UVX"/>
                         <outlet property="navbar" destination="e4U-Sc-ARm" id="WHo-nb-Zng"/>
@@ -395,6 +395,152 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAs-Q6-phh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4247.826086956522" y="357.58928571428572"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="8W1-hh-SaC">
+            <objects>
+                <viewController id="FCW-2V-JOb" customClass="quiz" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vvk-vR-Wi7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH8-8i-pV1" customClass="questionView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="407"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="183" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-7A-Q1m">
+                                        <rect key="frame" x="64" y="319" width="284" height="20.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnw-fL-0qn">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX/25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSG-Z1-YHn">
+                                                <rect key="frame" x="236.66666666666671" y="0.0" width="47.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rat_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="k42-JI-iIi">
+                                        <rect key="frame" x="35" y="119" width="344" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="COJ-JK-Wbo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which animal is not used as a zodiac animal for Lunar New Year?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zus-mO-cmF">
+                                        <rect key="frame" x="15" y="24.999999999999996" width="384" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="k42-JI-iIi" firstAttribute="top" secondItem="zus-mO-cmF" secondAttribute="bottom" constant="53.329999999999998" id="5jD-gU-fiR"/>
+                                    <constraint firstItem="zus-mO-cmF" firstAttribute="top" secondItem="vH8-8i-pV1" secondAttribute="top" constant="25" id="5uC-Qh-suN"/>
+                                    <constraint firstAttribute="bottom" secondItem="5TD-7A-Q1m" secondAttribute="bottom" constant="67.670000000000002" id="KJD-Mj-0xe"/>
+                                    <constraint firstAttribute="trailing" secondItem="k42-JI-iIi" secondAttribute="trailing" constant="35" id="XZk-Bp-k4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="5TD-7A-Q1m" secondAttribute="trailing" constant="65.870000000000005" id="aVD-AI-9fA"/>
+                                    <constraint firstItem="zus-mO-cmF" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="15" id="eGV-df-nSA"/>
+                                    <constraint firstItem="5TD-7A-Q1m" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="64.129999999999995" id="hqN-ac-I8O"/>
+                                    <constraint firstAttribute="height" constant="407" id="lR6-Zh-igb"/>
+                                    <constraint firstItem="k42-JI-iIi" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="35" id="pXj-fy-Q0P"/>
+                                    <constraint firstItem="5TD-7A-Q1m" firstAttribute="top" secondItem="k42-JI-iIi" secondAttribute="bottom" constant="72" id="tKT-T9-bEI"/>
+                                    <constraint firstAttribute="trailing" secondItem="zus-mO-cmF" secondAttribute="trailing" constant="15" id="yQE-v1-E5R"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIf-zB-CXM" customClass="answerView">
+                                <rect key="frame" x="20" y="526" width="374" height="287"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-SA-Gi3">
+                                        <rect key="frame" x="15" y="15" width="344" height="257"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uaz-kI-1b4">
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="51.666666666666664"/>
+                                                <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="A. Horse">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerTapped:" destination="FCW-2V-JOb" eventType="touchUpInside" id="Cab-iZ-0Hu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKt-V7-aaq">
+                                                <rect key="frame" x="0.0" y="68.666666666666629" width="344" height="51.333333333333343"/>
+                                                <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="B. Pig">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerTapped:" destination="FCW-2V-JOb" eventType="touchUpInside" id="mcF-ag-1Qv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xon-SC-9r9">
+                                                <rect key="frame" x="0.0" y="137" width="344" height="51.666666666666657"/>
+                                                <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="C. Badger">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerTapped:" destination="FCW-2V-JOb" eventType="touchUpInside" id="Dab-mn-2ez"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97Z-Nb-WDl">
+                                                <rect key="frame" x="0.0" y="205.66666666666663" width="344" height="51.333333333333314"/>
+                                                <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="D. Mouse">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerTapped:" destination="FCW-2V-JOb" eventType="touchUpInside" id="cfT-6k-WyN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oCu-SA-Gi3" secondAttribute="trailing" constant="15" id="G6V-x9-zcg"/>
+                                    <constraint firstAttribute="bottom" secondItem="oCu-SA-Gi3" secondAttribute="bottom" constant="15" id="Mf1-AZ-Fqx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="287" id="O5f-xj-unC"/>
+                                    <constraint firstItem="oCu-SA-Gi3" firstAttribute="centerX" secondItem="CIf-zB-CXM" secondAttribute="centerX" id="Ut9-bK-cdJ"/>
+                                    <constraint firstItem="oCu-SA-Gi3" firstAttribute="top" secondItem="CIf-zB-CXM" secondAttribute="top" constant="15" id="VFp-jz-FoG"/>
+                                    <constraint firstItem="oCu-SA-Gi3" firstAttribute="leading" secondItem="CIf-zB-CXM" secondAttribute="leading" constant="15" id="Xm9-fp-m9C"/>
+                                    <constraint firstAttribute="height" constant="287" id="nTQ-Qc-3v0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NG8-SW-zY3" firstAttribute="trailing" secondItem="CIf-zB-CXM" secondAttribute="trailing" constant="20" id="2ha-IU-LVO"/>
+                            <constraint firstItem="vH8-8i-pV1" firstAttribute="trailing" secondItem="NG8-SW-zY3" secondAttribute="trailing" id="H5f-jO-Sa0"/>
+                            <constraint firstItem="CIf-zB-CXM" firstAttribute="leading" secondItem="NG8-SW-zY3" secondAttribute="leading" constant="20" id="TdT-9Z-ch6"/>
+                            <constraint firstItem="CIf-zB-CXM" firstAttribute="top" secondItem="vH8-8i-pV1" secondAttribute="bottom" constant="31" id="adC-3q-0l8"/>
+                            <constraint firstItem="NG8-SW-zY3" firstAttribute="bottom" secondItem="vH8-8i-pV1" secondAttribute="bottom" constant="367" id="iyt-Xr-Al4"/>
+                            <constraint firstItem="NG8-SW-zY3" firstAttribute="bottom" secondItem="CIf-zB-CXM" secondAttribute="bottom" constant="49" id="kDT-jP-xkb"/>
+                            <constraint firstItem="vH8-8i-pV1" firstAttribute="leading" secondItem="NG8-SW-zY3" secondAttribute="leading" id="q28-d1-V34"/>
+                            <constraint firstItem="vH8-8i-pV1" firstAttribute="top" secondItem="NG8-SW-zY3" secondAttribute="top" id="r0E-ou-rLv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NG8-SW-zY3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wJb-EQ-Pvi"/>
+                    <connections>
+                        <outlet property="image_q" destination="k42-JI-iIi" id="ewP-g1-m3d"/>
+                        <outlet property="optA" destination="Uaz-kI-1b4" id="I3m-A3-D9J"/>
+                        <outlet property="optB" destination="pKt-V7-aaq" id="JC6-qo-HCt"/>
+                        <outlet property="optC" destination="xon-SC-9r9" id="RUz-tR-Wrk"/>
+                        <outlet property="optD" destination="97Z-Nb-WDl" id="AHb-4a-0Ur"/>
+                        <outlet property="question" destination="zus-mO-cmF" id="7r9-ba-nMm"/>
+                        <outlet property="quizprogress" destination="wSG-Z1-YHn" id="vSg-vb-oi6"/>
+                        <outlet property="quizscore" destination="Fnw-fL-0qn" id="838-q6-Wjq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4b2-2f-sWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5440.579710144928" y="356.91964285714283"/>
         </scene>
         <!--EventOne-->
         <scene sceneID="lyD-RG-cxt">
@@ -1721,6 +1867,7 @@
         <image name="lantern" width="1903" height="1354"/>
         <image name="lanterns" width="1950" height="1300"/>
         <image name="paint" width="1950" height="1300"/>
+        <image name="rat_placeholder" width="626" height="250"/>
         <image name="titleLogo" width="2555" height="866"/>
         <image name="vancouverArtGallery" width="762" height="442"/>
     </resources>
