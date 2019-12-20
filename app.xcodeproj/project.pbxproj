@@ -116,14 +116,11 @@
 				AA0C8E4723A77CB100DF6F3A /* Utilities.swift */,
 				AA51441623A6B76A00C37465 /* Products */,
 				AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */,
-<<<<<<< HEAD
 				330AA3FA23AC4098001A1F5A /* PointsViewController.swift */,
-=======
 				AA667FDD23ABFA5800AB2014 /* FunStopViewController.swift */,
 				AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */,
 				AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */,
 				AA22232123AC4E8100D130C7 /* VanFunStopProgram.swift */,
->>>>>>> 707a88dd36b8ec3057a4b0b7f3b85a890bb39bd7
 			);
 			path = app;
 			sourceTree = "<group>";
