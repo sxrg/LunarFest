@@ -107,11 +107,11 @@ class PointsViewController: UIViewController {
         dbRef.child("users").child(userID).observe(.value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            self.points = (value?["point"] as? String?)!!
+          //  self.points = (value?["point"] as? String?)!!
                 
                 
                 
-            self.agreeToDraw = value?["agreeToDraw"] as! String
+//            self.agreeToDraw = value?["agreeToDraw"] as! String
             self.pointsInt = Int(self.points)!
             self.pointsText.text = self.points
         }) { (error) in
