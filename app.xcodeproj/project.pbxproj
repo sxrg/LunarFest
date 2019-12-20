@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330AA3FA23AC4098001A1F5A /* PointsViewController.swift */; };
 		6453B13223A6D86100D4AA28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453B13123A6D86100D4AA28 /* Login.swift */; };
 		6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */; };
 		64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467323A71B1F00F3B2C7 /* signup.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		19702F113D04929F56CFF686 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
+		330AA3FA23AC4098001A1F5A /* PointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
 		64E1467223A6F5B100F3B2C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				AA51441723A6B76A00C37465 /* app */,
-				AA51441623A6B76A00C37465 /* Products */,
 				B620E39F83C4AA77B9ACB25F /* Pods */,
 				9918273A59B198A96CD3C5D2 /* Frameworks */,
 			);
@@ -87,6 +88,7 @@
 				AA51441523A6B76A00C37465 /* app.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AA51441723A6B76A00C37465 /* app */ = {
@@ -104,7 +106,9 @@
 				AA51442323A6B76D00C37465 /* LaunchScreen.storyboard */,
 				AA51442623A6B76D00C37465 /* Info.plist */,
 				AA0C8E4723A77CB100DF6F3A /* Utilities.swift */,
+				AA51441623A6B76A00C37465 /* Products */,
 				AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */,
+				330AA3FA23AC4098001A1F5A /* PointsViewController.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -253,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */,
+				330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */,
 				64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */,
 				AA51441B23A6B76A00C37465 /* SceneDelegate.swift in Sources */,
 				64E1467623A8107100F3B2C7 /* page_location.swift in Sources */,
