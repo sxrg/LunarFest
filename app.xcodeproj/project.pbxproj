@@ -13,11 +13,15 @@
 		64E1467623A8107100F3B2C7 /* page_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467523A8107100F3B2C7 /* page_location.swift */; };
 		AA00DFF823AA2FAC00B87B64 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */; };
 		AA0C8E4823A77CB100DF6F3A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C8E4723A77CB100DF6F3A /* Utilities.swift */; };
+		AA22232223AC4E8100D130C7 /* VanFunStopProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA22232123AC4E8100D130C7 /* VanFunStopProgram.swift */; };
 		AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51441823A6B76A00C37465 /* AppDelegate.swift */; };
 		AA51441B23A6B76A00C37465 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51441A23A6B76A00C37465 /* SceneDelegate.swift */; };
 		AA51442023A6B76A00C37465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA51441E23A6B76A00C37465 /* Main.storyboard */; };
 		AA51442223A6B76D00C37465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA51442123A6B76D00C37465 /* Assets.xcassets */; };
 		AA51442523A6B76D00C37465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA51442323A6B76D00C37465 /* LaunchScreen.storyboard */; };
+		AA667FDE23ABFA5800AB2014 /* FunStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA667FDD23ABFA5800AB2014 /* FunStopViewController.swift */; };
+		AA667FE023AC420B00AB2014 /* FunStopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */; };
+		AA667FE223AC47F100AB2014 /* VanQRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */; };
 		AAF58B4623A6C0990098E626 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAF58B4523A6C0990098E626 /* GoogleService-Info.plist */; };
 		DF62017FE50BB5E9428FB764 /* Pods_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7854034B4AD6E2B5F428C313 /* Pods_app.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +37,7 @@
 		845A0CA8F628964B784DC35C /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
 		AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		AA0C8E4723A77CB100DF6F3A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AA22232123AC4E8100D130C7 /* VanFunStopProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanFunStopProgram.swift; sourceTree = "<group>"; };
 		AA51441523A6B76A00C37465 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA51441823A6B76A00C37465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA51441A23A6B76A00C37465 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +45,9 @@
 		AA51442123A6B76D00C37465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA51442423A6B76D00C37465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA51442623A6B76D00C37465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA667FDD23ABFA5800AB2014 /* FunStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunStopViewController.swift; sourceTree = "<group>"; };
+		AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunStopInfoViewController.swift; sourceTree = "<group>"; };
+		AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanQRCodeScanner.swift; sourceTree = "<group>"; };
 		AAF58B4523A6C0990098E626 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,10 @@
 				AA51442623A6B76D00C37465 /* Info.plist */,
 				AA0C8E4723A77CB100DF6F3A /* Utilities.swift */,
 				AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */,
+				AA667FDD23ABFA5800AB2014 /* FunStopViewController.swift */,
+				AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */,
+				AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */,
+				AA22232123AC4E8100D130C7 /* VanFunStopProgram.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -255,8 +267,12 @@
 				AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */,
 				64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */,
 				AA51441B23A6B76A00C37465 /* SceneDelegate.swift in Sources */,
+				AA22232223AC4E8100D130C7 /* VanFunStopProgram.swift in Sources */,
 				64E1467623A8107100F3B2C7 /* page_location.swift in Sources */,
+				AA667FE223AC47F100AB2014 /* VanQRCodeScanner.swift in Sources */,
+				AA667FDE23ABFA5800AB2014 /* FunStopViewController.swift in Sources */,
 				AA0C8E4823A77CB100DF6F3A /* Utilities.swift in Sources */,
+				AA667FE023AC420B00AB2014 /* FunStopInfoViewController.swift in Sources */,
 				AA00DFF823AA2FAC00B87B64 /* EventDetailViewController.swift in Sources */,
 				6453B13223A6D86100D4AA28 /* Login.swift in Sources */,
 			);
