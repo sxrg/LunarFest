@@ -11,20 +11,25 @@ class page_location: UIViewController {
     
     @IBOutlet weak var leading: NSLayoutConstraint!
     @IBOutlet weak var trailing: NSLayoutConstraint!
-    
     @IBOutlet weak var navbar: UINavigationItem!
+    @IBOutlet var myView: UIView!
     
     var menuOut = false
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Modifying appearance of the menu bar.
         setUpElements()
+        leading.constant = -460
+        trailing.constant = -150
+
     }
     
+    // tapping on 'Event' button on sidebar just shifts it back
     @IBAction func eventTapped(_ sender: Any) {
-        leading.constant = 0
-        trailing.constant = 0
+        leading.constant = -460
+        trailing.constant = -150
         menuOut = false
         
         UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
@@ -34,12 +39,12 @@ class page_location: UIViewController {
     
     @IBAction func menuTapped(_ sender: Any) {
         if (menuOut == false) {
-            leading.constant = 180
-            trailing.constant = -150
+            leading.constant = -200
+            trailing.constant = 40
             menuOut = true
         } else {
-            leading.constant = 0
-            trailing.constant = 0
+            leading.constant = -460
+            trailing.constant = -150
             menuOut = false
         }
         
@@ -55,7 +60,7 @@ class page_location: UIViewController {
         
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
         navigationController?.navigationBar.isTranslucent = false
-     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     
     }
