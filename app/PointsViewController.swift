@@ -1,73 +1,45 @@
-//
-//  PointsViewController.swift
-//  app
-//
-//  Created by Gina Kim on 2019-12-19.
-//
-
 import Foundation
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class PointsViewController: UIViewController {
-    
-    
-    var dbRef = Database.database().reference()
-    
-    var points = "0"
-    var pointsInt = 0
-    var agreeToDraw = "No"
-    var userID = ""
-    var qrValue = "0"
-    
 
-    @IBOutlet var pointsInfo: UILabel!
+class PointsViewController: UIViewController{
+    var dbRef = Database.database().reference()
+    var points = 0
+    var agreeToDraw = false
+    var userID = ""
+    var qrValue = ""
+    let userDefault = UserDefaults.standard
     @IBOutlet var btnRedeem: UIButton!
-    @IBOutlet var pointsText: UILabel!
-    override func viewDidLoad() {
-            super.viewDidLoad()
-        self.pointsInfo.layer.cornerRadius = 15
-            setUpElements()
-         
-        
-            //super.viewDidLoad()
-                   
-                   if(qrValue != "0"){
-                    checkQRCodeValue()
-                   }
-                   //Getting points to display on the points page
-                   getDBValue()
-               
-            if(agreeToDraw != "Yes" && pointsInt >= 150){
-                       checkForJoinDraw()
-                   }
-        
+        @IBOutlet var pointsText: UILabel!
+
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        setUpElements()
+        userID = Auth.auth().currentUser!.uid
+        if(qrValue != "0"){
+            checkQRCodeValue()
+        }
+        getUserPoints()
+    if(!agreeToDraw && points >= 150){
+        checkForJoinDraw()
+        }
     }
-    
+
     func setUpElements(){
         
         // Style the elements
         Utilities.styleHollowButton(btnRedeem)
     }
     
-    
-    
-    
-    // Add this to the AppDelegate.swift
-    // Database.database().isPersistenceEnabled = true
-    // Database.database().keepSynced(true)
-    
-
     func checkForJoinDraw(){
-//Alert User that they have 150 points
+    //Alert User that they have 150 points
         let alert = UIAlertController(title: "Congrats!", message: "You have earned 150 points, would you like to enter a draw for a Visa Gift Card?", preferredStyle: UIAlertController.Style.alert)
         
         //if user clicks Sure! a second alert is shown just to confirm
     
         alert.addAction(UIAlertAction(title: "Sure!", style: UIAlertAction.Style.default, handler: {(action) in self.confirm()}))
-        
-    
         alert.addAction(UIAlertAction(title: "No Thanks!", style: UIAlertAction.Style.default, handler:nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -80,66 +52,52 @@ class PointsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Nevermind!", style: UIAlertAction.Style.default, handler:nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    //Updating database with points
-    func UpdateDB(){
-        dbRef.child("users").child(userID).child("Points").setValue(String(pointsInt));
-    }
-    
-    
-    
-    //Clicking Redeem
-    @IBAction func openQRCodeScanner(sender: Any){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "QRCodeScanner")
-        //letting the controller know which view to go back to
-        //uncomment when done with implementation of QR Code Scanner
-       // controller.previousUIView = "MyPoints"
-        self.present(controller, animated: true, completion: nil)
-    }
-    
-    
-    //Get Database Value
-    func getDBValue()->Void{
-        dbRef = Database.database().reference()
-        //dbRef.keepSynced(true)
-        userID = Auth.auth().currentUser!.uid
-        dbRef.child("users").child(userID).observe(.value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-          //  self.points = (value?["point"] as? String?)!!
-                
-                
-                
-//            self.agreeToDraw = value?["agreeToDraw"] as! String
-            self.pointsInt = Int(self.points)!
-            self.pointsText.text = self.points
-        }) { (error) in
-                print(error.localizedDescription)
-        }
-    }
-    //Modify points according to the QRCode Values
-    func modifyPoints(value:Int, operation: String)-> Void{
-        getDBValue()
-        if(operation == "Minus"){
-            pointsInt = pointsInt - value
-            self.UpdateDB()
-        }
-        if(operation == "Add"){
-            pointsInt = pointsInt + value
-            self.UpdateDB()
-        }
-    }
-        
-    //Update database accroding to user respond
-    func addToDrawPool() -> Void{
-        dbRef.child("users").child(userID).child("agreeToDraw").setValue("Yes")
+    func addToDrawPool(){
+        dbRef.child("users").child(userID).child("agreeToDraw").setValue(agreeToDraw)
         self.modifyPoints(value: 150, operation: "Minus")
         self.UpdateDB()
     }
-        
-        
-    //check qr code value that user scanned
+    //Updating database with points
+    func UpdateDB(){
+        dbRef.child("users").child(userID).child("point").setValue(points);
+    dbRef.child("users").child(userID).child("JoinDraw").setValue(agreeToDraw);
+    }
+
+     //Uncomment when doen implementation of QR Code Scanner
+    //Clicking Redeem
+    @IBAction func openQRCodeScanner(sender: Any){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       // let controller = storyboard.instantiateViewController(withIdentifier: "QRCodeScanner") as! VanQRCodeScanner
+        //letting the controller know which view to go back to
+        //uncomment when done with implementation of QR Code Scanner
+        //controller.previousUIView = "MyPoints"
+       // self.present(controller, animated: true, completion: nil)
+    }
+
+    
+    func getUserPoints(){
+        self.points = userDefault.integer(forKey: "points")
+    self.agreeToDraw = (userDefault.bool(forKey: "agreeToDraw"))
+    UpdateUI()
+    }
+
+    func modifyPoints(value:Int, operation: String)-> Void{
+        if(operation == "Minus"){
+            self.points = self.points - value
+       
+        }
+        if(operation == "Add"){
+            self.points = self.points + value
+        }
+    UpdateDB()
+    UpdateUI();
+    
+    }
+    func UpdateUI(){
+    self.pointsText.text = String(self.points)
+        userDefault.set(self.points, forKey: "points")
+        userDefault.set(self.agreeToDraw, forKey: "agreeToDraw")
+    }
     func checkQRCodeValue() -> Void{
         switch qrValue{
             case "A_5PT":
@@ -168,5 +126,11 @@ class PointsViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+
+    override func viewWillDisappear(_ animated: Bool){
+    super.viewWillDisappear(animated)
+        self.UpdateDB()
+    
     }
+}
 

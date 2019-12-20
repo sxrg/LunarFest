@@ -39,8 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 Messaging.messaging().delegate = self
                 application.registerForRemoteNotifications()
         
-               FirebaseApp.configure()
-                Database.database().isPersistenceEnabled = true
+               FirebaseApp.configure() 
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
