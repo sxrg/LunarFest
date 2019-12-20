@@ -197,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="2890" y="130"/>
         </scene>
-        <!--Page location-->
+        <!--Events-->
         <scene sceneID="ZeH-IZ-MDb">
             <objects>
                 <viewController id="gww-K7-P2U" customClass="page_location" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,145 +205,164 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4U-kg-3f4">
-                                <rect key="frame" x="20" y="160" width="41" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Map">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-WO-AAu">
-                                <rect key="frame" x="20" y="106" width="64" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Events">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="eventTapped:" destination="gww-K7-P2U" eventType="touchUpInside" id="CHa-Q4-NA8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbR-9B-Jsc">
-                                <rect key="frame" x="20" y="270" width="142" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="LunarFest Quiz">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qna-0c-kUT">
-                                <rect key="frame" x="20" y="326" width="93" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="My Points">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhO-bj-ked">
-                                <rect key="frame" x="20" y="214" width="80" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="FunStop">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YJm-NG-yJQ" kind="show" id="Qec-z2-UdY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-Js-9Mw">
-                                <rect key="frame" x="20" y="380" width="58" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEd-EU-DFK">
-                                <rect key="frame" x="0.0" y="44" width="320" height="558"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nei-e6-XgQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6V-rz-OFf">
-                                        <rect key="frame" x="196.5" y="36" width="113.5" height="72"/>
-                                        <fontDescription key="fontDescription" name="PostNoBillsColombo-Light" family="Post No Bills Colombo" pointSize="48"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-mD-xPr">
-                                        <rect key="frame" x="176" y="130" width="46" height="30"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gy-f6-kYa">
+                                        <rect key="frame" x="37" y="31" width="352" height="719"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dd-yb-JRZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="348" height="1128"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekV-LD-jmo">
+                                                        <rect key="frame" x="8" y="8" width="332" height="167"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <state key="normal" title="EVENT" backgroundImage="lantern"/>
+                                                        <connections>
+                                                            <segue destination="edk-ca-EZu" kind="show" id="IZG-6H-xLV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3H-in-om2">
+                                                        <rect key="frame" x="8" y="183" width="332" height="167"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <state key="normal" title="EVENT" backgroundImage="lantern"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-Mr-CJ4">
+                                                        <rect key="frame" x="8" y="358" width="332" height="167"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <state key="normal" title="EVENT" backgroundImage="lantern"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYt-mk-JEd">
+                                                        <rect key="frame" x="8" y="533" width="332" height="167"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <state key="normal" title="EVENT" backgroundImage="lantern"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpf-Tr-aIg">
+                                                        <rect key="frame" x="8" y="708" width="332" height="167"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <state key="normal" title="EVENT" backgroundImage="lantern"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khz-lA-Oaw">
+                                                        <rect key="frame" x="8" y="883" width="332" height="167"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <state key="normal" title="EVENT" backgroundImage="lantern"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1128" id="gHu-jM-FuN"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0dd-yb-JRZ" secondAttribute="trailing" id="4wJ-BB-27p"/>
+                                            <constraint firstItem="0dd-yb-JRZ" firstAttribute="top" secondItem="0Gy-f6-kYa" secondAttribute="top" id="9Hh-Ko-chD"/>
+                                            <constraint firstItem="0dd-yb-JRZ" firstAttribute="leading" secondItem="0Gy-f6-kYa" secondAttribute="leading" id="ByZ-gX-zuJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="0dd-yb-JRZ" secondAttribute="bottom" id="Fr7-ql-uBA"/>
+                                            <constraint firstItem="0dd-yb-JRZ" firstAttribute="width" secondItem="0Gy-f6-kYa" secondAttribute="width" id="zWX-e1-ihJ"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0Gy-f6-kYa" secondAttribute="bottom" constant="58" id="DCA-tf-0fR"/>
+                                    <constraint firstItem="0Gy-f6-kYa" firstAttribute="top" secondItem="nei-e6-XgQ" secondAttribute="top" constant="31" id="i9b-eM-xCj"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Gy-f6-kYa" secondAttribute="trailing" constant="29" id="oaK-X2-6yM"/>
+                                    <constraint firstItem="0Gy-f6-kYa" firstAttribute="leading" secondItem="nei-e6-XgQ" secondAttribute="leading" constant="37" id="wPr-YH-08N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-zQ-mJ2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-sb-N9U">
+                                        <rect key="frame" x="245" y="204" width="41" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="edk-ca-EZu" kind="show" id="BHO-iA-VV5"/>
-                                        </connections>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0v-HJ-g2S">
-                                        <rect key="frame" x="176" y="181" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-qx-7OQ">
+                                        <rect key="frame" x="245" y="83" width="64" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="ysm-qP-NB5" kind="show" id="XkD-el-1Z4"/>
-                                        </connections>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Events">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcL-Pj-l24">
-                                        <rect key="frame" x="184" y="226" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-g1-Pxb">
+                                        <rect key="frame" x="245" y="263" width="142" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="FDG-ND-1RT" kind="show" id="BBW-0I-DmX"/>
-                                        </connections>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="LunarFest Quiz">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVD-JU-bx3">
-                                        <rect key="frame" x="184" y="278" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-MF-YGX">
+                                        <rect key="frame" x="245" y="320" width="93" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="G3B-XC-6Mp" kind="show" id="GN0-RE-5ZX"/>
-                                        </connections>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="My Points">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-Q2-sx2">
-                                        <rect key="frame" x="184" y="325" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-HI-l0H">
+                                        <rect key="frame" x="245" y="144" width="80" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="LlA-QK-kMy" kind="show" id="ffa-i1-w5N"/>
-                                        </connections>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="FunStop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-Rq-8lA">
-                                        <rect key="frame" x="184" y="375" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9p-EQ-zdD">
+                                        <rect key="frame" x="245" y="384" width="58" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="v5n-tL-b2o" kind="show" id="1Gn-di-Dsq"/>
-                                        </connections>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="About">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="C6V-rz-OFf" secondAttribute="trailing" constant="10" id="Oh5-AX-w3u"/>
-                                    <constraint firstItem="C6V-rz-OFf" firstAttribute="top" secondItem="mEd-EU-DFK" secondAttribute="top" constant="36" id="Z0E-KB-YJN"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mEd-EU-DFK" firstAttribute="top" secondItem="DW3-69-Iww" secondAttribute="top" id="34d-m9-vTm"/>
-                            <constraint firstItem="mEd-EU-DFK" firstAttribute="leading" secondItem="DW3-69-Iww" secondAttribute="leading" id="OFn-Yd-mKp" userLabel="Leading"/>
-                            <constraint firstItem="DW3-69-Iww" firstAttribute="trailing" secondItem="mEd-EU-DFK" secondAttribute="trailing" id="XEx-1p-NsK" userLabel="Trailing"/>
-                            <constraint firstItem="mEd-EU-DFK" firstAttribute="bottom" secondItem="DW3-69-Iww" secondAttribute="bottom" constant="34" id="a7a-8x-5F7"/>
+                            <constraint firstItem="HoU-zQ-mJ2" firstAttribute="width" secondItem="NZ8-gU-hea" secondAttribute="width" id="Ap7-qN-CJa"/>
+                            <constraint firstItem="DW3-69-Iww" firstAttribute="trailing" secondItem="HoU-zQ-mJ2" secondAttribute="trailing" id="FLE-sn-xNG"/>
+                            <constraint firstItem="HoU-zQ-mJ2" firstAttribute="leading" secondItem="DW3-69-Iww" secondAttribute="leading" id="Iqx-LU-VXk"/>
+                            <constraint firstItem="HoU-zQ-mJ2" firstAttribute="top" secondItem="DW3-69-Iww" secondAttribute="top" id="S7D-gZ-Ffq"/>
+                            <constraint firstItem="nei-e6-XgQ" firstAttribute="top" secondItem="DW3-69-Iww" secondAttribute="top" id="mM1-36-Aqr"/>
+                            <constraint firstAttribute="bottom" secondItem="nei-e6-XgQ" secondAttribute="bottom" id="mQQ-EI-rLD"/>
+                            <constraint firstItem="HoU-zQ-mJ2" firstAttribute="bottom" secondItem="DW3-69-Iww" secondAttribute="bottom" constant="34" id="mSU-I8-XI3"/>
+                            <constraint firstItem="nei-e6-XgQ" firstAttribute="leading" secondItem="DW3-69-Iww" secondAttribute="leading" id="xfq-pM-o9b"/>
+                            <constraint firstItem="nei-e6-XgQ" firstAttribute="trailing" secondItem="DW3-69-Iww" secondAttribute="trailing" id="zil-g4-09u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DW3-69-Iww"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jgw-1b-e7q">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="text.justify" catalog="system" id="X9G-np-WlY">
+                    <navigationItem key="navigationItem" title="Events" id="e4U-Sc-ARm">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="text.justify" catalog="system" id="tKQ-jl-eHS">
                             <connections>
                                 <action selector="menuTapped:" destination="gww-K7-P2U" id="gL5-IE-xVV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="leading" destination="OFn-Yd-mKp" id="ibF-5E-3jN"/>
-                        <outlet property="navbar" destination="jgw-1b-e7q" id="181-r9-TVT"/>
-                        <outlet property="trailing" destination="XEx-1p-NsK" id="jgi-xp-eIT"/>
+                        <outlet property="leading" destination="Iqx-LU-VXk" id="lN0-zd-QAX"/>
+                        <outlet property="myView" destination="HoU-zQ-mJ2" id="qEN-vK-UVX"/>
+                        <outlet property="navbar" destination="e4U-Sc-ARm" id="WHo-nb-Zng"/>
+                        <outlet property="trailing" destination="FLE-sn-xNG" id="uOf-hU-05h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAs-Q6-phh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2561,6 +2580,7 @@
         <image name="icons8-camera-60" width="60" height="60"/>
         <image name="icons8-marker-50" width="50" height="50"/>
         <image name="stop.fill" catalog="system" width="64" height="56"/>
+        <image name="lantern" width="1903" height="1354"/>
         <image name="text.justify" catalog="system" width="64" height="50"/>
         <image name="titleLogo" width="2555" height="866"/>
         <image name="vancouverArtGallery" width="762" height="442"/>
