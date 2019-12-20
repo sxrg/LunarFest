@@ -35,4 +35,25 @@ class Utilities {
         button.layer.cornerRadius = 10.0
         button.tintColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0)
     }
+    
+    static func styleRoundedCorners(_ button:UIButton){
+
+        // Hollow rounded corner style
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0).cgColor
+        button.layer.cornerRadius = 10.0
+        button.tintColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0)
+    }
+    
+    static func xAxisShadow(_ myView:UIView) {
+        
+        myView.layer.shadowPath =
+              UIBezierPath(roundedRect: myView.bounds,
+              cornerRadius: myView.layer.cornerRadius).cgPath
+        myView.layer.shadowColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
+        myView.layer.shadowOpacity = 0.3
+        myView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        myView.layer.shadowRadius = 10
+        myView.layer.masksToBounds = false
+    }
 }

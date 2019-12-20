@@ -27,7 +27,18 @@ class page_location: UIViewController {
     }
     
     // tapping on 'Event' button on sidebar just shifts it back
-    @IBAction func eventTapped(_ sender: Any) {
+//    @IBAction func eventTapped(_ sender: Any) {
+//        leading.constant = -460
+//        trailing.constant = -150
+//        menuOut = false
+//
+//        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
+//            self.view.layoutIfNeeded()
+//        })
+//    }
+    
+    
+    @IBAction func eventTapped2(_ sender: UIButton) {
         leading.constant = -460
         trailing.constant = -150
         menuOut = false
@@ -55,13 +66,14 @@ class page_location: UIViewController {
     }
     
     func setUpElements(){
-        // Style the elements
-        //Utilities.styleTextField(emailField)
-        
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
+        // Styling the elements specific to
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        
+        // General styling
+        Utilities.xAxisShadow(myView)
     
     }
 }

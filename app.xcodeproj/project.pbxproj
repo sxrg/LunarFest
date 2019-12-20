@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6453B13223A6D86100D4AA28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453B13123A6D86100D4AA28 /* Login.swift */; };
 		6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */; };
+		64A1791C23AD4FD500DDFE40 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */; };
 		64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467323A71B1F00F3B2C7 /* signup.swift */; };
 		64E1467623A8107100F3B2C7 /* page_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467523A8107100F3B2C7 /* page_location.swift */; };
 		AA00DFF823AA2FAC00B87B64 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */; };
@@ -26,6 +27,7 @@
 		19702F113D04929F56CFF686 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
+		64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		64E1467223A6F5B100F3B2C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		64E1467323A71B1F00F3B2C7 /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
 		64E1467523A8107100F3B2C7 /* page_location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = page_location.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		6460E3D523A6ED4B00F75CB0 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */,
 				6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */,
 			);
 			path = fonts;
@@ -182,6 +185,7 @@
 				6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */,
 				AAF58B4623A6C0990098E626 /* GoogleService-Info.plist in Resources */,
 				AA51442223A6B76D00C37465 /* Assets.xcassets in Resources */,
+				64A1791C23AD4FD500DDFE40 /* OpenSans-Regular.ttf in Resources */,
 				AA51442023A6B76A00C37465 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

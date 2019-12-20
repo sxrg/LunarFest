@@ -33,6 +33,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>OpenSans-Regular.ttf</string>
 		<string>postnobillscolombo-light.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
