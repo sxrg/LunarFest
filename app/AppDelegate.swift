@@ -13,7 +13,7 @@ import UserNotifications
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     let gcmMessageIDKey = "gcm.message_id"
@@ -23,64 +23,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
          //Override point for customization after application launch.
         
-                if #available(iOS 10.0, *) {
-                  // For iOS 10 display notification (sent via APNS)
-                  UNUserNotificationCenter.current().delegate = self
-        
-                  let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-                  UNUserNotificationCenter.current().requestAuthorization(
-                    options: authOptions,
-                    completionHandler: {_, _ in })
-                } else {
-                  let settings: UIUserNotificationSettings =
-                  UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-                  application.registerUserNotificationSettings(settings)
-                }
-                Messaging.messaging().delegate = self
-                application.registerForRemoteNotifications()
+//                if #available(iOS 10.0, *) {
+//                  // For iOS 10 display notification (sent via APNS)
+//                  UNUserNotificationCenter.current().delegate = self
+//
+//                  let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+//                  UNUserNotificationCenter.current().requestAuthorization(
+//                    options: authOptions,
+//                    completionHandler: {_, _ in })
+//                } else {
+//                  let settings: UIUserNotificationSettings =
+//                  UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+//                  application.registerUserNotificationSettings(settings)
+//                }
+//                Messaging.messaging().delegate = self
+//                application.registerForRemoteNotifications()
         
                FirebaseApp.configure()
-                Database.database().isPersistenceEnabled = true
+//                Database.database().isPersistenceEnabled = true
         
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+       GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
 
         return true
     }
+    //mine
+   func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+       -> Bool {
+         return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-      // ...
-      if let error = error {
-        print(error.localizedDescription)
-        return
-      } else {
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-        Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
-            if error == nil {
-                self.userDefault.set(true, forKey: "usersignedin")
-                self.userDefault.synchronize()
-                self.window?.rootViewController?.performSegue(withIdentifier: "Segue_To_Signin", sender: nil)
-            } else {
-                print(error?.localizedDescription)
-            }
-        }
-        }
-    }
+    
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//      // ...
+//      if let error = error {
+//        print(error.localizedDescription)
+//        return
+//      } else {
+//        guard let authentication = user.authentication else { return }
+//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//        Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
+//            if error == nil {
+//                self.userDefault.set(true, forKey: "usersignedin")
+//                self.userDefault.synchronize()
+//                self.window?.rootViewController?.performSegue(withIdentifier: "Segue_To_Signin", sender: nil)
+//            } else {
+//                print(error?.localizedDescription)
+//            }
+//        }
+//        }
+//    }
     
 //    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 //        return GIDSignIn.sharedInstance().handle(url)
 //    }
     
-    @available(iOS 9.0, *)
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
-      -> Bool {
-      return GIDSignIn.sharedInstance().handle(url)
-    }
+
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
-    }
+//    @available(iOS 9.0, *)
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+//      -> Bool {
+//      return GIDSignIn.sharedInstance().handle(url)
+//    }
+    
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return GIDSignIn.sharedInstance().handle(url)
+//    }
 
     // MARK: UISceneSession Lifecycle
 

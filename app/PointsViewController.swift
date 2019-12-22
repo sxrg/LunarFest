@@ -15,8 +15,8 @@ class PointsViewController: UIViewController {
     
     var dbRef = Database.database().reference()
     
-    var points = "0"
-    var pointsInt = 0
+    var points = "150"
+    var pointsInt = 150
     var agreeToDraw = "No"
     var userID = ""
     var qrValue = "0"

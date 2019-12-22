@@ -143,6 +143,14 @@
                                     <action selector="signup:" destination="KqN-rA-ERi" eventType="touchUpInside" id="lY0-d1-eJK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PU-ak-uXM">
+                                <rect key="frame" x="99" y="558" width="208" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="googleLoginButton:" destination="Zmg-Pf-rD7" eventType="touchUpInside" id="Px6-mp-DWQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -176,6 +184,7 @@
                     <connections>
                         <outlet property="btnSubmit" destination="NUa-tu-EhV1" id="9qc-nR-Ooz"/>
                         <outlet property="emailField" destination="j8R-oF-y58" id="X9a-rS-l9c"/>
+                        <outlet property="googleButton" destination="1PU-ak-uXM" id="1oY-0K-gps"/>
                         <outlet property="passwordField" destination="7D6-wQ-1ls" id="D5D-zv-nMk"/>
                     </connections>
                 </viewController>
@@ -1837,13 +1846,13 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-Cj-HsE">
                                                 <rect key="frame" x="30" y="109.99999999999997" width="354" height="365.33333333333326"/>
-                                                <mutableString key="text">Founded in March 2004, Asian-Canadian Special Events Association (ACSEA) continues to create sustainable projects in the areas of arts and culture, working with partners across British Columbia, Canada, and internationally following a threefold mandate:
+                                                <string key="text">Founded in March 2004, Asian-Canadian Special Events Association (ACSEA) continues to create sustainable projects in the areas of arts and culture, working with partners across British Columbia, Canada, and internationally following a threefold mandate:
 
 1. Community Engagement 
 2. Fostering New Artistic and Cultural Expressions
 3. Platform to Learn and Share
 
-ACSEA’s signature events are spread throughout the year: the end of winter LunarFest, end of summer TAIWANfest and IPACI, and finally a brand new event in partnership with Canadian Heritage and Canada 150, We Are Canadians, Too!</mutableString>
+ACSEA’s signature events are spread throughout the year: the end of winter LunarFest, end of summer TAIWANfest and IPACI, and finally a brand new event in partnership with Canadian Heritage and Canada 150, We Are Canadians, Too!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
