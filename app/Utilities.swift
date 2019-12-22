@@ -35,4 +35,14 @@ class Utilities {
         button.layer.cornerRadius = 10.0
         button.tintColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0)
     }
+    
+//    static func styleRoundLabel(_ label:UILabel){
+//        
+//        // Rounded corner style
+//        label.layer.borderWidth = 2
+//        label.layer.borderColor = UIColor(red: 46/255.0, green: 44/255.0, blue: 71/255.0, alpha: 1.0).cgColor
+//        label.layer.cornerRadius = 15.0
+//        label.tintColor = UIColor(red: 46/255.0, green: 44/255.0, blue: 71/255.0, alpha: 1.0)
+//    }
+    
 }
