@@ -83,14 +83,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-0f-PaR">
-                                <rect key="frame" x="48" y="5" width="318" height="225"/>
+                                <rect key="frame" x="48" y="5" width="224" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="318" id="6tu-uJ-x1o"/>
                                     <constraint firstAttribute="height" constant="225" id="wwT-Km-wBH"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7D6-wQ-1ls">
-                                <rect key="frame" x="30" y="336.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="336.5" width="260" height="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -108,7 +108,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8R-oF-y58">
-                                <rect key="frame" x="30" y="258.5" width="354" height="35"/>
+                                <rect key="frame" x="30" y="258.5" width="260" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="DuI-qR-Z0T"/>
                                 </constraints>
@@ -117,7 +117,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orw-Zv-DHC" customClass="GIDSignInButton">
-                                <rect key="frame" x="89" y="406.5" width="236" height="36"/>
+                                <rect key="frame" x="89" y="406.5" width="142" height="36"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="236" id="Xxx-OY-kSY"/>
@@ -125,19 +125,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By using the app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxn-hg-Tsa">
-                                <rect key="frame" x="39" y="510" width="336" height="16"/>
+                                <rect key="frame" x="39" y="510" width="242" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you agree to receive emails from ACSEA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlU-AB-FkX">
-                                <rect key="frame" x="15" y="532" width="384" height="16"/>
+                                <rect key="frame" x="15" y="532" width="290" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-tu-EhV1">
-                                <rect key="frame" x="15" y="450" width="384" height="50"/>
+                                <rect key="frame" x="15" y="450" width="290" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AFu-BJ-AjP"/>
                                 </constraints>
@@ -293,65 +293,69 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-zQ-mJ2">
                                 <rect key="frame" x="0.0" y="44" width="320" height="558"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-sb-N9U">
-                                        <rect key="frame" x="226" y="190" width="42" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <state key="normal" title="Map">
-                                            <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-qx-7OQ">
-                                        <rect key="frame" x="226" y="94" width="62" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <state key="normal" title="Events">
-                                            <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="eventTapped2:" destination="gww-K7-P2U" eventType="touchUpInside" id="Bfz-Qo-2Vc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-g1-Pxb">
-                                        <rect key="frame" x="226" y="238" width="140" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <state key="normal" title="LunarFest Quiz">
-                                            <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="FCW-2V-JOb" kind="show" id="kXg-1I-i9K"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-MF-YGX">
-                                        <rect key="frame" x="226" y="286" width="92" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <state key="normal" title="My Points">
-                                            <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-HI-l0H">
-                                        <rect key="frame" x="226" y="142" width="78" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <state key="normal" title="FunStop">
-                                            <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="YJm-NG-yJQ" kind="show" id="ekP-HH-72M"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9p-EQ-zdD">
-                                        <rect key="frame" x="226" y="334" width="57" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <state key="normal" title="About">
-                                            <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-f7-zGx">
+                                        <rect key="frame" x="155" y="94" width="140" height="290"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-qx-7OQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="eventTapped2:" destination="gww-K7-P2U" eventType="touchUpInside" id="Bfz-Qo-2Vc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-HI-l0H">
+                                                <rect key="frame" x="0.0" y="48.5" width="78" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                <state key="normal" title="FunStop">
+                                                    <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="YJm-NG-yJQ" kind="show" id="ekP-HH-72M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-sb-N9U">
+                                                <rect key="frame" x="0.0" y="97" width="42" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                <state key="normal" title="Map">
+                                                    <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92w-g1-Pxb">
+                                                <rect key="frame" x="0.0" y="145.5" width="140" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                <state key="normal" title="LunarFest Quiz">
+                                                    <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="FCW-2V-JOb" kind="show" id="kXg-1I-i9K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-MF-YGX">
+                                                <rect key="frame" x="0.0" y="194" width="92" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                <state key="normal" title="My Points">
+                                                    <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9p-EQ-zdD">
+                                                <rect key="frame" x="0.0" y="242.5" width="57" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                <state key="normal" title="About">
+                                                    <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="h2L-f7-zGx" secondAttribute="bottom" constant="174" id="P8K-1q-fcP"/>
+                                    <constraint firstItem="h2L-f7-zGx" firstAttribute="top" secondItem="HoU-zQ-mJ2" secondAttribute="top" constant="94" id="Xhz-Fl-3K8"/>
+                                    <constraint firstAttribute="trailing" secondItem="h2L-f7-zGx" secondAttribute="trailing" constant="25" id="yQ4-WV-fGJ"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="tag">
                                         <integer key="value" value="1"/>
@@ -395,13 +399,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAs-Q6-phh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="okN-WZ-nhj">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
             </objects>
-            <point key="canvasLocation" x="4246.875" y="357.04225352112678"/>
+            <point key="canvasLocation" x="4446" y="335"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="8W1-hh-SaC">
@@ -412,19 +411,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH8-8i-pV1" customClass="questionView">
-                                <rect key="frame" x="0.0" y="44" width="320" height="407.5"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="157"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="183" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-7A-Q1m">
-                                        <rect key="frame" x="64" y="319.5" width="190" height="20.5"/>
+                                        <rect key="frame" x="25" y="319.5" width="270" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnw-fL-0qn">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="260" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Score: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnw-fL-0qn">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="XX/25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSG-Z1-YHn">
-                                                <rect key="frame" x="183" y="0.0" width="7" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSG-Z1-YHn">
+                                                <rect key="frame" x="236.5" y="0.0" width="33.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -446,13 +445,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5TD-7A-Q1m" secondAttribute="trailing" constant="25" id="3Dy-qX-1Or"/>
                                     <constraint firstItem="k42-JI-iIi" firstAttribute="top" secondItem="zus-mO-cmF" secondAttribute="bottom" constant="53.329999999999998" id="5jD-gU-fiR"/>
                                     <constraint firstItem="zus-mO-cmF" firstAttribute="top" secondItem="vH8-8i-pV1" secondAttribute="top" constant="25" id="5uC-Qh-suN"/>
+                                    <constraint firstItem="5TD-7A-Q1m" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="25" id="Cgd-2p-jF2"/>
                                     <constraint firstAttribute="bottom" secondItem="5TD-7A-Q1m" secondAttribute="bottom" constant="67.670000000000002" id="KJD-Mj-0xe"/>
                                     <constraint firstAttribute="trailing" secondItem="k42-JI-iIi" secondAttribute="trailing" constant="35" id="XZk-Bp-k4l"/>
-                                    <constraint firstAttribute="trailing" secondItem="5TD-7A-Q1m" secondAttribute="trailing" constant="65.870000000000005" id="aVD-AI-9fA"/>
                                     <constraint firstItem="zus-mO-cmF" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="15" id="eGV-df-nSA"/>
-                                    <constraint firstItem="5TD-7A-Q1m" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="64.129999999999995" id="hqN-ac-I8O"/>
                                     <constraint firstAttribute="height" constant="407" id="lR6-Zh-igb"/>
                                     <constraint firstItem="k42-JI-iIi" firstAttribute="leading" secondItem="vH8-8i-pV1" secondAttribute="leading" constant="35" id="pXj-fy-Q0P"/>
                                     <constraint firstItem="5TD-7A-Q1m" firstAttribute="top" secondItem="k42-JI-iIi" secondAttribute="bottom" constant="72" id="tKT-T9-bEI"/>
@@ -460,7 +459,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIf-zB-CXM" customClass="answerView">
-                                <rect key="frame" x="20" y="482.5" width="280" height="287"/>
+                                <rect key="frame" x="20" y="232" width="280" height="287"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-SA-Gi3">
                                         <rect key="frame" x="15" y="15" width="250" height="257"/>
