@@ -125,6 +125,7 @@ class signup: UIViewController, GIDSignInDelegate {
         }
     }
 
+    
     func moveToLocationMenu(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let locationMenu = storyBoard.instantiateViewController(withIdentifier: "page_location")

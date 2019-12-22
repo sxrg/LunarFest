@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KqN-rA-ERi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KqN-rA-ERi">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -192,6 +192,70 @@
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="129.91071428571428"/>
         </scene>
+        <!--Select City-->
+        <scene sceneID="m8G-is-aKh">
+            <objects>
+                <viewController id="Qwk-XZ-mDP" customClass="SelectCity" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lkk-dl-kXe" customClass="SelectCity" customModule="app" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pou-zF-9rs">
+                                <rect key="frame" x="48" y="49" width="224" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="TLs-V6-GhU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NS-Qa-Yqj">
+                                <rect key="frame" x="14" y="282" width="292" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Maz-Xg-6Fj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Vancouver">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.71764705880000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignup:" destination="Zmg-Pf-rD7" eventType="touchUpInside" id="a7J-nJ-K0p"/>
+                                    <action selector="signup:" destination="KqN-rA-ERi" eventType="touchUpInside" id="Z9u-hy-0Cu"/>
+                                    <segue destination="gww-K7-P2U" kind="show" id="quL-db-FQL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-K6-bla">
+                                <rect key="frame" x="14" y="340" width="292" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="67d-8m-n47"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Toronto">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.71764705880000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignup:" destination="Zmg-Pf-rD7" eventType="touchUpInside" id="Qx4-3L-EyW"/>
+                                    <action selector="signup:" destination="KqN-rA-ERi" eventType="touchUpInside" id="Z4h-bq-cmg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18527990580000001" green="0.16953071950000001" blue="0.28628683090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8NS-Qa-Yqj" firstAttribute="leading" secondItem="5EU-MZ-KlO" secondAttribute="leading" constant="14" id="66B-pF-3FH"/>
+                            <constraint firstItem="8M3-K6-bla" firstAttribute="leading" secondItem="5EU-MZ-KlO" secondAttribute="leading" constant="14" id="8mK-Jv-gly"/>
+                            <constraint firstItem="pou-zF-9rs" firstAttribute="leading" secondItem="5EU-MZ-KlO" secondAttribute="leading" constant="48" id="9SE-Bd-6AA"/>
+                            <constraint firstItem="5EU-MZ-KlO" firstAttribute="trailing" secondItem="8M3-K6-bla" secondAttribute="trailing" constant="14" id="LJe-Lu-7bQ"/>
+                            <constraint firstItem="8NS-Qa-Yqj" firstAttribute="top" secondItem="pou-zF-9rs" secondAttribute="bottom" constant="8" id="NN1-Ka-cjz"/>
+                            <constraint firstItem="pou-zF-9rs" firstAttribute="centerX" secondItem="8NS-Qa-Yqj" secondAttribute="centerX" id="NhG-dt-MQh"/>
+                            <constraint firstItem="8M3-K6-bla" firstAttribute="top" secondItem="8NS-Qa-Yqj" secondAttribute="bottom" constant="8" id="SMz-5J-r1g"/>
+                            <constraint firstItem="5EU-MZ-KlO" firstAttribute="trailing" secondItem="8NS-Qa-Yqj" secondAttribute="trailing" constant="14" id="Yhh-uc-uq7"/>
+                            <constraint firstItem="pou-zF-9rs" firstAttribute="top" secondItem="5EU-MZ-KlO" secondAttribute="top" constant="5" id="jOB-dt-d8Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5EU-MZ-KlO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2qM-R8-PRU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXQ-gl-dn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735" y="-305"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="OX1-3h-9f0">
             <objects>
@@ -203,7 +267,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gww-K7-P2U" kind="relationship" relationship="rootViewController" id="07R-Ko-YWP"/>
+                        <segue destination="Qwk-XZ-mDP" kind="relationship" relationship="rootViewController" id="0Yv-ef-DzY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfp-py-yt7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -330,6 +394,9 @@
                                         <state key="normal" title="My Points">
                                             <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="jhu-Zg-Xlu" kind="show" id="kI0-IO-lhx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-HI-l0H">
                                         <rect key="frame" x="226" y="142" width="78" height="40"/>
@@ -349,6 +416,9 @@
                                         <state key="normal" title="About">
                                             <color key="titleColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rz4-dM-Ncp" kind="show" id="Sgf-3g-Ylq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -401,7 +471,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </objects>
-            <point key="canvasLocation" x="4246.875" y="357.04225352112678"/>
+            <point key="canvasLocation" x="4770" y="377"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="8W1-hh-SaC">
@@ -2762,10 +2832,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Rk-uue">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qa-4z-ABH">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A2-gI-MZc">
                                                 <rect key="frame" x="30" y="40" width="120" height="28"/>
@@ -2888,7 +2958,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zR-jt-3aB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-05-zvS">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1240"/>
