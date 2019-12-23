@@ -177,6 +177,7 @@ class signup: UIViewController, GIDSignInUIDelegate{
 extension signup: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("Did sign in with google")
+        moveToLocationMenu()
     }
     
     
