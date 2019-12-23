@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KqN-rA-ERi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KqN-rA-ERi">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,14 +107,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orw-Zv-DHC" customClass="GIDSignInButton">
-                                <rect key="frame" x="89" y="460.66666666666669" width="236" height="36"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="Xxx-OY-kSY"/>
-                                    <constraint firstAttribute="height" constant="36" id="ryH-Dm-21o"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By using the app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxn-hg-Tsa">
                                 <rect key="frame" x="39" y="789" width="336" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -143,10 +135,11 @@
                                     <action selector="signup:" destination="KqN-rA-ERi" eventType="touchUpInside" id="lY0-d1-eJK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PU-ak-uXM">
-                                <rect key="frame" x="99" y="558" width="208" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PU-ak-uXM">
+                                <rect key="frame" x="30" y="474.66666666666669" width="354" height="33"/>
+                                <color key="backgroundColor" red="0.79372423889999999" green="0.31132704020000002" blue="0.25094783310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Sign In With Google"/>
                                 <connections>
                                     <action selector="googleLoginButton:" destination="Zmg-Pf-rD7" eventType="touchUpInside" id="Px6-mp-DWQ"/>
                                 </connections>
@@ -154,21 +147,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="orw-Zv-DHC" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="89" id="07d-jb-drp"/>
+                            <constraint firstItem="1PU-ak-uXM" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="30" id="6Nl-2R-X8h"/>
                             <constraint firstItem="VlU-AB-FkX" firstAttribute="top" secondItem="Kxn-hg-Tsa" secondAttribute="bottom" constant="6" id="8CR-yn-vSj"/>
                             <constraint firstItem="3mI-vW-TBs" firstAttribute="top" secondItem="j8R-oF-y58" secondAttribute="bottom" constant="15" id="8jD-6c-p8j"/>
                             <constraint firstItem="3mI-vW-TBs" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="30" id="BgV-Ft-Tfx"/>
                             <constraint firstItem="3kg-rY-RDt" firstAttribute="trailing" secondItem="VlU-AB-FkX" secondAttribute="trailing" constant="15" id="Dpq-UK-MUX"/>
                             <constraint firstItem="7D6-wQ-1ls" firstAttribute="top" secondItem="3mI-vW-TBs" secondAttribute="bottom" constant="8" id="G6f-1b-DDQ"/>
+                            <constraint firstItem="1PU-ak-uXM" firstAttribute="top" secondItem="7D6-wQ-1ls" secondAttribute="bottom" constant="50" id="KmF-6w-Llf"/>
                             <constraint firstItem="j8R-oF-y58" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="30" id="NPi-PO-19N"/>
                             <constraint firstItem="4mQ-0f-PaR" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="48" id="Ndb-hs-QOU"/>
                             <constraint firstItem="Kxn-hg-Tsa" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="39" id="SEa-Rk-z1B"/>
-                            <constraint firstItem="orw-Zv-DHC" firstAttribute="top" secondItem="7D6-wQ-1ls" secondAttribute="bottom" constant="36" id="UTa-va-4AE"/>
                             <constraint firstItem="4mQ-0f-PaR" firstAttribute="top" secondItem="3kg-rY-RDt" secondAttribute="top" constant="5" id="Wgq-FO-lcZ"/>
                             <constraint firstItem="tYz-TX-qCQ" firstAttribute="top" secondItem="4mQ-0f-PaR" secondAttribute="bottom" constant="10" id="YJr-7y-q3e"/>
                             <constraint firstItem="VlU-AB-FkX" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="15" id="YSJ-wD-1Px"/>
                             <constraint firstItem="3kg-rY-RDt" firstAttribute="trailing" secondItem="NUa-tu-EhV1" secondAttribute="trailing" constant="30" id="ZdF-H5-s3O"/>
-                            <constraint firstItem="3kg-rY-RDt" firstAttribute="trailing" secondItem="orw-Zv-DHC" secondAttribute="trailing" constant="89" id="gEK-aK-xKw"/>
                             <constraint firstItem="j8R-oF-y58" firstAttribute="top" secondItem="tYz-TX-qCQ" secondAttribute="bottom" constant="8" id="jH9-0P-U4n"/>
                             <constraint firstItem="7D6-wQ-1ls" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="30" id="jfJ-GW-zGA"/>
                             <constraint firstItem="Kxn-hg-Tsa" firstAttribute="top" secondItem="NUa-tu-EhV1" secondAttribute="bottom" constant="10" id="lrZ-Rn-hS5"/>
@@ -176,6 +168,7 @@
                             <constraint firstItem="tYz-TX-qCQ" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="30" id="sS4-pW-3Ww"/>
                             <constraint firstItem="3kg-rY-RDt" firstAttribute="bottom" secondItem="VlU-AB-FkX" secondAttribute="bottom" constant="35" id="xC6-by-qi8"/>
                             <constraint firstItem="NUa-tu-EhV1" firstAttribute="leading" secondItem="3kg-rY-RDt" secondAttribute="leading" constant="30" id="ygC-O2-OCS"/>
+                            <constraint firstItem="3kg-rY-RDt" firstAttribute="trailing" secondItem="1PU-ak-uXM" secondAttribute="trailing" constant="30" id="yvk-7c-pKC"/>
                             <constraint firstItem="3kg-rY-RDt" firstAttribute="trailing" secondItem="Kxn-hg-Tsa" secondAttribute="trailing" constant="39" id="zO9-wN-SUN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3kg-rY-RDt"/>

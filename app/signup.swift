@@ -31,17 +31,6 @@ class signup: UIViewController, GIDSignInUIDelegate{
     var email: String!
     let userDefault = UserDefaults()
     
-
-//    let googleLoginButton: UIButton = {
-//           let button = UIButton(type: .system)
-//           button.layer.cornerRadius = 5
-//           button.setTitle("Sign In with Google", for: .normal)
-//           button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-//           button.backgroundColor = .googleRed()
-//           button.setTitleColor(.white, for: .normal)
-//           button.addTarget(self, action: #selector(handleGoogleSignIn), for: .touchUpInside)
-//           return button
-//       }()
     
     @objc func handleGoogleSignIn() {
         GIDSignIn.sharedInstance()?.signIn()
@@ -50,22 +39,7 @@ class signup: UIViewController, GIDSignInUIDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if Auth.auth().currentUser != nil{
-//            //self.moveToLocationMenu()
-//            //move to next view contorller
-//        }else{
-//        }
-//
-//        GIDSignIn.sharedInstance()?.presentingViewController = self
-//
-//
-//        setUpElements()
-//
-//        let tapGesture = UITapGestureRecognizer(target: self, action:
-//        #selector(self.dismissKeyboard(_:)))
-//                self.view.addGestureRecognizer(tapGesture)
-//        /*get the two inputfield to give up as first
-//        object that'll receive an event*/
+        self.googleButton.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,24 +62,7 @@ class signup: UIViewController, GIDSignInUIDelegate{
         createUser()
     }
     
-//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//        if let error = error {
-//          print(error.localizedDescription)
-//          return
-//        } else {
-//          guard let authentication = user.authentication else { return }
-//          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-//          Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
-//              if error == nil {
-//                  print(result?.user.email)
-//                  print(result?.user.displayName)
-//              } else {
-//                  print(error?.localizedDescription)
-//              }
-//          }
-//          }
-//    }
-    
+
 
     //FIRAuthErrorCodeEmailAlreadyInUse
     func createUser(){
