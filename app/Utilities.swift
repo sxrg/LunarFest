@@ -78,4 +78,9 @@ class Utilities {
         button.layer.shadowRadius = 7
         button.layer.masksToBounds = false
     }
+    
+    static func roundViewCorners(_ myView: UIView) {
+        myView.layer.cornerRadius = 25
+        myView.clipsToBounds = true
+    }
 }

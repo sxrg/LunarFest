@@ -51,6 +51,7 @@ class quiz: UIViewController {
             dbRef.child("users").child(userID).child("point").setValue(score)
             UserDefaults.standard.set(self.score, forKey: "points")
             UserDefaults.standard.set(date, forKey:"lastQuizDate")
+            moveToQuizEnd()
             
         } else {
             score += 5
@@ -58,11 +59,19 @@ class quiz: UIViewController {
             dbRef.child("users").child(userID).child("point").setValue(score)
             UserDefaults.standard.set(self.score, forKey: "points")
             UserDefaults.standard.set(date,forKey:"lastQuizDate")
+            moveToQuizEnd()
         }
         
         //questionNumber += 1
         //updateQuestion()
         
+    }
+    
+    func moveToQuizEnd() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let quizend = storyBoard.instantiateViewController(withIdentifier: "quizend")
+        quizend.modalPresentationStyle = .fullScreen
+        self.present(quizend, animated: true, completion: nil)
     }
     
     // quiz refresh related functions -- not used
