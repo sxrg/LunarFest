@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330AA3FA23AC4098001A1F5A /* PointsViewController.swift */; };
 		6453B13223A6D86100D4AA28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453B13123A6D86100D4AA28 /* Login.swift */; };
+		645C467423B03D0D0086949C /* quizend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C467323B03D0D0086949C /* quizend.swift */; };
 		6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */; };
 		649F310F23AD7F8A009087AD /* quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F310E23AD7F8A009087AD /* quiz.swift */; };
 		649F311123AD9392009087AD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F311023AD9392009087AD /* Question.swift */; };
 		649F311323AD9543009087AD /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F311223AD9543009087AD /* QuestionBank.swift */; };
 		64A1791C23AD4FD500DDFE40 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */; };
+		64C6F62023B00F9800611FBF /* quiz_instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6F61F23B00F9800611FBF /* quiz_instructions.swift */; };
 		64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467323A71B1F00F3B2C7 /* signup.swift */; };
 		64E1467623A8107100F3B2C7 /* page_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E1467523A8107100F3B2C7 /* page_location.swift */; };
 		AA00DFF823AA2FAC00B87B64 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00DFF723AA2FAC00B87B64 /* EventDetailViewController.swift */; };
@@ -35,11 +37,13 @@
 		19702F113D04929F56CFF686 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 		330AA3FA23AC4098001A1F5A /* PointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		645C467323B03D0D0086949C /* quizend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizend.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
 		649F310E23AD7F8A009087AD /* quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
 		649F311023AD9392009087AD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		649F311223AD9543009087AD /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		64C6F61F23B00F9800611FBF /* quiz_instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz_instructions.swift; sourceTree = "<group>"; };
 		64E1467223A6F5B100F3B2C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		64E1467323A71B1F00F3B2C7 /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
 		64E1467523A8107100F3B2C7 /* page_location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = page_location.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				649F311023AD9392009087AD /* Question.swift */,
 				649F311223AD9543009087AD /* QuestionBank.swift */,
 				649F310E23AD7F8A009087AD /* quiz.swift */,
+				64C6F61F23B00F9800611FBF /* quiz_instructions.swift */,
+				645C467323B03D0D0086949C /* quizend.swift */,
 				64E1467523A8107100F3B2C7 /* page_location.swift */,
 				64E1467323A71B1F00F3B2C7 /* signup.swift */,
 				6453B13123A6D86100D4AA28 /* Login.swift */,
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */,
+				645C467423B03D0D0086949C /* quizend.swift in Sources */,
 				649F311123AD9392009087AD /* Question.swift in Sources */,
 				330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */,
 				64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */,
@@ -296,6 +303,7 @@
 				AA00DFF823AA2FAC00B87B64 /* EventDetailViewController.swift in Sources */,
 				649F310F23AD7F8A009087AD /* quiz.swift in Sources */,
 				6453B13223A6D86100D4AA28 /* Login.swift in Sources */,
+				64C6F62023B00F9800611FBF /* quiz_instructions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
