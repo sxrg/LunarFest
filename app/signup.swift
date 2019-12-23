@@ -12,41 +12,34 @@ import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
 
-class signup: UIViewController, GIDSignInUIDelegate{
-    
+class signup: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
-    
     @IBOutlet var googleButton: UIButton!
-    
-
     @IBAction func googleLoginButton(_ sender: UIButton) {
         googleButton.addTarget(self, action:
-            #selector(handleGoogleSignIn), for:.touchUpInside)
+        #selector(handleGoogleSignIn), for:.touchUpInside)
     }
-    
     
     var email: String!
     let userDefault = UserDefaults()
     
-    
     @objc func handleGoogleSignIn() {
-        GIDSignIn.sharedInstance()?.signIn()
-    }
-        
+          GIDSignIn.sharedInstance()?.signIn()
+      }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.googleButton.layer.cornerRadius = 5
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
     }
+    
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer){
             emailField.resignFirstResponder()
             passwordField.resignFirstResponder()
@@ -61,8 +54,6 @@ class signup: UIViewController, GIDSignInUIDelegate{
     @IBAction func btnSignup(_ sender: Any) {
         createUser()
     }
-    
-
 
     //FIRAuthErrorCodeEmailAlreadyInUse
     func createUser(){
@@ -128,15 +119,36 @@ class signup: UIViewController, GIDSignInUIDelegate{
         Utilities.styleHollowButton(btnSubmit)
     }
 
-
 }
-
-
 extension signup: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        print("Did sign in with google")
-        moveToLocationMenu()
+//            print("Signed in with google")
+//            moveToLocationMenu()
+        
+        
+        if let error = error {
+            print("Failed to sign in with error:", error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
+            if let error = error {
+                       print("Failed to sign in  and retrieve data with error:", error)
+                       return
+                   }
+            guard let uid = result?.user.uid else {return}
+            guard let email = result?.user.email else {return}
+            let values = ["email": email]
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: {(error, ref) in
+                
+                self.moveToLocationMenu()
+                
+            })
+        }
     }
-    
-    
 }
+

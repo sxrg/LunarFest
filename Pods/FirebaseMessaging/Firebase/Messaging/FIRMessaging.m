@@ -225,13 +225,6 @@ const BOOL FIRMessagingIsAPNSSyncMessage(NSDictionary *message) {
       [FIRDependency dependencyWithProtocol:@protocol(FIRAnalyticsInterop) isRequired:NO];
   FIRComponentCreationBlock creationBlock =
       ^id _Nullable(FIRComponentContainer *container, BOOL *isCacheable) {
-    if (!container.app.isDefaultApp) {
-      // Only start for the default FIRApp.
-      FIRMessagingLoggerDebug(kFIRMessagingMessageCodeFIRApp001,
-                              @"Firebase Messaging only works with the default app.");
-      return nil;
-    }
-
     // Ensure it's cached so it returns the same instance every time messaging is called.
     *isCacheable = YES;
     id<FIRAnalyticsInterop> analytics = FIR_COMPONENT(FIRAnalyticsInterop, container);
@@ -240,19 +233,28 @@ const BOOL FIRMessagingIsAPNSSyncMessage(NSDictionary *message) {
                                  withInstanceID:[FIRInstanceID instanceID]
                                withUserDefaults:[GULUserDefaults standardUserDefaults]];
     [messaging start];
-    [messaging configureNotificationSwizzlingIfEnabled];
     return messaging;
   };
   FIRComponent *messagingProvider =
       [FIRComponent componentWithProtocol:@protocol(FIRMessagingInstanceProvider)
-                      instantiationTiming:FIRInstantiationTimingEagerInDefaultApp
+                      instantiationTiming:FIRInstantiationTimingLazy
                              dependencies:@[ analyticsDep ]
                            creationBlock:creationBlock];
 
   return @[ messagingProvider ];
 }
 
-- (void)configureNotificationSwizzlingIfEnabled {
++ (void)configureWithApp:(FIRApp *)app {
+  if (!app.isDefaultApp) {
+    // Only configure for the default FIRApp.
+    FIRMessagingLoggerDebug(kFIRMessagingMessageCodeFIRApp001,
+                            @"Firebase Messaging only works with the default app.");
+    return;
+  }
+  [[FIRMessaging messaging] configureMessaging:app];
+}
+
+- (void)configureMessaging:(FIRApp *)app {
   // Swizzle remote-notification-related methods (app delegate and UNUserNotificationCenter)
   if ([FIRMessagingRemoteNotificationsProxy canSwizzleMethods]) {
     NSString *docsURLString = @"https://firebase.google.com/docs/cloud-messaging/ios/client"

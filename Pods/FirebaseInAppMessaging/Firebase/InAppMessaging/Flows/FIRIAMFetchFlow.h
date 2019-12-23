@@ -18,7 +18,6 @@
 
 #import "FIRIAMActivityLogger.h"
 #import "FIRIAMBookKeeper.h"
-#import "FIRIAMDisplayExecutor.h"
 #import "FIRIAMMessageClientCache.h"
 #import "FIRIAMSDKModeManager.h"
 #import "FIRIAMTimeFetcher.h"
@@ -51,8 +50,7 @@ typedef void (^FIRIAMFetchMessageCompletionHandler)(
                      bookKeeper:(id<FIRIAMBookKeeper>)displayBookKeeper
                  activityLogger:(FIRIAMActivityLogger *)activityLogger
            analyticsEventLogger:(id<FIRIAMAnalyticsEventLogger>)analyticsEventLogger
-           FIRIAMSDKModeManager:(FIRIAMSDKModeManager *)sdkModeManager
-                displayExecutor:(FIRIAMDisplayExecutor *)displayExecutor;
+           FIRIAMSDKModeManager:(FIRIAMSDKModeManager *)sdkModeManager;
 
 // Triggers a potential fetch of in-app messaging from the source. It would check and respect the
 // the fetchMinIntervalInMinutes defined in setting
