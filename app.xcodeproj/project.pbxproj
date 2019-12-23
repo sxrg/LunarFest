@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330AA3FA23AC4098001A1F5A /* PointsViewController.swift */; };
+		33A470B823ADA6070010F572 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A470B723ADA6070010F572 /* Extensions.swift */; };
 		6453B13223A6D86100D4AA28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453B13123A6D86100D4AA28 /* Login.swift */; };
 		6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */; };
 		649F310F23AD7F8A009087AD /* quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F310E23AD7F8A009087AD /* quiz.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		19702F113D04929F56CFF686 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 		330AA3FA23AC4098001A1F5A /* PointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
+		33A470B723ADA6070010F572 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
 		649F310E23AD7F8A009087AD /* quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */,
 				AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */,
 				AA22232123AC4E8100D130C7 /* VanFunStopProgram.swift */,
+				33A470B723ADA6070010F572 /* Extensions.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */,
 				649F311123AD9392009087AD /* Question.swift in Sources */,
+				33A470B823ADA6070010F572 /* Extensions.swift in Sources */,
 				330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */,
 				64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */,
 				649F311323AD9543009087AD /* QuestionBank.swift in Sources */,

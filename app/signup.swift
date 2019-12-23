@@ -12,37 +12,41 @@ import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
 
-class signup: UIViewController, GIDSignInDelegate {
+class signup: UIViewController, GIDSignInUIDelegate{
     
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
     
+    @IBOutlet var googleButton: UIButton!
+    
+
+    @IBAction func googleLoginButton(_ sender: UIButton) {
+        googleButton.addTarget(self, action:
+            #selector(handleGoogleSignIn), for:.touchUpInside)
+    }
+    
+    
     var email: String!
     let userDefault = UserDefaults()
     
+    
+    @objc func handleGoogleSignIn() {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Auth.auth().currentUser != nil{
-            //self.moveToLocationMenu()
-            //move to next view contorller
-        }else{
-        }
-        
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
-        
-        
-        setUpElements()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action:
-        #selector(self.dismissKeyboard(_:)))
-                self.view.addGestureRecognizer(tapGesture)
-        /*get the two inputfield to give up as first
-        object that'll receive an event*/
+        self.googleButton.layer.cornerRadius = 5
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
+    }
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer){
             emailField.resignFirstResponder()
             passwordField.resignFirstResponder()
@@ -58,24 +62,7 @@ class signup: UIViewController, GIDSignInDelegate {
         createUser()
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-          print(error.localizedDescription)
-          return
-        } else {
-          guard let authentication = user.authentication else { return }
-          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-          Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
-              if error == nil {
-                  print(result?.user.email)
-                  print(result?.user.displayName)
-              } else {
-                  print(error?.localizedDescription)
-              }
-          }
-          }
-    }
-    
+
 
     //FIRAuthErrorCodeEmailAlreadyInUse
     func createUser(){
@@ -141,4 +128,15 @@ class signup: UIViewController, GIDSignInDelegate {
         Utilities.styleHollowButton(btnSubmit)
     }
 
+
+}
+
+
+extension signup: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("Did sign in with google")
+        moveToLocationMenu()
+    }
+    
+    
 }
