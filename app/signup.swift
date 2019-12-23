@@ -134,32 +134,9 @@ class signup: UIViewController, GIDSignInUIDelegate{
 
 extension signup: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//            print("Signed in with google")
-//            moveToLocationMenu()
-        
-        
-        if let error = error {
-            print("Failed to sign in with error:", error)
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-        
-        Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
-            if let error = error {
-                       print("Failed to sign in  and retrieve data with error:", error)
-                       return
-                   }
-            guard let uid = result?.user.uid else {return}
-            guard let email = result?.user.email else {return}
-            let values = ["email": email]
-            
-            Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: {(error, ref) in
-                
-                self.moveToLocationMenu()
-                
-            })
-        }
+        print("Did sign in with google")
+        moveToLocationMenu()
     }
+    
+    
 }
