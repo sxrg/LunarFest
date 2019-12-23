@@ -49,8 +49,11 @@ class signup: UIViewController, GIDSignInDelegate {
         }
     
     override func viewDidAppear(_ animated: Bool) {
-        if userDefault.bool(forKey: "usersignedin") {
-            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+        //if userDefault.bool(forKey: "usersignedin") {
+          //  performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+        //}
+        if(Auth.auth().currentUser != nil){
+            moveToLocationMenu()
         }
     }
     
