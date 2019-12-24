@@ -38,16 +38,17 @@ class quiz_instructions: UIViewController {
     @IBAction func startquiz(_ sender: UIButton) {
         
         // lets user proceed to quiz if its their first time
-        // also for testing purposes
         if (date == nil) {
             proceedToQuiz()
         }
         
         if (date == today){
-            let alert = UIAlertController(title: "Sorry!", message: "You have tried the quiz already!",
+            let alert = UIAlertController(title: "Sorry!", message: "You have tried the quiz today! Please come back tomorrow.",
                                           preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            
+            backToPreviousPage()
         
         } else {
             proceedToQuiz()
@@ -57,6 +58,13 @@ class quiz_instructions: UIViewController {
     func proceedToQuiz() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let quizpage = storyBoard.instantiateViewController(withIdentifier: "quiz")
+        quizpage.modalPresentationStyle = .fullScreen
+        self.present(quizpage, animated: true, completion: nil)
+    }
+    
+    func backToPreviousPage() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let quizpage = storyBoard.instantiateViewController(withIdentifier: "page_location")
         quizpage.modalPresentationStyle = .fullScreen
         self.present(quizpage, animated: true, completion: nil)
     }

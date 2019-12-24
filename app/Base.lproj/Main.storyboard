@@ -644,6 +644,7 @@
                     </view>
                     <connections>
                         <outlet property="btnback" destination="6zH-L4-rhO" id="Y5Z-vM-iwR"/>
+                        <outlet property="pointsEarned" destination="axR-Ln-T0n" id="XNT-4M-Lwr"/>
                         <outlet property="whiteBG" destination="BVM-yO-G3B" id="wkf-Wt-qcC"/>
                     </connections>
                 </viewController>

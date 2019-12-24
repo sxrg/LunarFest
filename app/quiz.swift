@@ -12,10 +12,9 @@ import FirebaseAuth
 
 class quiz: UIViewController {
     
+    // Outlets for labels
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var image_q: UIImageView!
-    @IBOutlet weak var quizscore: UILabel!
-    @IBOutlet weak var quizprogress: UILabel!
     
     // Outlets for question buttons
     @IBOutlet weak var optA: UIButton!
@@ -23,10 +22,14 @@ class quiz: UIViewController {
     @IBOutlet weak var optC: UIButton!
     @IBOutlet weak var optD: UIButton!
     
+    // Setting up question bank
     let allQuestions = QuestionBank()
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
+    
+    // Lets quizend page know if user got correct
+    static var isCorrect: Bool!
     
     // for keeping score
     var dbRef = Database.database().reference()
@@ -40,6 +43,14 @@ class quiz: UIViewController {
         super.viewDidLoad()
         // Modifying appearance of the menu bar.
         setUpElements()
+        
+        // randomly select a question from the questionbank
+        question.text = allQuestions.list[questionNumber].question
+        optA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
+        optB.setTitle(allQuestions.list[questionNumber].optionB, for: UIControl.State.normal)
+        optC.setTitle(allQuestions.list[questionNumber].optionC, for: UIControl.State.normal)
+        optD.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
+        selectedAnswer = allQuestions.list[questionNumber].correctAnswer
     
     }
     
@@ -47,18 +58,22 @@ class quiz: UIViewController {
     @IBAction func answerTapped(_ sender: UIButton) {
         if sender.tag == selectedAnswer {
             score += 10
-            
-            dbRef.child("users").child(userID).child("point").setValue(score)
+        dbRef.child("users").child(userID).child("point").setValue(score)
             UserDefaults.standard.set(self.score, forKey: "points")
             UserDefaults.standard.set(date, forKey:"lastQuizDate")
+            
+            quiz.isCorrect = true
+            
             moveToQuizEnd()
             
         } else {
             score += 5
-            
-            dbRef.child("users").child(userID).child("point").setValue(score)
+        dbRef.child("users").child(userID).child("point").setValue(score)
             UserDefaults.standard.set(self.score, forKey: "points")
             UserDefaults.standard.set(date,forKey:"lastQuizDate")
+            
+            quiz.isCorrect = false
+            
             moveToQuizEnd()
         }
         
