@@ -36,13 +36,46 @@ class Utilities {
         button.tintColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0)
     }
     
-//    static func styleRoundLabel(_ label:UILabel){
-//        
-//        // Rounded corner style
-//        label.layer.borderWidth = 2
-//        label.layer.borderColor = UIColor(red: 46/255.0, green: 44/255.0, blue: 71/255.0, alpha: 1.0).cgColor
-//        label.layer.cornerRadius = 15.0
-//        label.tintColor = UIColor(red: 46/255.0, green: 44/255.0, blue: 71/255.0, alpha: 1.0)
-//    }
+    static func styleRoundedCorners(_ button:UIButton){
+
+        // Hollow rounded corner style
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0).cgColor
+        button.layer.cornerRadius = 10.0
+        button.tintColor = UIColor(red: 230/255.0, green: 183/255.0, blue: 115/255.0, alpha: 1.0)
+    }
     
+    static func xAxisShadow(_ myView:UIView) {
+        
+        myView.layer.shadowPath =
+              UIBezierPath(roundedRect: myView.bounds,
+              cornerRadius: myView.layer.cornerRadius).cgPath
+        myView.layer.shadowColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
+        myView.layer.shadowOpacity = 0.3
+        myView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        myView.layer.shadowRadius = 10
+        myView.layer.masksToBounds = false
+    }
+    
+    static func styleEventButtons(_ button: UIButton) {
+        button.layer.cornerRadius = 30
+        button.clipsToBounds = true
+        
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style:
+                    UIBlurEffect.Style.light))
+        blur.frame = button.bounds
+        blur.isUserInteractionEnabled = false //This allows touches to forward to the button.
+        button.insertSubview(blur, at: 0)
+    }
+    
+    static func styleQuestionButton(_ button: UIButton) {
+        button.layer.cornerRadius = 25
+        button.clipsToBounds = true
+        
+        button.layer.shadowColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
+        button.layer.shadowOpacity = 0.45
+        button.layer.shadowOffset = CGSize(width: 3, height: 3)
+        button.layer.shadowRadius = 7
+        button.layer.masksToBounds = false
+    }
 }
