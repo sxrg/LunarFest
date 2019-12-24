@@ -44,7 +44,10 @@ class quiz: UIViewController {
         // Modifying appearance of the menu bar.
         setUpElements()
         
-        // randomly select a question from the questionbank
+        // randomly select a question index from the questionbank
+        questionNumber = Int.random(in: 0 ..< 20)
+        
+        // setup UIlabels accordingly
         question.text = allQuestions.list[questionNumber].question
         optA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
         optB.setTitle(allQuestions.list[questionNumber].optionB, for: UIControl.State.normal)
