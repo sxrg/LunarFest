@@ -19,20 +19,22 @@ class signup: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet var googleButton: UIButton!
     @IBAction func googleLoginButton(_ sender: UIButton) {
-        googleButton.addTarget(self, action:
-        #selector(handleGoogleSignIn), for:.touchUpInside)
+        GIDSignIn.sharedInstance()?.signIn();
+//        googleButton.addTarget(self, action:
+//        #selector(handleGoogleSignIn), for:.touchUpInside)
     }
     
     var email: String!
     let userDefault = UserDefaults()
-    
-    @objc func handleGoogleSignIn() {
-          GIDSignIn.sharedInstance()?.signIn()
-      }
+//
+//    @objc func handleGoogleSignIn() {
+//        GIDSignIn.sharedInstance()?.signIn()
+//      }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.googleButton.layer.cornerRadius = 5
+        setUpElements()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,8 +48,11 @@ class signup: UIViewController, GIDSignInUIDelegate {
         }
     
     override func viewDidAppear(_ animated: Bool) {
-        if userDefault.bool(forKey: "usersignedin") {
-            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+//        if userDefault.bool(forKey: "usersignedin") {
+//            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+//        }
+        if(Auth.auth().currentUser != nil){
+            moveToLocationMenu()
         }
     }
     
@@ -106,7 +111,7 @@ class signup: UIViewController, GIDSignInUIDelegate {
     
     func moveToLocationMenu(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let locationMenu = storyBoard.instantiateViewController(withIdentifier: "page_location")
+            let locationMenu = storyBoard.instantiateViewController(withIdentifier: "chooseCity")
             locationMenu.modalPresentationStyle = .fullScreen
             self.present(locationMenu, animated: true, completion: nil)
     }
