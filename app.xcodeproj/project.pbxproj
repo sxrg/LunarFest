@@ -52,6 +52,7 @@
 		3312A95F23B29D240085E907 /* quiz_instructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quiz_instructions.swift; sourceTree = "<group>"; };
 		3312A96023B29D250085E907 /* QuestionBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		3312A96123B29D260085E907 /* quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
+		3312A96723B2AA220085E907 /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
 		64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */,
+				3312A96723B2AA220085E907 /* PoiretOne-Regular.ttf */,
 				6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */,
 			);
 			path = fonts;
@@ -147,9 +149,9 @@
 				3312A94F23B292340085E907 /* EventTableViewController2.swift */,
 				3312A95223B292360085E907 /* EventTableViewController3.swift */,
 				3312A95023B292350085E907 /* EventTableViewController4.swift */,
-				3312A95123B292350085E907 /* EventTableViewController5.swift */,
 				AA51441623A6B76A00C37465 /* Products */,
 				330AA3FA23AC4098001A1F5A /* PointsViewController.swift */,
+				3312A95123B292350085E907 /* EventTableViewController5.swift */,
 				AA667FDD23ABFA5800AB2014 /* FunStopViewController.swift */,
 				AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */,
 				AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */,

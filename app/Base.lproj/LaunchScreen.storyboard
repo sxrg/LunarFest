@@ -1,40 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PoiretOne-Regular.ttf">
+            <string>PoiretOne-Regular</string>
+        </array>
+        <array key="postnobillscolombo-light.ttf">
+            <string>PostNoBillsColombo-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="7Ev-wG-5Kh">
             <objects>
                 <viewController id="hR4-OX-kMn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0f-IZ-tI4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="drZ-RG-eTJ">
-                                <rect key="frame" x="48" y="124" width="318" height="225"/>
+                                <rect key="frame" x="30" y="40" width="260" height="146"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="318" id="i58-ID-Zoe"/>
-                                    <constraint firstAttribute="height" constant="225" id="u9L-bf-2mM"/>
+                                    <constraint firstAttribute="height" constant="146" id="jCf-Yh-30t"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L U N A R F E S T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-bz-Ia8">
+                                <rect key="frame" x="15" y="186" width="290" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="scM-dE-yaq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PostNoBillsColombo-Light" family="Post No Bills Colombo" pointSize="33"/>
+                                <color key="textColor" red="0.82901173829999997" green="0.4891741872" blue="0.3097547591" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpV-w5-Unb">
+                                <rect key="frame" x="30" y="220.5" width="260" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32.5" id="AGL-nj-pR3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PoiretOne-Regular" family="Poiret One" pointSize="30"/>
+                                <color key="textColor" red="0.87973010539999996" green="0.46989935640000002" blue="0.26267898080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JIK-iB-03Q" firstAttribute="trailing" secondItem="drZ-RG-eTJ" secondAttribute="trailing" constant="48" id="NMd-xq-Tpa"/>
-                            <constraint firstItem="drZ-RG-eTJ" firstAttribute="top" secondItem="JIK-iB-03Q" secondAttribute="top" constant="80" id="NX1-qV-ElS"/>
-                            <constraint firstItem="drZ-RG-eTJ" firstAttribute="leading" secondItem="JIK-iB-03Q" secondAttribute="leading" constant="48" id="jyd-6j-spW"/>
+                            <constraint firstItem="QZl-bz-Ia8" firstAttribute="leading" secondItem="JIK-iB-03Q" secondAttribute="leading" constant="15" id="7xO-ke-KZq"/>
+                            <constraint firstItem="QZl-bz-Ia8" firstAttribute="top" secondItem="drZ-RG-eTJ" secondAttribute="bottom" id="AOE-bb-NYg"/>
+                            <constraint firstItem="JIK-iB-03Q" firstAttribute="trailing" secondItem="QZl-bz-Ia8" secondAttribute="trailing" constant="15" id="Ja1-ha-0Yb"/>
+                            <constraint firstItem="JIK-iB-03Q" firstAttribute="trailing" secondItem="kpV-w5-Unb" secondAttribute="trailing" constant="30" id="Rx3-ar-iAf"/>
+                            <constraint firstItem="kpV-w5-Unb" firstAttribute="leading" secondItem="JIK-iB-03Q" secondAttribute="leading" constant="30" id="WQa-U7-vpD"/>
+                            <constraint firstItem="drZ-RG-eTJ" firstAttribute="top" secondItem="JIK-iB-03Q" secondAttribute="top" constant="40" id="gNo-e4-zzu"/>
+                            <constraint firstItem="drZ-RG-eTJ" firstAttribute="leading" secondItem="q0f-IZ-tI4" secondAttribute="leading" constant="30" id="jL1-JB-vyy"/>
+                            <constraint firstItem="kpV-w5-Unb" firstAttribute="top" secondItem="QZl-bz-Ia8" secondAttribute="bottom" id="nXq-2U-BrK"/>
+                            <constraint firstItem="JIK-iB-03Q" firstAttribute="trailing" secondItem="drZ-RG-eTJ" secondAttribute="trailing" constant="30" id="oFr-Tm-bSc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JIK-iB-03Q"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQo-6u-nKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="363.61607142857139"/>
+            <point key="canvasLocation" x="33.75" y="363.38028169014086"/>
         </scene>
     </scenes>
     <resources>

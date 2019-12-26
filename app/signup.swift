@@ -48,20 +48,22 @@ class signup: UIViewController, GIDSignInUIDelegate {
         }
     
     override func viewDidAppear(_ animated: Bool) {
-//        if userDefault.bool(forKey: "usersignedin") {
-//            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
-//        }
-        if(Auth.auth().currentUser != nil){
-            moveToLocationMenu()
+        if userDefault.bool(forKey: "usersignedin") {
+            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
         }
+//        if(Auth.auth().currentUser != nil){
+//            moveToLocationMenu()
+//        }
     }
     
     @IBAction func btnSignup(_ sender: Any) {
+       
         createUser()
     }
 
     //FIRAuthErrorCodeEmailAlreadyInUse
     func createUser(){
+
         Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){
         (authResult, error) in
         if error != nil{
@@ -72,7 +74,9 @@ class signup: UIViewController, GIDSignInUIDelegate {
                 //if email is already use then try signing in
                 self.signIn()
                 
-            }else{
+            }
+           
+            else{
                 
                 //some kind of error that's not email has been used occured
                 let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
@@ -80,7 +84,24 @@ class signup: UIViewController, GIDSignInUIDelegate {
                 self.present(alert,animated: true, completion: nil)
             }
         }else{
-            self.signIn()//directly signs in the user in after account is created
+            let signUpAlert = UIAlertController(title: "Warning", message: "The account doesn't exist, would you like to create a new account?", preferredStyle: .alert)
+                             signUpAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in self.signIn()}))
+                                     self.present(signUpAlert,animated: true, completion: nil)
+            signUpAlert.addAction(UIAlertAction(title: "No", style: .default, handler: {action in self.deleteUser()}))
+            //self.signIn()//directly signs in the user in after account is created
+            }
+        }
+    }
+    
+    func deleteUser(){
+        let user = Auth.auth().currentUser
+        
+        user?.delete{
+            error in
+            if error != nil{
+                
+            }else{
+                
             }
         }
     }

@@ -13,11 +13,10 @@ class PointsViewController: UIViewController{
     let userDefault = UserDefaults.standard
     @IBOutlet var btnRedeem: UIButton!
     @IBOutlet var pointsText: UILabel!
-    @IBOutlet var pointsInfo: UILabel!
-    
+    @IBOutlet var pointsTextView: UIView!
     override func viewDidLoad(){
         super.viewDidLoad()
-        self.pointsInfo.layer.cornerRadius = 15
+        self.pointsTextView.layer.cornerRadius = 15
         setUpElements()
         userID = Auth.auth().currentUser!.uid
         if(qrValue != ""){

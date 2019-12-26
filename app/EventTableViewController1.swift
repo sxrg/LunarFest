@@ -32,6 +32,7 @@ class EventTableViewController1: UITableViewController{
                    
         let xPos = CGFloat(i)*self.view.bounds.size.width
         imageView.frame = CGRect(x: xPos, y: 0, width: view.frame.size.width, height: scrollView.frame.size.height)
+            
                    
         scrollView.contentSize.width = view.frame.size.height*CGFloat(i+1)
         scrollView.addSubview(imageView)

@@ -33,6 +33,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>PoiretOne-Regular.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
 		<string>postnobillscolombo-light.ttf</string>
 	</array>

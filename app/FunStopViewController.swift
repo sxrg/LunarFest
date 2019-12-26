@@ -10,21 +10,20 @@ import UIKit
 
 class FunStopViewController: UIViewController {
     
-    //@IBOutlet var howtoPlayDetailText: UILabel!
     @IBOutlet var btnStart: UIButton!
+    @IBOutlet var funStopDescView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.funStopDescView.layer.cornerRadius = 15
         setUpElements()
         
     }
     
     func setUpElements(){
-        
         // Style the elements
-        //Utilities.styleRoundLabel(howtoPlayDetailText)
+        
         Utilities.styleHollowButton(btnStart)
     }
 

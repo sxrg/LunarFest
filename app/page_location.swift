@@ -20,7 +20,6 @@ class page_location: UIViewController {
     @IBOutlet weak var btn_3: UIButton!
     @IBOutlet weak var btn_4: UIButton!
     @IBOutlet weak var btn_5: UIButton!
-    @IBOutlet weak var btn_6: UIButton!
     
     var menuOut = false
     
@@ -77,7 +76,7 @@ class page_location: UIViewController {
         Utilities.styleEventButtons(btn_3)
         Utilities.styleEventButtons(btn_4)
         Utilities.styleEventButtons(btn_5)
-        Utilities.styleEventButtons(btn_6)
+
     
     }
 }

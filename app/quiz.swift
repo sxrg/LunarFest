@@ -25,7 +25,6 @@ class quiz: UIViewController {
     // Setting up question bank
     let allQuestions = QuestionBank()
     var questionNumber: Int = 0
-    var score: Int = 0
     var selectedAnswer: Int = 0
     
     // Lets quizend page know if user got correct
@@ -60,9 +59,9 @@ class quiz: UIViewController {
     
     @IBAction func answerTapped(_ sender: UIButton) {
         if sender.tag == selectedAnswer {
-            score += 10
-        dbRef.child("users").child(userID).child("point").setValue(score)
-            UserDefaults.standard.set(self.score, forKey: "points")
+            points += 10
+        dbRef.child("users").child(userID).child("point").setValue(points)
+            UserDefaults.standard.set(self.points, forKey: "points")
             UserDefaults.standard.set(date, forKey:"lastQuizDate")
             
             quiz.isCorrect = true
@@ -70,9 +69,9 @@ class quiz: UIViewController {
             moveToQuizEnd()
             
         } else {
-            score += 5
-        dbRef.child("users").child(userID).child("point").setValue(score)
-            UserDefaults.standard.set(self.score, forKey: "points")
+            points += 5
+        dbRef.child("users").child(userID).child("point").setValue(points)
+            UserDefaults.standard.set(self.points, forKey: "points")
             UserDefaults.standard.set(date,forKey:"lastQuizDate")
             
             quiz.isCorrect = false

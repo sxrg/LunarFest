@@ -20,12 +20,14 @@ class quiz_instructions: UIViewController {
     var points = UserDefaults.standard.integer(forKey: "points")
     var date: Date!
     var today = Date()
-    
+    @IBOutlet var quizInstructionView: UIView!
+    @IBOutlet var btnStart: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.quizInstructionView.layer.cornerRadius = 15
         // if this is first time user takes quiz
         date = UserDefaults.standard.object(forKey:"lastQuizDate") as? Date
+        setUpElements()
     }
     
     //in viewWillDisappear
@@ -70,7 +72,7 @@ class quiz_instructions: UIViewController {
     }
     
     func setUpElements() {
-        // setting up appearance
+        Utilities.styleHollowButton(btnStart)
     }
     
 }

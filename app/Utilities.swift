@@ -15,8 +15,11 @@ class Utilities {
         
         // Create the bottom lines
         let bottomLine = CALayer()
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+//        bottomLine.frame = CGRect(x: 0, y: textfield.frame.height-2, width: .view.window.frame.size.width - 60, height: 2)
         
-        bottomLine.frame = CGRect(x: 0, y: textfield.frame.height-2, width: textfield.frame.width, height: 2)
+        bottomLine.frame = CGRect(x: 0, y: textfield.frame.height-2, width: screenWidth - 60, height: 2)
         
         bottomLine.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor
         
@@ -51,9 +54,9 @@ class Utilities {
               UIBezierPath(roundedRect: myView.bounds,
               cornerRadius: myView.layer.cornerRadius).cgPath
         myView.layer.shadowColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
-        myView.layer.shadowOpacity = 0.3
+        myView.layer.shadowOpacity = 1.0
         myView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        myView.layer.shadowRadius = 10
+        myView.layer.shadowRadius = 20
         myView.layer.masksToBounds = false
     }
     
@@ -61,11 +64,6 @@ class Utilities {
         button.layer.cornerRadius = 30
         button.clipsToBounds = true
         
-        let blur = UIVisualEffectView(effect: UIBlurEffect(style:
-                    UIBlurEffect.Style.light))
-        blur.frame = button.bounds
-        blur.isUserInteractionEnabled = false //This allows touches to forward to the button.
-        button.insertSubview(blur, at: 0)
     }
     
     static func styleQuestionButton(_ button: UIButton) {
