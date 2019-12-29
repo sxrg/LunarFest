@@ -16,10 +16,41 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.778926133465-f9o5s7kj20gat2tf4cadr001c9bg0v6n</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) camera use</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NeoSansTwoUnicase.ttf</string>
+		<string>NeoSansTwoUltraItalic.ttf</string>
+		<string>NeoSansTwoRegular.ttf</string>
+		<string>NeoSansTwoMedium.ttf</string>
+		<string>NeoSansTwoMediumItalic.ttf</string>
+		<string>NeoSansTwoLight.ttf</string>
+		<string>NeoSansTwoLightItalic.ttf</string>
+		<string>NeoSansTwoItalic.ttf</string>
+		<string>NeoSansTwoBold.ttf</string>
+		<string>NeoSansTwoBoldItalic.ttf</string>
+		<string>NeoSansTwoBlack.ttf </string>
+		<string>NeoSansTwoBlackItalic.ttf</string>
+		<string>PoiretOne-Regular.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+		<string>postnobillscolombo-light.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -47,6 +78,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

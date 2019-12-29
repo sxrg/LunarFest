@@ -1,0 +1,186 @@
+//
+//  signup.swift
+//  app
+//
+//  Created by Sherry Guo on 2019-12-15.
+//
+
+import UIKit
+import Foundation
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
+import GoogleSignIn
+
+class signup: UIViewController, GIDSignInUIDelegate {
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet var googleButton: UIButton!
+    @IBAction func googleLoginButton(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn();
+//        googleButton.addTarget(self, action:
+//        #selector(handleGoogleSignIn), for:.touchUpInside)
+    }
+    
+    var email: String!
+    let userDefault = UserDefaults()
+//
+//    @objc func handleGoogleSignIn() {
+//        GIDSignIn.sharedInstance()?.signIn()
+//      }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if(Auth.auth().currentUser != nil){
+            moveToLocationMenu()
+        }
+        overrideUserInterfaceStyle = .light
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        self.googleButton.layer.cornerRadius = 5
+        setUpElements()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
+    }
+    
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer){
+            emailField.resignFirstResponder()
+            passwordField.resignFirstResponder()
+        }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if userDefault.bool(forKey: "usersignedin") {
+            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+        }
+        if(Auth.auth().currentUser != nil){
+            moveToLocationMenu()
+        }
+    }
+    
+    @IBAction func btnSignup(_ sender: Any) {
+       
+        createUser()
+    }
+
+    //FIRAuthErrorCodeEmailAlreadyInUse
+    func createUser(){
+
+        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){
+        (authResult, error) in
+        if error != nil{
+            let errorCode = AuthErrorCode(rawValue: error!._code)
+                
+            if errorCode == .emailAlreadyInUse {
+                
+                //if email is already use then try signing in
+                self.signIn()
+                
+            }
+           
+            else{
+                
+                //some kind of error that's not email has been used occured
+                let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert,animated: true, completion: nil)
+            }
+        }else{
+            let signUpAlert = UIAlertController(title: "Warning", message: "The account doesn't exist, would you like to create a new account?", preferredStyle: .alert)
+                             signUpAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in self.signIn()}))
+                                     self.present(signUpAlert,animated: true, completion: nil)
+            signUpAlert.addAction(UIAlertAction(title: "No", style: .default, handler: {action in self.deleteUser()}))
+            //self.signIn()//directly signs in the user in after account is created
+            }
+        }
+    }
+    
+    func deleteUser(){
+        let user = Auth.auth().currentUser
+        
+        user?.delete{
+            error in
+            if error != nil{
+                
+            }else{
+                
+            }
+        }
+    }
+
+    func signIn(){//might not need to pass the two parameter in?
+
+         Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!){
+            (user, error) in
+            if error != nil{
+                    
+            //cant sign in
+            let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert,animated: true, completion: nil)
+                        
+            }else{
+                    
+                //signed in update user's email in database
+                let user = Auth.auth().currentUser
+                let uid = user!.uid
+                let myDatabse = Database.database().reference()
+            myDatabse.child("users").child(uid).child("email").setValue(user?.email)
+                    self.moveToLocationMenu()
+            }
+        }
+    }
+
+    
+    func moveToLocationMenu(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let locationMenu = storyBoard.instantiateViewController(withIdentifier: "chooseCity")
+            locationMenu.modalPresentationStyle = .fullScreen
+            self.present(locationMenu, animated: true, completion: nil)
+    }
+    
+    func setUpElements(){
+        
+        // Style the elements
+        Utilities.styleTextField(emailField)
+        Utilities.styleTextField(passwordField)
+        Utilities.styleHollowButton(btnSubmit)
+    }
+
+}
+extension signup: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//            print("Signed in with google")
+//            moveToLocationMenu()
+        
+        
+        if let error = error {
+            print("Failed to sign in with error:", error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
+            if let error = error {
+                       print("Failed to sign in  and retrieve data with error:", error)
+                       return
+                   }
+            guard let uid = result?.user.uid else {return}
+            guard let email = result?.user.email else {return}
+            let values = ["email": email]
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: {(error, ref) in
+                
+                self.moveToLocationMenu()
+                
+            })
+        }
+    }
+}
+

@@ -1,25 +1,84 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NeoSansTwoRegular.ttf">
+            <string>NeoSansTwo</string>
+        </array>
+        <array key="PoiretOne-Regular.ttf">
+            <string>PoiretOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="7Ev-wG-5Kh">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="hR4-OX-kMn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydB-2Y-us1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-XW-NjJ">
+                                <rect key="frame" x="30" y="65" width="260" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="dA7-Y1-GGf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L U N A R F E S T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-J8-lsb">
+                                <rect key="frame" x="15" y="246" width="290" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="xei-jm-bsp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NeoSansTwo" family="Neo Sans Two" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFY-Rn-b3m">
+                                <rect key="frame" x="30" y="280.5" width="260" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32.5" id="ZyH-uC-RGA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PoiretOne-Regular" family="Poiret One" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ATH-04-Y39">
+                                <rect key="frame" x="100" y="436" width="120" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="eKl-8h-ajJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1843137255" green="0.17254901959999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l3q-J8-lsb" firstAttribute="top" secondItem="dNI-XW-NjJ" secondAttribute="bottom" constant="35" id="0ku-Rt-uzQ"/>
+                            <constraint firstItem="Hlg-1y-wZC" firstAttribute="trailing" secondItem="eFY-Rn-b3m" secondAttribute="trailing" constant="30" id="8GO-Sp-Iks"/>
+                            <constraint firstItem="Hlg-1y-wZC" firstAttribute="trailing" secondItem="l3q-J8-lsb" secondAttribute="trailing" constant="15" id="90f-Sx-f2O"/>
+                            <constraint firstItem="Hlg-1y-wZC" firstAttribute="trailing" secondItem="ATH-04-Y39" secondAttribute="trailing" constant="100" id="FSf-Iz-RqT"/>
+                            <constraint firstItem="dNI-XW-NjJ" firstAttribute="leading" secondItem="ydB-2Y-us1" secondAttribute="leading" constant="30" id="GOP-Qf-hsE"/>
+                            <constraint firstItem="l3q-J8-lsb" firstAttribute="leading" secondItem="Hlg-1y-wZC" secondAttribute="leading" constant="15" id="HMp-BB-5F1"/>
+                            <constraint firstItem="eFY-Rn-b3m" firstAttribute="leading" secondItem="Hlg-1y-wZC" secondAttribute="leading" constant="30" id="eXC-Si-g6A"/>
+                            <constraint firstItem="Hlg-1y-wZC" firstAttribute="bottom" secondItem="ATH-04-Y39" secondAttribute="bottom" constant="68" id="m5I-1h-aQl"/>
+                            <constraint firstItem="Hlg-1y-wZC" firstAttribute="trailing" secondItem="dNI-XW-NjJ" secondAttribute="trailing" constant="30" id="mBX-po-vmx"/>
+                            <constraint firstItem="dNI-XW-NjJ" firstAttribute="top" secondItem="Hlg-1y-wZC" secondAttribute="top" constant="65" id="rhH-I5-Lbg"/>
+                            <constraint firstItem="ATH-04-Y39" firstAttribute="leading" secondItem="Hlg-1y-wZC" secondAttribute="leading" constant="100" id="wSX-Uy-ov2"/>
+                            <constraint firstItem="eFY-Rn-b3m" firstAttribute="top" secondItem="l3q-J8-lsb" secondAttribute="bottom" id="zzb-Hs-AQB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hlg-1y-wZC"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQo-6u-nKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="33.75" y="363.38028169014086"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Ellipse 2" width="1198" height="1198"/>
+        <image name="titleLogo" width="2555" height="866"/>
+    </resources>
 </document>
