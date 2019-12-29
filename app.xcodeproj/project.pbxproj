@@ -106,7 +106,7 @@
 		845A0CA8F628964B784DC35C /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
 		AA0C8E4723A77CB100DF6F3A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AA22232123AC4E8100D130C7 /* VanFunStopProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanFunStopProgram.swift; sourceTree = "<group>"; };
-		AA51441523A6B76A00C37465 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA51441523A6B76A00C37465 /* LunarFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA51441823A6B76A00C37465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA51441A23A6B76A00C37465 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA51441F23A6B76A00C37465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		AA51441623A6B76A00C37465 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA51441523A6B76A00C37465 /* app.app */,
+				AA51441523A6B76A00C37465 /* LunarFun.app */,
 			);
 			name = Products;
 			path = ..;
@@ -253,7 +253,7 @@
 			);
 			name = app;
 			productName = app;
-			productReference = AA51441523A6B76A00C37465 /* app.app */;
+			productReference = AA51441523A6B76A00C37465 /* LunarFun.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -565,7 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.acsea.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LunarFun;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -584,7 +584,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.acsea.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LunarFun;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

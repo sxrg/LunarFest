@@ -10,7 +10,7 @@ import UIKit
 
 class EventTableViewController2: UITableViewController{
     
-    let imageArray = ["Craft-1","Craft-2","Craft-3","The Castles and The Lifestyles -  Korea art","The Castles and The Lifestyles - Chinese","The Castles and The Lifestyles - CHN - KOR","The Castles and The Lifestyles - Taiwan","The Castles and The Lifestyles - TW-VN","The Castles and The Lifestyles - Vietnam","The Ratafoodie"]
+    let imageArray = ["The Castles and The Lifestyles -  Korea art","The Castles and The Lifestyles - Chinese","The Castles and The Lifestyles - CHN - KOR","The Castles and The Lifestyles - Taiwan","The Castles and The Lifestyles - TW-VN","The Castles and The Lifestyles - Vietnam"]
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
             scrollView.delegate = self
@@ -89,9 +89,10 @@ class EventTableViewController2: UITableViewController{
         else if indexPath.section == 3 && indexPath.row == 0{
             if dateCellExpanded {
                 btnReadMoreOrLess.setTitle("Read less", for: .normal)
-                heightConstraint.constant = 1145 //y axis
+                heightConstraint.constant = 1156
+                //y axis
                 aboutLabel.numberOfLines = 0
-                return 1216 //height of table cell
+                return 1191 //height of table cell
             } else {
                 btnReadMoreOrLess.setTitle("Read more", for: .normal)
                 heightConstraint.constant = 100

@@ -10,7 +10,7 @@ import UIKit
 
 class EventTableViewController3: UITableViewController{
     
-    let imageArray = ["Coastal Lunar Lanterns-1","Coastal Lunar Lanterns-2","Doors Open"]
+    let imageArray = ["Coastal Lunar Lanterns-1","Coastal Lunar Lanterns-2", "thomas", "carrielynn", "john", "zachary"]
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
             scrollView.delegate = self
@@ -88,9 +88,9 @@ class EventTableViewController3: UITableViewController{
         else if indexPath.section == 3 && indexPath.row == 0{
             if dateCellExpanded {
                 btnReadMoreOrLess.setTitle("Read less", for: .normal)
-                heightConstraint.constant = 1256
+                heightConstraint.constant = 1130
                 aboutLabel.numberOfLines = 0
-                return 1286
+                return 1150
             } else {
                 btnReadMoreOrLess.setTitle("Read more", for: .normal)
                 heightConstraint.constant = 100

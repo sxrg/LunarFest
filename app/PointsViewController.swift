@@ -72,7 +72,7 @@ class PointsViewController: UIViewController{
     func UpdateDB(){
         dbRef.child("users").child(userID).child("point").setValue(points);
     dbRef.child("users").child(userID).child("JoinDraw").setValue(agreeToDraw);
-         UserDefaults.standard.set(historyMessage, forKey:"historyMessage")
+//         UserDefaults.standard.set(historyMessage, forKey:"historyMessage")
     }
 
      //Uncomment when doen implementation of QR Code Scanner
@@ -99,20 +99,20 @@ class PointsViewController: UIViewController{
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let now = Date()
         let dateString = formatter.string(from:now)
-        if(operation == "Minus" && self.points > value){
+        if(operation == "Minus" && self.points >= value){
                 self.points = self.points - value
                 historyMessage = (historyMessage ?? "") + "-"
                 historyMessage = (historyMessage ?? "") + String(value)
                 historyMessage = (historyMessage ?? "") + " points ("
                 historyMessage = (historyMessage ?? "") + dateString + ")"+"\n"
-            }
-            if(operation == "Add"){
-                self.points = self.points + value
-                historyMessage = (historyMessage ?? "") + "+"
-                historyMessage = (historyMessage ?? "") + String(value)
-                historyMessage = (historyMessage ?? "") + " points ("
-                historyMessage = (historyMessage ?? "") + dateString + ")"+"\n"
-            }
+                userDefault.set(historyMessage, forKey:"historyMessage")
+        } else if (self.points < value ){
+            print("points redeem")
+            let alert = UIAlertController(title: "Warning", message: "No enough points to redeem", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+            
         UpdateUI()
         UpdateDB()
         }
@@ -137,14 +137,14 @@ class PointsViewController: UIViewController{
     }
     func checkQRCodeValue() -> Void{
         switch qrValue{
-            case "A_5PT":
-                modifyPoints(value: 5,operation: "Add")
-            case "A_10PT":
-                modifyPoints(value: 10,operation: "Add")
-            case "A_40PT":
-                modifyPoints(value: 40, operation: "Add")
-            case "A_50PT":
-                modifyPoints(value: 50, operation: "Add")
+//            case "A_5PT":
+//                modifyPoints(value: 5,operation: "Add")
+//            case "A_10PT":
+//                modifyPoints(value: 10,operation: "Add")
+//            case "A_40PT":
+//                modifyPoints(value: 40, operation: "Add")
+//            case "A_50PT":
+//                modifyPoints(value: 50, operation: "Add")
             case "R_10PT":
                 modifyPoints(value: 10, operation: "Minus")
             case "R_20PT":
