@@ -37,12 +37,13 @@ class quiz: UIViewController {
     var points = UserDefaults.standard.integer(forKey: "points")
     var date: Date!
     var today = Date()
+    var lastDate = UserDefaults.standard.string(forKey:"lastQuizDate")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Modifying appearance of the menu bar.
         setUpElements()
-        
+         UserDefaults.standard.setValue(self.lastDate, forKey: "lastQuizDate")
         // randomly select a question index from the questionbank
         questionNumber = Int.random(in: 0 ..< 20)
         
@@ -62,7 +63,7 @@ class quiz: UIViewController {
             points += 10
         dbRef.child("users").child(userID).child("point").setValue(points)
             UserDefaults.standard.set(self.points, forKey: "points")
-            UserDefaults.standard.set(date, forKey:"lastQuizDate")
+            UserDefaults.standard.set(lastDate, forKey:"lastQuizDate")
             
             quiz.isCorrect = true
             

@@ -26,6 +26,7 @@ class page_location: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         // Modifying appearance of the menu bar.
         setUpElements()
         leading.constant = -460
@@ -64,7 +65,7 @@ class page_location: UIViewController {
     
     func setUpElements(){
         // Styling the elements specific to
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2431372549, green: 0.2431372549, blue: 0.3176470588, alpha: 1)
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
@@ -75,7 +76,6 @@ class page_location: UIViewController {
         Utilities.styleEventButtons(btn_2)
         Utilities.styleEventButtons(btn_3)
         Utilities.styleEventButtons(btn_4)
-        Utilities.styleEventButtons(btn_5)
 
     
     }

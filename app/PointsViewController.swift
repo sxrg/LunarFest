@@ -6,7 +6,7 @@ import FirebaseAuth
 
 class PointsViewController: UIViewController{
     var dbRef = Database.database().reference()
-    var points = 0
+    var points = UserDefaults.standard.integer(forKey: "points")
     var agreeToDraw = false
     var userID = ""
     var qrValue = ""
@@ -14,8 +14,14 @@ class PointsViewController: UIViewController{
     @IBOutlet var btnRedeem: UIButton!
     @IBOutlet var pointsText: UILabel!
     @IBOutlet var pointsTextView: UIView!
+    @IBOutlet var history: UIButton!
+    
+    //add this in vancouver & vancouver's mypoints page
+    var historyMessage = UserDefaults.standard.object(forKey:"historyMessage") as? String
+    
     override func viewDidLoad(){
         super.viewDidLoad()
+        agreeToDraw = userDefault.bool(forKey: "agreeToDraw")
         self.pointsTextView.layer.cornerRadius = 15
         setUpElements()
         userID = Auth.auth().currentUser!.uid
@@ -26,12 +32,14 @@ class PointsViewController: UIViewController{
     if(!agreeToDraw && points >= 150){
         checkForJoinDraw()
         }
+
     }
 
     func setUpElements(){
         
         // Style the elements
         Utilities.styleHollowButton(btnRedeem)
+        Utilities.styleHollowButton(history)
     }
     
     func checkForJoinDraw(){
@@ -54,7 +62,9 @@ class PointsViewController: UIViewController{
         self.present(alert, animated: true, completion: nil)
     }
     func addToDrawPool(){
-        dbRef.child("users").child(userID).child("agreeToDraw").setValue(agreeToDraw)
+        agreeToDraw = true
+        userDefault.set(agreeToDraw, forKey: "agreeToDraw")
+    dbRef.child("users").child(userID).child("agreeToDraw").setValue(agreeToDraw)
         self.modifyPoints(value: 150, operation: "Minus")
         self.UpdateDB()
     }
@@ -62,38 +72,64 @@ class PointsViewController: UIViewController{
     func UpdateDB(){
         dbRef.child("users").child(userID).child("point").setValue(points);
     dbRef.child("users").child(userID).child("JoinDraw").setValue(agreeToDraw);
+         UserDefaults.standard.set(historyMessage, forKey:"historyMessage")
     }
 
      //Uncomment when doen implementation of QR Code Scanner
     //Clicking Redeem
-    @IBAction func openQRCodeScanner(sender: Any){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-       // let controller = storyboard.instantiateViewController(withIdentifier: "QRCodeScanner") as! VanQRCodeScanner
-        //letting the controller know which view to go back to
-        //uncomment when done with implementation of QR Code Scanner
-        //controller.previousUIView = "MyPoints"
-       // self.present(controller, animated: true, completion: nil)
-    }
-
+    
+//    @IBAction func redeemQRCodeScanner(_ sender: UIButton) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//        let controller = storyboard.instantiateViewController(withIdentifier: "QRCodeRedeem") as!
+//            QRCodeRedeem
+//        controller.previousUIView = "page_location"
+//        self.present(controller, animated: true, completion: nil)
+//    }
     
     func getUserPoints(){
         self.points = userDefault.integer(forKey: "points")
     self.agreeToDraw = (userDefault.bool(forKey: "agreeToDraw"))
     UpdateUI()
     }
-
-    func modifyPoints(value:Int, operation: String)-> Void{
-        if(operation == "Minus"){
-            self.points = self.points - value
-       
-        }
-        if(operation == "Add"){
-            self.points = self.points + value
-        }
-    UpdateDB()
-    UpdateUI();
     
-    }
+    //modify this in vancouver & toronto fun stop & mypoints page
+    func modifyPoints(value:Int, operation: String)-> Void{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let now = Date()
+        let dateString = formatter.string(from:now)
+        if(operation == "Minus" && self.points > value){
+                self.points = self.points - value
+                historyMessage = (historyMessage ?? "") + "-"
+                historyMessage = (historyMessage ?? "") + String(value)
+                historyMessage = (historyMessage ?? "") + " points ("
+                historyMessage = (historyMessage ?? "") + dateString + ")"+"\n"
+            }
+            if(operation == "Add"){
+                self.points = self.points + value
+                historyMessage = (historyMessage ?? "") + "+"
+                historyMessage = (historyMessage ?? "") + String(value)
+                historyMessage = (historyMessage ?? "") + " points ("
+                historyMessage = (historyMessage ?? "") + dateString + ")"+"\n"
+            }
+        UpdateUI()
+        UpdateDB()
+        }
+
+    
+//    func modifyPoints(value:Int, operation: String)-> Void{
+//        if(operation == "Minus" && self.points > value){
+//            self.points = self.points - value
+//
+//        }
+//        if(operation == "Add"){
+//            self.points = self.points + value
+//        }
+//    UpdateDB()
+//    UpdateUI();
+//
+//    }
     func UpdateUI(){
     self.pointsText.text = String(self.points)
         userDefault.set(self.points, forKey: "points")
@@ -133,5 +169,23 @@ class PointsViewController: UIViewController{
         self.UpdateDB()
     
     }
-}
+    
+    @IBAction func showRedeem(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let QRCodeRedeem = storyBoard.instantiateViewController(withIdentifier: "QRCodeRedeem") as! QRCodeRedeem
+        self.present(QRCodeRedeem, animated: true, completion: nil)
+    }
+    
 
+    @IBAction func showHistory(_ sender: Any) {
+        let alert = UIAlertController(title: "History", message: historyMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.message = historyMessage
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+     
+    }
+    
+    //Add this to updateDB or save function in vancouver/mypoints
+   
+    
+}

@@ -11,6 +11,7 @@ import FirebaseDatabase
 import FirebaseMessaging
 import UserNotifications
 import GoogleSignIn
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       
        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-
+        GMSServices.provideAPIKey("AIzaSyA4xkaOBNHCJ2gSRI2kjtWsmRyQb02RVOA")
 
         return true
     }

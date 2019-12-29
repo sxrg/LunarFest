@@ -50,13 +50,13 @@ class Utilities {
     
     static func xAxisShadow(_ myView:UIView) {
         
-        myView.layer.shadowPath =
-              UIBezierPath(roundedRect: myView.bounds,
-              cornerRadius: myView.layer.cornerRadius).cgPath
+//        myView.layer.shadowPath =
+//              UIBezierPath(roundedRect: myView.bounds,
+//              cornerRadius: myView.layer.cornerRadius).cgPath
         myView.layer.shadowColor = #colorLiteral(red: 0.1843137255, green: 0.1725490196, blue: 0.2862745098, alpha: 1)
-        myView.layer.shadowOpacity = 1.0
-        myView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        myView.layer.shadowRadius = 20
+        myView.layer.shadowOpacity = 0.2
+        myView.layer.shadowOffset = CGSize(width: 7, height: 7)
+        myView.layer.shadowRadius = 7
         myView.layer.masksToBounds = false
     }
     

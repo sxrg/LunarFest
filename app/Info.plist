@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) camera use</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -33,6 +35,18 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NeoSansTwoUnicase.ttf</string>
+		<string>NeoSansTwoUltraItalic.ttf</string>
+		<string>NeoSansTwoRegular.ttf</string>
+		<string>NeoSansTwoMedium.ttf</string>
+		<string>NeoSansTwoMediumItalic.ttf</string>
+		<string>NeoSansTwoLight.ttf</string>
+		<string>NeoSansTwoLightItalic.ttf</string>
+		<string>NeoSansTwoItalic.ttf</string>
+		<string>NeoSansTwoBold.ttf</string>
+		<string>NeoSansTwoBoldItalic.ttf</string>
+		<string>NeoSansTwoBlack.ttf </string>
+		<string>NeoSansTwoBlackItalic.ttf</string>
 		<string>PoiretOne-Regular.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
 		<string>postnobillscolombo-light.ttf</string>

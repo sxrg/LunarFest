@@ -36,8 +36,8 @@ class QuestionBank {
         list.append(Question(image: "rat_placeholder", questionText: "When is Lunar New Year in 2019?",
         choiceA: "February 6th", choiceB: "January 1st", choiceC: "January 25th", choiceD: "February 5th", answer: 4))
         
-        list.append(Question(image: "rat_placeholder", questionText: "Which company does this logo belong to?",
-        choiceA: "---", choiceB: "---", choiceC: "---", choiceD: "---", answer: 1))
+        list.append(Question(image: "telus", questionText: "Which company does this logo belong to?",
+        choiceA: "Telus", choiceB: "Rogers", choiceC: "Bell", choiceD: "Virgin", answer: 1))
         
         //
         

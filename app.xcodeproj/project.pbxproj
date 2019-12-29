@@ -10,7 +10,6 @@
 		330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330AA3FA23AC4098001A1F5A /* PointsViewController.swift */; };
 		3312A95423B292370085E907 /* EventTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A94F23B292340085E907 /* EventTableViewController2.swift */; };
 		3312A95523B292370085E907 /* EventTableViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A95023B292350085E907 /* EventTableViewController4.swift */; };
-		3312A95623B292370085E907 /* EventTableViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A95123B292350085E907 /* EventTableViewController5.swift */; };
 		3312A95723B292370085E907 /* EventTableViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A95223B292360085E907 /* EventTableViewController3.swift */; };
 		3312A95823B292370085E907 /* EventTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A95323B292370085E907 /* EventTableViewController1.swift */; };
 		3312A95C23B29A370085E907 /* chooseCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A95B23B29A370085E907 /* chooseCity.swift */; };
@@ -19,6 +18,29 @@
 		3312A96423B29D260085E907 /* quiz_instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A95F23B29D240085E907 /* quiz_instructions.swift */; };
 		3312A96523B29D260085E907 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A96023B29D250085E907 /* QuestionBank.swift */; };
 		3312A96623B29D260085E907 /* quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312A96123B29D260085E907 /* quiz.swift */; };
+		333AEEF223B54714009A63DA /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEEF123B54714009A63DA /* map.swift */; };
+		333AEEFA23B56F37009A63DA /* QRCodeRedeem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEEF923B56F37009A63DA /* QRCodeRedeem.swift */; };
+		333AEEFC23B6822A009A63DA /* torMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEEFB23B6822A009A63DA /* torMap.swift */; };
+		333AEEFE23B689D3009A63DA /* TorFunStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEEFD23B689D2009A63DA /* TorFunStopViewController.swift */; };
+		333AEF0023B689D6009A63DA /* TorEventTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEEFF23B689D6009A63DA /* TorEventTableViewController1.swift */; };
+		333AEF0223B689F2009A63DA /* TorEventTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEF0123B689F2009A63DA /* TorEventTableViewController2.swift */; };
+		333AEF0423B689FA009A63DA /* TorQRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEF0323B689FA009A63DA /* TorQRCodeScanner.swift */; };
+		333AEF0623B68A01009A63DA /* TorPageLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEF0523B68A01009A63DA /* TorPageLocationViewController.swift */; };
+		333AEF0823B68A08009A63DA /* TorFunStopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333AEF0723B68A07009A63DA /* TorFunStopInfoViewController.swift */; };
+		33F7F50123B80E9F00FFC9A1 /* NeoSansTwoLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4F423B80E9300FFC9A1 /* NeoSansTwoLightItalic.ttf */; };
+		33F7F50223B80E9F00FFC9A1 /* NeoSansTwoUltraItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4F523B80E9400FFC9A1 /* NeoSansTwoUltraItalic.ttf */; };
+		33F7F50323B80E9F00FFC9A1 /* NeoSansTwoLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4F623B80E9500FFC9A1 /* NeoSansTwoLight.ttf */; };
+		33F7F50423B80E9F00FFC9A1 /* NeoSansTwoMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4F723B80E9600FFC9A1 /* NeoSansTwoMedium.ttf */; };
+		33F7F50523B80E9F00FFC9A1 /* NeoSansTwoUnicase.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4F823B80E9700FFC9A1 /* NeoSansTwoUnicase.ttf */; };
+		33F7F50623B80E9F00FFC9A1 /* NeoSansTwoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4F923B80E9800FFC9A1 /* NeoSansTwoRegular.ttf */; };
+		33F7F50723B80E9F00FFC9A1 /* NeoSansTwoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4FA23B80E9900FFC9A1 /* NeoSansTwoBold.ttf */; };
+		33F7F50823B80E9F00FFC9A1 /* NeoSansTwoMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4FB23B80E9A00FFC9A1 /* NeoSansTwoMediumItalic.ttf */; };
+		33F7F50923B80E9F00FFC9A1 /* NeoSansTwoItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4FC23B80E9B00FFC9A1 /* NeoSansTwoItalic.ttf */; };
+		33F7F50A23B80E9F00FFC9A1 /* NeoSansTwoBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4FD23B80E9C00FFC9A1 /* NeoSansTwoBlack.ttf */; };
+		33F7F50B23B80E9F00FFC9A1 /* NeoSansTwoBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4FE23B80E9D00FFC9A1 /* NeoSansTwoBoldItalic.ttf */; };
+		33F7F50C23B80E9F00FFC9A1 /* NeoSansTwoBlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F4FF23B80E9E00FFC9A1 /* NeoSansTwoBlackItalic.ttf */; };
+		33F7F50D23B80E9F00FFC9A1 /* NeoSansTwoUltra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F7F50023B80E9F00FFC9A1 /* NeoSansTwoUltra.ttf */; };
+		33F7F50E23B8105600FFC9A1 /* PoiretOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3312A96723B2AA220085E907 /* PoiretOne-Regular.ttf */; };
 		6453B13223A6D86100D4AA28 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453B13123A6D86100D4AA28 /* Login.swift */; };
 		6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */; };
 		64A1791C23AD4FD500DDFE40 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */; };
@@ -43,7 +65,6 @@
 		330AA3FA23AC4098001A1F5A /* PointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
 		3312A94F23B292340085E907 /* EventTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController2.swift; sourceTree = "<group>"; };
 		3312A95023B292350085E907 /* EventTableViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController4.swift; sourceTree = "<group>"; };
-		3312A95123B292350085E907 /* EventTableViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController5.swift; sourceTree = "<group>"; };
 		3312A95223B292360085E907 /* EventTableViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController3.swift; sourceTree = "<group>"; };
 		3312A95323B292370085E907 /* EventTableViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController1.swift; sourceTree = "<group>"; };
 		3312A95B23B29A370085E907 /* chooseCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseCity.swift; sourceTree = "<group>"; };
@@ -53,6 +74,28 @@
 		3312A96023B29D250085E907 /* QuestionBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		3312A96123B29D260085E907 /* quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
 		3312A96723B2AA220085E907 /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
+		333AEEF123B54714009A63DA /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
+		333AEEF923B56F37009A63DA /* QRCodeRedeem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRedeem.swift; sourceTree = "<group>"; };
+		333AEEFB23B6822A009A63DA /* torMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = torMap.swift; sourceTree = "<group>"; };
+		333AEEFD23B689D2009A63DA /* TorFunStopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorFunStopViewController.swift; sourceTree = "<group>"; };
+		333AEEFF23B689D6009A63DA /* TorEventTableViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorEventTableViewController1.swift; sourceTree = "<group>"; };
+		333AEF0123B689F2009A63DA /* TorEventTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorEventTableViewController2.swift; sourceTree = "<group>"; };
+		333AEF0323B689FA009A63DA /* TorQRCodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorQRCodeScanner.swift; sourceTree = "<group>"; };
+		333AEF0523B68A01009A63DA /* TorPageLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorPageLocationViewController.swift; sourceTree = "<group>"; };
+		333AEF0723B68A07009A63DA /* TorFunStopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorFunStopInfoViewController.swift; sourceTree = "<group>"; };
+		33F7F4F423B80E9300FFC9A1 /* NeoSansTwoLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoLightItalic.ttf; sourceTree = "<group>"; };
+		33F7F4F523B80E9400FFC9A1 /* NeoSansTwoUltraItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoUltraItalic.ttf; sourceTree = "<group>"; };
+		33F7F4F623B80E9500FFC9A1 /* NeoSansTwoLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoLight.ttf; sourceTree = "<group>"; };
+		33F7F4F723B80E9600FFC9A1 /* NeoSansTwoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoMedium.ttf; sourceTree = "<group>"; };
+		33F7F4F823B80E9700FFC9A1 /* NeoSansTwoUnicase.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoUnicase.ttf; sourceTree = "<group>"; };
+		33F7F4F923B80E9800FFC9A1 /* NeoSansTwoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoRegular.ttf; sourceTree = "<group>"; };
+		33F7F4FA23B80E9900FFC9A1 /* NeoSansTwoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoBold.ttf; sourceTree = "<group>"; };
+		33F7F4FB23B80E9A00FFC9A1 /* NeoSansTwoMediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoMediumItalic.ttf; sourceTree = "<group>"; };
+		33F7F4FC23B80E9B00FFC9A1 /* NeoSansTwoItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoItalic.ttf; sourceTree = "<group>"; };
+		33F7F4FD23B80E9C00FFC9A1 /* NeoSansTwoBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoBlack.ttf; sourceTree = "<group>"; };
+		33F7F4FE23B80E9D00FFC9A1 /* NeoSansTwoBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoBoldItalic.ttf; sourceTree = "<group>"; };
+		33F7F4FF23B80E9E00FFC9A1 /* NeoSansTwoBlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoBlackItalic.ttf; sourceTree = "<group>"; };
+		33F7F50023B80E9F00FFC9A1 /* NeoSansTwoUltra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoSansTwoUltra.ttf; sourceTree = "<group>"; };
 		6453B13123A6D86100D4AA28 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "postnobillscolombo-light.ttf"; sourceTree = "<group>"; };
 		64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -91,6 +134,19 @@
 		6460E3D523A6ED4B00F75CB0 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				33F7F4FF23B80E9E00FFC9A1 /* NeoSansTwoBlackItalic.ttf */,
+				33F7F4FD23B80E9C00FFC9A1 /* NeoSansTwoBlack.ttf */,
+				33F7F4FE23B80E9D00FFC9A1 /* NeoSansTwoBoldItalic.ttf */,
+				33F7F4FA23B80E9900FFC9A1 /* NeoSansTwoBold.ttf */,
+				33F7F4FC23B80E9B00FFC9A1 /* NeoSansTwoItalic.ttf */,
+				33F7F4F423B80E9300FFC9A1 /* NeoSansTwoLightItalic.ttf */,
+				33F7F4F623B80E9500FFC9A1 /* NeoSansTwoLight.ttf */,
+				33F7F4FB23B80E9A00FFC9A1 /* NeoSansTwoMediumItalic.ttf */,
+				33F7F4F723B80E9600FFC9A1 /* NeoSansTwoMedium.ttf */,
+				33F7F4F923B80E9800FFC9A1 /* NeoSansTwoRegular.ttf */,
+				33F7F4F523B80E9400FFC9A1 /* NeoSansTwoUltraItalic.ttf */,
+				33F7F50023B80E9F00FFC9A1 /* NeoSansTwoUltra.ttf */,
+				33F7F4F823B80E9700FFC9A1 /* NeoSansTwoUnicase.ttf */,
 				64A1791B23AD4FD400DDFE40 /* OpenSans-Regular.ttf */,
 				3312A96723B2AA220085E907 /* PoiretOne-Regular.ttf */,
 				6460E3D623A6ED6100F75CB0 /* postnobillscolombo-light.ttf */,
@@ -133,25 +189,33 @@
 				3312A95B23B29A370085E907 /* chooseCity.swift */,
 				AA51441A23A6B76A00C37465 /* SceneDelegate.swift */,
 				AA51441E23A6B76A00C37465 /* Main.storyboard */,
+				333AEEFB23B6822A009A63DA /* torMap.swift */,
+				333AEF0523B68A01009A63DA /* TorPageLocationViewController.swift */,
+				333AEEF123B54714009A63DA /* map.swift */,
 				64E1467523A8107100F3B2C7 /* page_location.swift */,
+				333AEF0723B68A07009A63DA /* TorFunStopInfoViewController.swift */,
 				3312A95E23B29D230085E907 /* Question.swift */,
 				3312A96023B29D250085E907 /* QuestionBank.swift */,
 				3312A96123B29D260085E907 /* quiz.swift */,
 				3312A95F23B29D240085E907 /* quiz_instructions.swift */,
 				3312A95D23B29D220085E907 /* quizend.swift */,
+				333AEF0323B689FA009A63DA /* TorQRCodeScanner.swift */,
+				333AEEF923B56F37009A63DA /* QRCodeRedeem.swift */,
 				64E1467323A71B1F00F3B2C7 /* signup.swift */,
 				6453B13123A6D86100D4AA28 /* Login.swift */,
 				AA51442123A6B76D00C37465 /* Assets.xcassets */,
 				AA51442323A6B76D00C37465 /* LaunchScreen.storyboard */,
 				AA51442623A6B76D00C37465 /* Info.plist */,
 				AA0C8E4723A77CB100DF6F3A /* Utilities.swift */,
+				333AEEFD23B689D2009A63DA /* TorFunStopViewController.swift */,
+				333AEF0123B689F2009A63DA /* TorEventTableViewController2.swift */,
+				333AEEFF23B689D6009A63DA /* TorEventTableViewController1.swift */,
 				3312A95323B292370085E907 /* EventTableViewController1.swift */,
 				3312A94F23B292340085E907 /* EventTableViewController2.swift */,
 				3312A95223B292360085E907 /* EventTableViewController3.swift */,
 				3312A95023B292350085E907 /* EventTableViewController4.swift */,
 				AA51441623A6B76A00C37465 /* Products */,
 				330AA3FA23AC4098001A1F5A /* PointsViewController.swift */,
-				3312A95123B292350085E907 /* EventTableViewController5.swift */,
 				AA667FDD23ABFA5800AB2014 /* FunStopViewController.swift */,
 				AA667FDF23AC420B00AB2014 /* FunStopInfoViewController.swift */,
 				AA667FE123AC47F100AB2014 /* VanQRCodeScanner.swift */,
@@ -229,11 +293,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F7F50A23B80E9F00FFC9A1 /* NeoSansTwoBlack.ttf in Resources */,
+				33F7F50223B80E9F00FFC9A1 /* NeoSansTwoUltraItalic.ttf in Resources */,
+				33F7F50423B80E9F00FFC9A1 /* NeoSansTwoMedium.ttf in Resources */,
+				33F7F50B23B80E9F00FFC9A1 /* NeoSansTwoBoldItalic.ttf in Resources */,
 				AA51442523A6B76D00C37465 /* LaunchScreen.storyboard in Resources */,
+				33F7F50623B80E9F00FFC9A1 /* NeoSansTwoRegular.ttf in Resources */,
+				33F7F50D23B80E9F00FFC9A1 /* NeoSansTwoUltra.ttf in Resources */,
 				6460E3D723A6ED6100F75CB0 /* postnobillscolombo-light.ttf in Resources */,
 				AAF58B4623A6C0990098E626 /* GoogleService-Info.plist in Resources */,
 				AA51442223A6B76D00C37465 /* Assets.xcassets in Resources */,
+				33F7F50323B80E9F00FFC9A1 /* NeoSansTwoLight.ttf in Resources */,
+				33F7F50823B80E9F00FFC9A1 /* NeoSansTwoMediumItalic.ttf in Resources */,
+				33F7F50C23B80E9F00FFC9A1 /* NeoSansTwoBlackItalic.ttf in Resources */,
+				33F7F50E23B8105600FFC9A1 /* PoiretOne-Regular.ttf in Resources */,
+				33F7F50723B80E9F00FFC9A1 /* NeoSansTwoBold.ttf in Resources */,
+				33F7F50923B80E9F00FFC9A1 /* NeoSansTwoItalic.ttf in Resources */,
+				33F7F50123B80E9F00FFC9A1 /* NeoSansTwoLightItalic.ttf in Resources */,
 				64A1791C23AD4FD500DDFE40 /* OpenSans-Regular.ttf in Resources */,
+				33F7F50523B80E9F00FFC9A1 /* NeoSansTwoUnicase.ttf in Resources */,
 				AA51442023A6B76A00C37465 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,23 +385,31 @@
 				AA51441923A6B76A00C37465 /* AppDelegate.swift in Sources */,
 				330AA3FC23AC4E9B001A1F5A /* PointsViewController.swift in Sources */,
 				64E1467423A71B1F00F3B2C7 /* signup.swift in Sources */,
+				333AEF0223B689F2009A63DA /* TorEventTableViewController2.swift in Sources */,
 				AA51441B23A6B76A00C37465 /* SceneDelegate.swift in Sources */,
 				3312A95823B292370085E907 /* EventTableViewController1.swift in Sources */,
+				333AEEFA23B56F37009A63DA /* QRCodeRedeem.swift in Sources */,
 				AA22232223AC4E8100D130C7 /* VanFunStopProgram.swift in Sources */,
 				3312A96623B29D260085E907 /* quiz.swift in Sources */,
 				3312A95523B292370085E907 /* EventTableViewController4.swift in Sources */,
+				333AEF0823B68A08009A63DA /* TorFunStopInfoViewController.swift in Sources */,
 				3312A96423B29D260085E907 /* quiz_instructions.swift in Sources */,
 				64E1467623A8107100F3B2C7 /* page_location.swift in Sources */,
-				3312A95623B292370085E907 /* EventTableViewController5.swift in Sources */,
 				3312A95423B292370085E907 /* EventTableViewController2.swift in Sources */,
+				333AEEF223B54714009A63DA /* map.swift in Sources */,
+				333AEF0423B689FA009A63DA /* TorQRCodeScanner.swift in Sources */,
 				AA667FE223AC47F100AB2014 /* VanQRCodeScanner.swift in Sources */,
 				AA667FDE23ABFA5800AB2014 /* FunStopViewController.swift in Sources */,
 				3312A96223B29D260085E907 /* quizend.swift in Sources */,
 				3312A96323B29D260085E907 /* Question.swift in Sources */,
 				AA0C8E4823A77CB100DF6F3A /* Utilities.swift in Sources */,
+				333AEEFE23B689D3009A63DA /* TorFunStopViewController.swift in Sources */,
 				AA667FE023AC420B00AB2014 /* FunStopInfoViewController.swift in Sources */,
 				3312A95C23B29A370085E907 /* chooseCity.swift in Sources */,
+				333AEEFC23B6822A009A63DA /* torMap.swift in Sources */,
+				333AEF0023B689D6009A63DA /* TorEventTableViewController1.swift in Sources */,
 				3312A95723B292370085E907 /* EventTableViewController3.swift in Sources */,
+				333AEF0623B68A01009A63DA /* TorPageLocationViewController.swift in Sources */,
 				6453B13223A6D86100D4AA28 /* Login.swift in Sources */,
 				3312A96523B29D260085E907 /* QuestionBank.swift in Sources */,
 			);

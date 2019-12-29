@@ -33,6 +33,12 @@ class signup: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(Auth.auth().currentUser != nil){
+            moveToLocationMenu()
+        }
+        overrideUserInterfaceStyle = .light
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
         self.googleButton.layer.cornerRadius = 5
         setUpElements()
     }
@@ -51,9 +57,9 @@ class signup: UIViewController, GIDSignInUIDelegate {
         if userDefault.bool(forKey: "usersignedin") {
             performSegue(withIdentifier: "Segue_To_Signin", sender: self)
         }
-//        if(Auth.auth().currentUser != nil){
-//            moveToLocationMenu()
-//        }
+        if(Auth.auth().currentUser != nil){
+            moveToLocationMenu()
+        }
     }
     
     @IBAction func btnSignup(_ sender: Any) {

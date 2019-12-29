@@ -15,6 +15,7 @@ class FunStopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         // Do any additional setup after loading the view.
         self.funStopDescView.layer.cornerRadius = 15
         setUpElements()

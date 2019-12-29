@@ -21,7 +21,7 @@ class EventTableViewController3: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        overrideUserInterfaceStyle = .light
         // For page control
         pageControl.numberOfPages = imageArray.count
                
@@ -42,9 +42,16 @@ class EventTableViewController3: UITableViewController{
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        let page = scrollView.contentOffset.x/scrollView.frame.width
-        pageControl.currentPage = Int(page)
+            
+            let page = scrollView.contentOffset.x/scrollView.frame.width
+        if(pageControl.currentPage ==  (imageArray.count - 1)){
+            print("last item" )
+            scrollView.contentOffset = CGPoint(x: 320,y: 0)
+            pageControl.currentPage = 0
+            
+        }else{
+                pageControl.currentPage = Int(page)
+            }
     }
     
     
@@ -81,9 +88,9 @@ class EventTableViewController3: UITableViewController{
         else if indexPath.section == 3 && indexPath.row == 0{
             if dateCellExpanded {
                 btnReadMoreOrLess.setTitle("Read less", for: .normal)
-                heightConstraint.constant = 1515
+                heightConstraint.constant = 1256
                 aboutLabel.numberOfLines = 0
-                return 1566
+                return 1286
             } else {
                 btnReadMoreOrLess.setTitle("Read more", for: .normal)
                 heightConstraint.constant = 100

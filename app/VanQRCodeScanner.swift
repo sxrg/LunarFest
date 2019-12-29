@@ -100,6 +100,7 @@ class VanQRCodeScanner: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         let VanFunStopProgram = storyBoard.instantiateViewController(withIdentifier: "FunStopInfoViewController") as! FunStopInfoViewController;
         
         VanFunStopProgram.qrValue = code
+        VanFunStopProgram.modalPresentationStyle = .fullScreen
         self.present(VanFunStopProgram, animated: true, completion: nil)
 //        
 //        print(code)
