@@ -21,7 +21,7 @@
         <!--Login-->
         <scene sceneID="0to-Jx-6FU">
             <objects>
-                <viewController title="Login" id="KqN-rA-ERi" customClass="Login" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="KqN-rA-ERi" customClass="Login" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WVD-sd-Tq5" customClass="login">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
         <!--Signup-->
         <scene sceneID="x43-Io-Wpr">
             <objects>
-                <viewController id="Zmg-Pf-rD7" customClass="signup" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zmg-Pf-rD7" customClass="signup" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Bk-aR-55f" customClass="Signup">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,8 +236,8 @@
         <!--Choose City-->
         <scene sceneID="m8G-is-aKh">
             <objects>
-                <viewController storyboardIdentifier="chooseCity" id="Qwk-XZ-mDP" customClass="chooseCity" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lkk-dl-kXe" customClass="SelectCity" customModule="app" customModuleProvider="target">
+                <viewController storyboardIdentifier="chooseCity" id="Qwk-XZ-mDP" customClass="chooseCity" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lkk-dl-kXe" customClass="SelectCity" customModule="LunarFun" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -348,8 +348,8 @@
         <!--Page location-->
         <scene sceneID="ZeH-IZ-MDb">
             <objects>
-                <viewController id="gww-K7-P2U" customClass="page_location" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NZ8-gU-hea" customClass="viewController" customModule="app" customModuleProvider="target">
+                <viewController id="gww-K7-P2U" customClass="page_location" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZ8-gU-hea" customClass="viewController" customModule="LunarFun" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -565,7 +565,7 @@
         <!--Fun Stop-->
         <scene sceneID="PKj-pM-cca">
             <objects>
-                <viewController title="Fun Stop" id="YJm-NG-yJQ" customClass="FunStopViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Fun Stop" id="YJm-NG-yJQ" customClass="FunStopViewController" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2pa-bk-7dq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -604,11 +604,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="243.5" id="iNI-Rb-Zdg"/>
                                         </constraints>
-                                        <mutableString key="text">1. Visit the various LunarFest locations, and look for a Lunar Fun QR Code. 
+                                        <string key="text">1. Visit the various LunarFest locations, and look for a Lunar Fun QR Code. 
 2. Tap the camera icon to scan the Lunar Fun QR Code. 
 3. Earn points and qualify for the draw for a $200 Visa gift card. 
 4. Visit the MyPoints page to see your progress and the list of prizes!
-</mutableString>
+</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -652,7 +652,7 @@
         <!--VanQRCodeScanner-->
         <scene sceneID="HVV-UA-gR1">
             <objects>
-                <viewController storyboardIdentifier="VanQRCodeScanner" id="PiQ-dx-dye" userLabel="VanQRCodeScanner" customClass="VanQRCodeScanner" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VanQRCodeScanner" id="PiQ-dx-dye" userLabel="VanQRCodeScanner" customClass="VanQRCodeScanner" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pDD-6T-Xe0"/>
                         <viewControllerLayoutGuide type="bottom" id="M4M-Ej-Ktb"/>
@@ -695,7 +695,7 @@
         <!--Map-->
         <scene sceneID="x2v-fd-nJj">
             <objects>
-                <viewController id="T8r-0x-G0T" customClass="map" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T8r-0x-G0T" customClass="map" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EIP-eU-mcE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -711,7 +711,7 @@
         <!--Points View Controller-->
         <scene sceneID="ly9-SO-teN">
             <objects>
-                <viewController storyboardIdentifier="PointsViewController" id="jhu-Zg-Xlu" customClass="PointsViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PointsViewController" id="jhu-Zg-Xlu" customClass="PointsViewController" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hew-Z3-CKd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -883,7 +883,7 @@ Click Redeem to scan the redemption QR Code
         <!--Code Redeem-->
         <scene sceneID="DLf-x4-zk4">
             <objects>
-                <viewController storyboardIdentifier="QRCodeRedeem" id="BQm-pU-DNf" customClass="QRCodeRedeem" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRCodeRedeem" id="BQm-pU-DNf" customClass="QRCodeRedeem" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Hk-jC-tgm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -996,7 +996,7 @@ ACSEA’s signature events are spread throughout the year: the end of winter Lun
         <!--Map - Toronto-->
         <scene sceneID="aZi-ob-zyl">
             <objects>
-                <viewController id="RcE-78-o1t" customClass="torMap" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RcE-78-o1t" customClass="torMap" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sqr-nG-TOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1012,7 +1012,7 @@ ACSEA’s signature events are spread throughout the year: the end of winter Lun
         <!--Event Table View Controller1-->
         <scene sceneID="pde-pK-bxm">
             <objects>
-                <tableViewController id="kNt-0j-lLQ" customClass="EventTableViewController1" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="kNt-0j-lLQ" customClass="EventTableViewController1" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L5s-Kd-mfC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1464,7 +1464,7 @@ How do cultures from around the world celebrate Lunar New Year and spend time wi
         <!--Event Table View Controller2-->
         <scene sceneID="tGW-hI-HQl">
             <objects>
-                <tableViewController id="l6c-N5-lmz" customClass="EventTableViewController2" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="l6c-N5-lmz" customClass="EventTableViewController2" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="t6C-0U-ewP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1857,7 +1857,7 @@ Decorating the house in red and yellow, lucky colours in Vietnamese culture, fam
         <!--Event Table View Controller3-->
         <scene sceneID="JqQ-qo-52q">
             <objects>
-                <tableViewController id="4nd-5C-wAa" customClass="EventTableViewController3" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4nd-5C-wAa" customClass="EventTableViewController3" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UaZ-ml-rE7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2020,7 +2020,7 @@ Decorating the house in red and yellow, lucky colours in Vietnamese culture, fam
                                                     <rect key="frame" x="15" y="0.0" width="384" height="1150"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
-                                                            <mutableString key="content">In acknowledgement that we are fortunate to be able to gather on the unceded territory of the Coast Salish People, these eight gigantic lanterns were created with the designs of Indigenous artists from the Stó:lō, Dené, Musqueam, and Tsleil-Waututh nations to celebrate one of the most important traditions in Asia – the Lunar New Year. </mutableString>
+                                                            <string key="content">In acknowledgement that we are fortunate to be able to gather on the unceded territory of the Coast Salish People, these eight gigantic lanterns were created with the designs of Indigenous artists from the Stó:lō, Dené, Musqueam, and Tsleil-Waututh nations to celebrate one of the most important traditions in Asia – the Lunar New Year. </string>
                                                             <attributes>
                                                                 <font key="NSFont" size="17" name="HelveticaNeue-Italic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -2070,13 +2070,13 @@ Black Fish, Dog Fish, Eagles, &amp; Salmon.
                                                             </attributes>
                                                         </fragment>
                                                         <fragment>
-                                                            <mutableString key="content">
+                                                            <string key="content">
 A lost lone wolf who’s been separated from its pack, calls out each night to communicate for
 others who may feel similar. During the day he hunts and travels seeking shelter to survive.
 This piece is a reflection of some people's lives, who are abandoned, separated or forgotten
 and as the world keeps moving without them, they keep fighting for themselves.
 
-</mutableString>
+</string>
                                                             <attributes>
                                                                 <font key="NSFont" size="17" name="HelveticaNeue"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -2093,10 +2093,10 @@ and as the world keeps moving without them, they keep fighting for themselves.
                                                             </attributes>
                                                         </fragment>
                                                         <fragment>
-                                                            <mutableString key="content">
+                                                            <string key="content">
 The piece is a combination of coast salish design principles, from hand drawn or carved mediums and also from woven textile patterns. The red fawn in this piece, is representative of the medicine that a fawn offers, in its curiosity, exuberance for life, and its gentleness. The zigzag patterns and coloring in the background depict paths travelled in the forests.
 
-</mutableString>
+</string>
                                                             <attributes>
                                                                 <font key="NSFont" size="17" name="HelveticaNeue"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -2113,8 +2113,8 @@ The piece is a combination of coast salish design principles, from hand drawn or
                                                             </attributes>
                                                         </fragment>
                                                         <fragment>
-                                                            <mutableString key="content">
-The face on top is a represents the artist’s ancestors sending prayers out to cover the land and people. The mountains are shaped like salmon heads because the snowmelt is the water they swim in and represents a strong connection in the artist’s Salish culture.</mutableString>
+                                                            <string key="content">
+The face on top is a represents the artist’s ancestors sending prayers out to cover the land and people. The mountains are shaped like salmon heads because the snowmelt is the water they swim in and represents a strong connection in the artist’s Salish culture.</string>
                                                             <attributes>
                                                                 <font key="NSFont" size="17" name="HelveticaNeue"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -2252,7 +2252,7 @@ The face on top is a represents the artist’s ancestors sending prayers out to 
         <!--Event Table View Controller4-->
         <scene sceneID="B5b-do-oKX">
             <objects>
-                <tableViewController id="UDJ-7v-IcW" customClass="EventTableViewController4" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="UDJ-7v-IcW" customClass="EventTableViewController4" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0sV-LN-adW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2543,7 +2543,7 @@ The face on top is a represents the artist’s ancestors sending prayers out to 
         <!--Quiz instructions-->
         <scene sceneID="jxS-Kg-h6q">
             <objects>
-                <viewController id="vsC-Pn-rhy" customClass="quiz_instructions" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vsC-Pn-rhy" customClass="quiz_instructions" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRp-ex-pGY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2582,12 +2582,12 @@ The face on top is a represents the artist’s ancestors sending prayers out to 
                                         <constraints>
                                             <constraint firstAttribute="height" constant="272" id="ELM-xx-gXO"/>
                                         </constraints>
-                                        <mutableString key="text">Earn points towards your Lunar Fun prize! 
+                                        <string key="text">Earn points towards your Lunar Fun prize! 
 
 A one question quiz is available each day, use your knowledge and choose the correct answer!
 * 5 points will be rewarded just for playing 
 * Additional 5 points will be rewarded if you correctly answered the question.  
-Good Luck! </mutableString>
+Good Luck! </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2632,7 +2632,7 @@ Good Luck! </mutableString>
         <!--Quiz-->
         <scene sceneID="IN8-h3-FaU">
             <objects>
-                <viewController storyboardIdentifier="quiz" id="pfT-wQ-e0s" customClass="quiz" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quiz" id="pfT-wQ-e0s" customClass="quiz" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yLS-eE-AYB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2758,7 +2758,7 @@ Good Luck! </mutableString>
         <!--Quizend-->
         <scene sceneID="hQA-Wr-miC">
             <objects>
-                <viewController storyboardIdentifier="quizend" id="akE-VF-tlb" customClass="quizend" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quizend" id="akE-VF-tlb" customClass="quizend" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BGh-FE-gVt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2855,8 +2855,8 @@ Good Luck! </mutableString>
         <!--Tor Page Location View Controller-->
         <scene sceneID="by8-gh-Ncm">
             <objects>
-                <viewController id="zHS-N7-ovl" customClass="TorPageLocationViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vMO-Zo-J4O" customClass="viewController" customModule="app" customModuleProvider="target">
+                <viewController id="zHS-N7-ovl" customClass="TorPageLocationViewController" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMO-Zo-J4O" customClass="viewController" customModule="LunarFun" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -3042,7 +3042,7 @@ Good Luck! </mutableString>
         <!--Fun Stop-->
         <scene sceneID="ls2-c1-y8U">
             <objects>
-                <viewController title="Fun Stop" id="f9b-lX-Xsg" customClass="TorFunStopViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Fun Stop" id="f9b-lX-Xsg" customClass="TorFunStopViewController" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydn-2j-yVZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3081,11 +3081,11 @@ Good Luck! </mutableString>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="243.5" id="Fbh-Yd-nwe"/>
                                         </constraints>
-                                        <mutableString key="text">1. Visit the various LunarFest locations, and look for a Lunar Fun QR Code. 
+                                        <string key="text">1. Visit the various LunarFest locations, and look for a Lunar Fun QR Code. 
 2. Tap the camera icon to scan the Lunar Fun QR Code. 
 3. Earn points and qualify for the draw for a $200 Visa gift card. 
 4. Visit the MyPoints page to see your progress and the list of prizes! 
-</mutableString>
+</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3129,7 +3129,7 @@ Good Luck! </mutableString>
         <!--Fun Stop Info-->
         <scene sceneID="0aG-ro-8pD">
             <objects>
-                <viewController storyboardIdentifier="TorFunStopInfoViewController" title="Fun Stop Info" id="ttj-hl-TLI" customClass="TorFunStopInfoViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TorFunStopInfoViewController" title="Fun Stop Info" id="ttj-hl-TLI" customClass="TorFunStopInfoViewController" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uzx-rS-Lw3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3138,10 +3138,10 @@ Good Luck! </mutableString>
                                 <rect key="frame" x="0.0" y="88" width="320" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttc-0O-wBA">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="298"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325.33333333333331" height="320.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mzi-qQ-oiG">
-                                                <rect key="frame" x="15" y="63" width="342" height="199"/>
+                                                <rect key="frame" x="15" y="85.666666666666657" width="310.33333333333331" height="198.99999999999997"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X01-Fc-d2O">
                                                         <rect key="frame" x="10" y="17.333333333333332" width="24" height="19.333333333333339"/>
@@ -3171,7 +3171,7 @@ Good Luck! </mutableString>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-TN-4Eg">
-                                                        <rect key="frame" x="10" y="104.33333333333333" width="24" height="19.333333333333329"/>
+                                                        <rect key="frame" x="10" y="104.33333333333336" width="24" height="19.333333333333329"/>
                                                         <color key="backgroundColor" red="0.9134544403" green="0.9134544403" blue="0.9134544403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -3180,7 +3180,7 @@ Good Luck! </mutableString>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-WC-aX9">
-                                                        <rect key="frame" x="10" y="133.33333333333334" width="24" height="19.333333333333343"/>
+                                                        <rect key="frame" x="10" y="133.33333333333337" width="24" height="19.333333333333343"/>
                                                         <color key="backgroundColor" red="0.9134544403" green="0.9134544403" blue="0.9134544403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -3189,7 +3189,7 @@ Good Luck! </mutableString>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8fR-ce-diS">
-                                                        <rect key="frame" x="10" y="162.33333333333334" width="24" height="19.333333333333343"/>
+                                                        <rect key="frame" x="10" y="162.33333333333337" width="24" height="19.333333333333343"/>
                                                         <color key="backgroundColor" red="0.9134544403" green="0.9134544403" blue="0.9134544403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -3225,7 +3225,7 @@ Good Luck! </mutableString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horse &amp; Sheep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cb-Rb-xV0">
-                                                        <rect key="frame" x="44" y="104" width="115" height="21"/>
+                                                        <rect key="frame" x="44" y="104.00000000000003" width="115" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="Djo-bJ-e8p"/>
                                                         </constraints>
@@ -3234,7 +3234,7 @@ Good Luck! </mutableString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey &amp; Rooster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-97-ZqJ">
-                                                        <rect key="frame" x="44" y="133" width="140" height="21"/>
+                                                        <rect key="frame" x="44" y="133.00000000000003" width="140" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="hhp-lS-lCH"/>
                                                         </constraints>
@@ -3243,7 +3243,7 @@ Good Luck! </mutableString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog &amp; Pig" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NX-XO-11Q">
-                                                        <rect key="frame" x="44.000000000000007" y="162" width="76.666666666666686" height="21"/>
+                                                        <rect key="frame" x="44.000000000000007" y="162.00000000000003" width="76.666666666666686" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="Ced-Mg-uwN"/>
                                                         </constraints>
@@ -3283,7 +3283,7 @@ Good Luck! </mutableString>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMC-Gd-API">
-                                                <rect key="frame" x="302" y="15" width="50" height="50"/>
+                                                <rect key="frame" x="270.33333333333331" y="15" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Oc5-0u-sqG"/>
                                                     <constraint firstAttribute="width" constant="50" id="itt-yz-zfU"/>
@@ -3295,8 +3295,11 @@ Good Luck! </mutableString>
                                                     <action selector="openQRCodeScanner:" destination="ttj-hl-TLI" eventType="touchUpInside" id="5rf-sn-p0o"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living Arts Centre - Feb 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-ty-8By">
-                                                <rect key="frame" x="15" y="25" width="217" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living Arts Centre &amp; Varley Art Gallery" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkd-W2-Og3">
+                                                <rect key="frame" x="15" y="24.999999999999996" width="191" height="45.666666666666657"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="191" id="8w3-4a-Noo"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3305,17 +3308,17 @@ Good Luck! </mutableString>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aMC-Gd-API" secondAttribute="trailing" constant="5" id="3qt-KI-Xqj"/>
-                                            <constraint firstItem="Fgm-ty-8By" firstAttribute="leading" secondItem="Ttc-0O-wBA" secondAttribute="leading" constant="15" id="5WJ-pL-Dpb"/>
                                             <constraint firstItem="Mzi-qQ-oiG" firstAttribute="leading" secondItem="Ttc-0O-wBA" secondAttribute="leading" constant="15" id="BYW-Rz-8vp"/>
-                                            <constraint firstItem="Mzi-qQ-oiG" firstAttribute="top" secondItem="Fgm-ty-8By" secondAttribute="bottom" constant="15" id="GVY-uK-c5n"/>
+                                            <constraint firstItem="Mzi-qQ-oiG" firstAttribute="top" secondItem="Fkd-W2-Og3" secondAttribute="bottom" constant="15" id="BoJ-k9-HxN"/>
                                             <constraint firstAttribute="bottom" secondItem="Mzi-qQ-oiG" secondAttribute="bottom" constant="36" id="H1o-aW-sd3"/>
+                                            <constraint firstItem="Fkd-W2-Og3" firstAttribute="leading" secondItem="Ttc-0O-wBA" secondAttribute="leading" constant="15" id="VJO-Ku-pN6"/>
                                             <constraint firstAttribute="trailing" secondItem="Mzi-qQ-oiG" secondAttribute="trailing" id="WzN-kd-8kd"/>
-                                            <constraint firstItem="Fgm-ty-8By" firstAttribute="top" secondItem="Ttc-0O-wBA" secondAttribute="top" constant="25" id="hw1-9x-edx"/>
+                                            <constraint firstItem="Fkd-W2-Og3" firstAttribute="top" secondItem="Ttc-0O-wBA" secondAttribute="top" constant="25" id="bxN-HB-jwW"/>
                                             <constraint firstItem="aMC-Gd-API" firstAttribute="top" secondItem="Ttc-0O-wBA" secondAttribute="top" constant="15" id="jMl-Mc-b8M"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-dy-vch">
-                                        <rect key="frame" x="110" y="585" width="155" height="53"/>
+                                        <rect key="frame" x="110" y="585" width="122" height="53"/>
                                         <color key="backgroundColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="108" id="9PF-5D-f4z"/>
@@ -3367,12 +3370,12 @@ Good Luck! </mutableString>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqB-P1-khl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="OTd-cj-j6w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7340.625" y="-939.08450704225356"/>
+            <point key="canvasLocation" x="7340" y="-939.16256157635473"/>
         </scene>
         <!--TorQRCodeScanner-->
         <scene sceneID="Nul-nI-nEB">
             <objects>
-                <viewController storyboardIdentifier="TorQRCodeScanner" id="z5M-8e-XNk" userLabel="TorQRCodeScanner" customClass="TorQRCodeScanner" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TorQRCodeScanner" id="z5M-8e-XNk" userLabel="TorQRCodeScanner" customClass="TorQRCodeScanner" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="855-fl-Hjj"/>
                         <viewControllerLayoutGuide type="bottom" id="H0h-OH-s1x"/>
@@ -3415,7 +3418,7 @@ Good Luck! </mutableString>
         <!--Tor Event Table View Controller1-->
         <scene sceneID="v1M-sh-KrW">
             <objects>
-                <tableViewController id="MEi-0f-a2T" customClass="TorEventTableViewController1" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="MEi-0f-a2T" customClass="TorEventTableViewController1" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Gp-Nu-daf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3680,7 +3683,7 @@ Good Luck! </mutableString>
         <!--Tor Event Table View Controller2-->
         <scene sceneID="O7T-Ju-2FX">
             <objects>
-                <tableViewController id="EKY-5D-mXh" customClass="TorEventTableViewController2" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="EKY-5D-mXh" customClass="TorEventTableViewController2" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5p-6I-o82">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3925,7 +3928,7 @@ Good Luck! </mutableString>
         <!--Fun Stop Info-->
         <scene sceneID="k8l-MJ-6uq">
             <objects>
-                <viewController storyboardIdentifier="FunStopInfoViewController" title="Fun Stop Info" id="GSh-m6-hMI" customClass="FunStopInfoViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FunStopInfoViewController" title="Fun Stop Info" id="GSh-m6-hMI" customClass="FunStopInfoViewController" customModule="LunarFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="NJW-8x-mOR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3934,10 +3937,10 @@ Good Luck! </mutableString>
                                 <rect key="frame" x="0.0" y="88" width="320" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-LT-jgd">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="974.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="974.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7b-KQ-rO4">
-                                                <rect key="frame" x="15" y="85.666666666666629" width="379" height="373"/>
+                                                <rect key="frame" x="15" y="85.666666666666629" width="342" height="373"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hFC-FB-Ftt">
                                                         <rect key="frame" x="10" y="17.333333333333332" width="24" height="19.333333333333339"/>
@@ -4211,7 +4214,7 @@ Good Luck! </mutableString>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fa-GF-PNg">
-                                                <rect key="frame" x="339" y="15" width="50" height="50"/>
+                                                <rect key="frame" x="302" y="15" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="8ya-3Y-NL7"/>
                                                     <constraint firstAttribute="width" constant="50" id="q1m-Xr-uKf"/>
@@ -4232,7 +4235,7 @@ Jan 25 - Jan 26</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5u-aj-Tbm">
-                                                <rect key="frame" x="15" y="626.33333333333337" width="379" height="54"/>
+                                                <rect key="frame" x="15" y="626.33333333333337" width="342" height="54"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1eJ-vg-zjg">
                                                         <rect key="frame" x="10" y="17.333333333333332" width="24" height="19.333333333333339"/>
@@ -4269,7 +4272,7 @@ Jan 16 - Feb 10</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2N-Oc-STH">
-                                                <rect key="frame" x="15" y="539.33333333333337" width="379" height="141"/>
+                                                <rect key="frame" x="15" y="539.33333333333337" width="342" height="141"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SS5-af-hfD">
                                                         <rect key="frame" x="10" y="17.333333333333332" width="24" height="19.333333333333339"/>
@@ -4367,7 +4370,7 @@ Jan 16 - Feb 10</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9N6-OL-W0e">
-                                                <rect key="frame" x="15" y="769.33333333333337" width="379" height="54"/>
+                                                <rect key="frame" x="15" y="769.33333333333337" width="342" height="54"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rP9-3F-hHx">
                                                         <rect key="frame" x="10" y="17.333333333333332" width="24" height="19.333333333333339"/>
