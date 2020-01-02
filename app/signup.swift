@@ -33,9 +33,9 @@ class signup: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(Auth.auth().currentUser != nil){
-            moveToLocationMenu()
-        }
+//        if(Auth.auth().currentUser != nil){
+//            moveToLocationMenu()
+//        }
         overrideUserInterfaceStyle = .light
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
         self.view.addGestureRecognizer(tapGesture)
@@ -54,11 +54,12 @@ class signup: UIViewController, GIDSignInUIDelegate {
         }
     
     override func viewDidAppear(_ animated: Bool) {
-        if userDefault.bool(forKey: "usersignedin") {
-            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
-        }
-        if(Auth.auth().currentUser != nil){
-            moveToLocationMenu()
+//        if userDefault.bool(forKey: "usersignedin") {
+//            performSegue(withIdentifier: "Segue_To_Signin", sender: self)
+//        }
+        if(Auth.auth().currentUser?.email != nil){
+            print("email", Auth.auth().currentUser?.email)
+                moveToLocationMenu()
         }
     }
     
@@ -129,8 +130,8 @@ class signup: UIViewController, GIDSignInUIDelegate {
                 let user = Auth.auth().currentUser
                 let uid = user!.uid
                 let myDatabse = Database.database().reference()
-            myDatabse.child("users").child(uid).child("email").setValue(user?.email)
-                    self.moveToLocationMenu()
+                myDatabse.child("users").child(uid).child("email").setValue(user?.email)
+                self.moveToLocationMenu()
             }
         }
     }
