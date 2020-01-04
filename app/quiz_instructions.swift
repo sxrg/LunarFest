@@ -58,14 +58,9 @@ class quiz_instructions: UIViewController {
     
     @IBAction func startquiz(_ sender: UIButton) {
         
-        print("today's date: \(todayString), lastDate: \(lastDate)")
-        
         // lets user proceed to quiz if its their first time
-        //lastDate = UserDefaults.standard.object(forKey: "lastQuizDate") as? String
         if (lastDate == nil) {
-            //UserDefaults.standard.set(self.todayString, forKey: "lastQuizDate")
             dbRef.child("users").child(userID).child("lastQuizDate").setValue(lastDate)
-            //lastDate = UserDefaults.standard.object(forKey:"lastQuizDate") as? String
             lastDate = todayString
             UserDefaults.standard.setValue(self.todayString, forKey: "lastQuizDate")
             UserDefaults.standard.synchronize()
@@ -77,7 +72,10 @@ class quiz_instructions: UIViewController {
             backToPreviousPage()
         }
         else {
-            backToPreviousPage()
+            lastDate = todayString
+            UserDefaults.standard.setValue(self.todayString, forKey: "lastQuizDate")
+            UserDefaults.standard.synchronize()
+            proceedToQuiz()
         }
     }
     
