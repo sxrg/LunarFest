@@ -73,7 +73,7 @@ class quiz: UIViewController {
             points += 5
         dbRef.child("users").child(userID).child("point").setValue(points)
             UserDefaults.standard.set(self.points, forKey: "points")
-            UserDefaults.standard.set(date,forKey:"lastQuizDate")
+            UserDefaults.standard.set(lastDate, forKey:"lastQuizDate")
             
             quiz.isCorrect = false
             
