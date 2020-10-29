@@ -15,6 +15,7 @@ A festival event app thats made for 2020 Lunar Fest
 * [Contact](#contact)
 
 ## General info
+![appicon](./appicon.png)<br/><br/>
 Lunar Fest is an annual festival organized by Asian-Canadian Special Events Association. 
 The festival started in 2009 and built to be a Vancouver Winter Olympic Legacy event. The festival collaborates with
 many Asian and Canadian communities to celebrate one of the oldest traditions for many Asian cultures the Lunar New Year. 
